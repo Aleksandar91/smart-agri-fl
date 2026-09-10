@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-iid-s401-multikrum-e1-clean",
+  "alpha_label": "iid",
+  "seed": 401,
+  "algorithm": "multikrum",
+  "local_epochs": 1,
+  "attack": "none",
+  "started_utc": "2026-08-29T09:53:24Z",
+  "finished_utc": "2026-08-29T10:00:21Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "krum_clients_to_keep": 4,
+  "role": "phase4-clean-robust",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-iid-s401-multikrum-e1-clean"
+}

@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "stage": "5",
+  "jobs": [
+    {
+      "experiment_id": "pv19-full-a01-s101-fedavg-e1",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s101-fedprox-e1",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "fedprox",
+      "role": "phase5-clean",
+      "aggregation": "fedprox",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s101-fedavg-e1",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s101-fedavg-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s101-fedavg-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s101-fedavg-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s101-median-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s101-median-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s101-median-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s211-fedavg-e1",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s211-fedprox-e1",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "fedprox",
+      "role": "phase5-clean",
+      "aggregation": "fedprox",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s211-fedavg-e1",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s211-fedavg-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s211-fedavg-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s211-fedavg-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s211-median-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s211-median-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s211-median-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s307-fedavg-e1",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s307-fedprox-e1",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "fedprox",
+      "role": "phase5-clean",
+      "aggregation": "fedprox",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s307-fedavg-e1",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s307-fedavg-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s307-fedavg-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s307-fedavg-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s307-median-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s307-median-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s307-median-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s401-fedavg-e1",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s401-fedprox-e1",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "fedprox",
+      "role": "phase5-clean",
+      "aggregation": "fedprox",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s401-fedavg-e1",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s401-fedavg-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s401-fedavg-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s401-fedavg-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s401-median-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s401-median-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s401-median-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s503-fedavg-e1",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s503-fedprox-e1",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "fedprox",
+      "role": "phase5-clean",
+      "aggregation": "fedprox",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s503-fedavg-e1",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "fedavg",
+      "role": "phase5-clean",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s503-fedavg-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s503-fedavg-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s503-fedavg-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "fedavg",
+      "role": "phase5-flip1-apple",
+      "aggregation": "fedavg",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a01-s503-median-e1-flip1-apple",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-a05-s503-median-e1-flip1-apple",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-full-iid-s503-median-e1-flip1-apple",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase5-flip1-apple",
+      "aggregation": "median",
+      "dataset": "pv19-full-774007483a1d",
+      "scientific": true
+    }
+  ]
+}

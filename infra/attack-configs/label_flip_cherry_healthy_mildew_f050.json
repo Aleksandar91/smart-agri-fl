@@ -1,0 +1,10 @@
+{
+  "description": "PV-19 locked pair 2 at flip fraction 0.50. Not used in stage 4.1.",
+  "seed": 1337,
+  "active_rounds": {"start": 1, "end": 10},
+  "label_flip": {
+    "source_class": "Cherry___healthy",
+    "target_class": "Cherry___Powdery_mildew",
+    "fraction": 0.50
+  }
+}

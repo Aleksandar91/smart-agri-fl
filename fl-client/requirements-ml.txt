@@ -1,0 +1,7 @@
+numpy==2.4.6  # last version supporting Python 3.11 (2.5.x needs >=3.12)
+pillow==12.3.0
+tqdm==4.68.4
+flwr==1.32.1
+# torch/torchvision are installed from the CPU wheel index in the Dockerfile.
+# A plain `pip install torch==2.13.0` from PyPI pulls CUDA/nvidia wheels, which
+# blew the GitLab 1h timeout and is unused on the Pi and our CPU Docker clients.

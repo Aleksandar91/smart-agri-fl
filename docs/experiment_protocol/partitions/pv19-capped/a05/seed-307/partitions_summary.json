@@ -1,0 +1,553 @@
+{
+  "data_root": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\raw\\color",
+  "source_manifest": "<repository-root>\\docs\\experiment_protocol\\datasets\\pv19-capped-primary-v1\\train.json",
+  "source_dataset_id": "pv19-capped-62b5b2119fb2",
+  "source_dataset_manifest_sha256": "62b5b2119fb2e12b004e59c5fdfdef29765e2e4bb9c1b6cf79aeb3155ba8f872",
+  "source_split": "train",
+  "group_safe": true,
+  "mode": "dirichlet",
+  "alpha": 0.5,
+  "seed": 307,
+  "num_clients": 5,
+  "classes": [
+    "Apple___Apple_scab",
+    "Apple___Black_rot",
+    "Apple___Cedar_apple_rust",
+    "Apple___healthy",
+    "Blueberry___healthy",
+    "Cherry___Powdery_mildew",
+    "Cherry___healthy",
+    "Grape___Black_rot",
+    "Grape___Esca",
+    "Grape___Leaf_blight",
+    "Pepper___Bacterial_spot",
+    "Pepper___healthy",
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Potato___healthy",
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Spider_mites"
+  ],
+  "total_samples": 3797,
+  "clients": [
+    {
+      "client_id": 0,
+      "num_samples": 743,
+      "num_groups": 121,
+      "per_class": {
+        "Apple___Apple_scab": 104,
+        "Apple___Black_rot": 32,
+        "Apple___healthy": 16,
+        "Blueberry___healthy": 63,
+        "Cherry___Powdery_mildew": 70,
+        "Cherry___healthy": 29,
+        "Grape___Black_rot": 112,
+        "Grape___Esca": 36,
+        "Grape___Leaf_blight": 32,
+        "Pepper___Bacterial_spot": 11,
+        "Pepper___healthy": 70,
+        "Potato___Early_blight": 44,
+        "Potato___Late_blight": 8,
+        "Potato___healthy": 4,
+        "Tomato___Bacterial_spot": 4,
+        "Tomato___Leaf_Mold": 108
+      }
+    },
+    {
+      "client_id": 1,
+      "num_samples": 532,
+      "num_groups": 85,
+      "per_class": {
+        "Apple___Black_rot": 94,
+        "Apple___Cedar_apple_rust": 8,
+        "Apple___healthy": 24,
+        "Cherry___Powdery_mildew": 46,
+        "Grape___Black_rot": 4,
+        "Grape___Esca": 4,
+        "Grape___Leaf_blight": 4,
+        "Pepper___healthy": 112,
+        "Potato___Early_blight": 28,
+        "Potato___Late_blight": 40,
+        "Potato___healthy": 16,
+        "Tomato___Bacterial_spot": 128,
+        "Tomato___Early_blight": 4,
+        "Tomato___Leaf_Mold": 8,
+        "Tomato___Spider_mites": 12
+      }
+    },
+    {
+      "client_id": 2,
+      "num_samples": 1092,
+      "num_groups": 207,
+      "per_class": {
+        "Apple___Apple_scab": 12,
+        "Apple___Black_rot": 27,
+        "Apple___Cedar_apple_rust": 120,
+        "Apple___healthy": 107,
+        "Cherry___Powdery_mildew": 24,
+        "Cherry___healthy": 164,
+        "Grape___Black_rot": 12,
+        "Grape___Esca": 96,
+        "Grape___Leaf_blight": 4,
+        "Pepper___Bacterial_spot": 79,
+        "Pepper___healthy": 27,
+        "Potato___Early_blight": 60,
+        "Potato___Late_blight": 80,
+        "Potato___healthy": 40,
+        "Tomato___Bacterial_spot": 8,
+        "Tomato___Early_blight": 184,
+        "Tomato___Leaf_Mold": 44,
+        "Tomato___Spider_mites": 4
+      }
+    },
+    {
+      "client_id": 3,
+      "num_samples": 769,
+      "num_groups": 144,
+      "per_class": {
+        "Apple___Apple_scab": 7,
+        "Apple___Black_rot": 53,
+        "Apple___Cedar_apple_rust": 52,
+        "Apple___healthy": 36,
+        "Blueberry___healthy": 49,
+        "Cherry___Powdery_mildew": 24,
+        "Grape___Black_rot": 76,
+        "Grape___Esca": 12,
+        "Grape___Leaf_blight": 52,
+        "Pepper___Bacterial_spot": 112,
+        "Potato___Early_blight": 4,
+        "Potato___Late_blight": 48,
+        "Tomato___Bacterial_spot": 44,
+        "Tomato___Early_blight": 20,
+        "Tomato___Leaf_Mold": 28,
+        "Tomato___Spider_mites": 152
+      }
+    },
+    {
+      "client_id": 4,
+      "num_samples": 661,
+      "num_groups": 128,
+      "per_class": {
+        "Apple___Apple_scab": 81,
+        "Apple___Cedar_apple_rust": 8,
+        "Apple___healthy": 24,
+        "Blueberry___healthy": 82,
+        "Cherry___Powdery_mildew": 44,
+        "Cherry___healthy": 10,
+        "Grape___Black_rot": 4,
+        "Grape___Esca": 60,
+        "Grape___Leaf_blight": 116,
+        "Potato___Early_blight": 72,
+        "Potato___Late_blight": 32,
+        "Potato___healthy": 44,
+        "Tomato___Bacterial_spot": 24,
+        "Tomato___Leaf_Mold": 20,
+        "Tomato___Spider_mites": 40
+      }
+    }
+  ],
+  "heterogeneity": {
+    "client_sample_counts": [
+      743,
+      532,
+      1092,
+      769,
+      661
+    ],
+    "client_sample_shares": [
+      0.19568080063207796,
+      0.14011061364234922,
+      0.28759547010798,
+      0.2025283118251251,
+      0.17408480379246774
+    ],
+    "class_metrics": {
+      "Apple___Apple_scab": {
+        "counts": [
+          104,
+          0,
+          12,
+          7,
+          81
+        ],
+        "shares": [
+          0.5098039215686274,
+          0.0,
+          0.058823529411764705,
+          0.03431372549019608,
+          0.39705882352941174
+        ],
+        "monopoly": 0.5098039215686274,
+        "normalized_entropy": 0.6167333793985807,
+        "effective_clients": 2.6982248198983636,
+        "clients_with_samples": 4
+      },
+      "Apple___Black_rot": {
+        "counts": [
+          32,
+          94,
+          27,
+          53,
+          0
+        ],
+        "shares": [
+          0.1553398058252427,
+          0.4563106796116505,
+          0.13106796116504854,
+          0.25728155339805825,
+          0.0
+        ],
+        "monopoly": 0.4563106796116505,
+        "normalized_entropy": 0.784680165512684,
+        "effective_clients": 3.535638861076908,
+        "clients_with_samples": 4
+      },
+      "Apple___Cedar_apple_rust": {
+        "counts": [
+          0,
+          8,
+          120,
+          52,
+          8
+        ],
+        "shares": [
+          0.0,
+          0.0425531914893617,
+          0.6382978723404256,
+          0.2765957446808511,
+          0.0425531914893617
+        ],
+        "monopoly": 0.6382978723404256,
+        "normalized_entropy": 0.5658653965736424,
+        "effective_clients": 2.4861248736524053,
+        "clients_with_samples": 4
+      },
+      "Apple___healthy": {
+        "counts": [
+          16,
+          24,
+          107,
+          36,
+          24
+        ],
+        "shares": [
+          0.07729468599033816,
+          0.11594202898550725,
+          0.5169082125603864,
+          0.17391304347826086,
+          0.11594202898550725
+        ],
+        "monopoly": 0.5169082125603864,
+        "normalized_entropy": 0.8343460187078456,
+        "effective_clients": 3.829859485256142,
+        "clients_with_samples": 5
+      },
+      "Blueberry___healthy": {
+        "counts": [
+          63,
+          0,
+          0,
+          49,
+          82
+        ],
+        "shares": [
+          0.3247422680412371,
+          0.0,
+          0.0,
+          0.25257731958762886,
+          0.422680412371134
+        ],
+        "monopoly": 0.422680412371134,
+        "normalized_entropy": 0.6690458420573864,
+        "effective_clients": 2.935235660855546,
+        "clients_with_samples": 3
+      },
+      "Cherry___Powdery_mildew": {
+        "counts": [
+          70,
+          46,
+          24,
+          24,
+          44
+        ],
+        "shares": [
+          0.33653846153846156,
+          0.22115384615384615,
+          0.11538461538461539,
+          0.11538461538461539,
+          0.21153846153846154
+        ],
+        "monopoly": 0.33653846153846156,
+        "normalized_entropy": 0.9488645407265568,
+        "effective_clients": 4.604981100669431,
+        "clients_with_samples": 5
+      },
+      "Cherry___healthy": {
+        "counts": [
+          29,
+          0,
+          164,
+          0,
+          10
+        ],
+        "shares": [
+          0.14285714285714285,
+          0.0,
+          0.8078817733990148,
+          0.0,
+          0.04926108374384237
+        ],
+        "monopoly": 0.8078817733990148,
+        "normalized_entropy": 0.3719601371933292,
+        "effective_clients": 1.819654679800507,
+        "clients_with_samples": 3
+      },
+      "Grape___Black_rot": {
+        "counts": [
+          112,
+          4,
+          12,
+          76,
+          4
+        ],
+        "shares": [
+          0.5384615384615384,
+          0.019230769230769232,
+          0.057692307692307696,
+          0.36538461538461536,
+          0.019230769230769232
+        ],
+        "monopoly": 0.5384615384615384,
+        "normalized_entropy": 0.6323608767897045,
+        "effective_clients": 2.7669498309834424,
+        "clients_with_samples": 5
+      },
+      "Grape___Esca": {
+        "counts": [
+          36,
+          4,
+          96,
+          12,
+          60
+        ],
+        "shares": [
+          0.17307692307692307,
+          0.019230769230769232,
+          0.46153846153846156,
+          0.057692307692307696,
+          0.28846153846153844
+        ],
+        "monopoly": 0.46153846153846156,
+        "normalized_entropy": 0.782640298651495,
+        "effective_clients": 3.524050253918162,
+        "clients_with_samples": 5
+      },
+      "Grape___Leaf_blight": {
+        "counts": [
+          32,
+          4,
+          4,
+          52,
+          116
+        ],
+        "shares": [
+          0.15384615384615385,
+          0.019230769230769232,
+          0.019230769230769232,
+          0.25,
+          0.5576923076923077
+        ],
+        "monopoly": 0.5576923076923077,
+        "normalized_entropy": 0.691034618471734,
+        "effective_clients": 3.040972342466799,
+        "clients_with_samples": 5
+      },
+      "Pepper___Bacterial_spot": {
+        "counts": [
+          11,
+          0,
+          79,
+          112,
+          0
+        ],
+        "shares": [
+          0.054455445544554455,
+          0.0,
+          0.3910891089108911,
+          0.5544554455445545,
+          0.0
+        ],
+        "monopoly": 0.5544554455445545,
+        "normalized_entropy": 0.5297802259565995,
+        "effective_clients": 2.345851340288311,
+        "clients_with_samples": 3
+      },
+      "Pepper___healthy": {
+        "counts": [
+          70,
+          112,
+          27,
+          0,
+          0
+        ],
+        "shares": [
+          0.3349282296650718,
+          0.5358851674641149,
+          0.1291866028708134,
+          0.0,
+          0.0
+        ],
+        "monopoly": 0.5358851674641149,
+        "normalized_entropy": 0.599614143664928,
+        "effective_clients": 2.6248972059691864,
+        "clients_with_samples": 3
+      },
+      "Potato___Early_blight": {
+        "counts": [
+          44,
+          28,
+          60,
+          4,
+          72
+        ],
+        "shares": [
+          0.21153846153846154,
+          0.1346153846153846,
+          0.28846153846153844,
+          0.019230769230769232,
+          0.34615384615384615
+        ],
+        "monopoly": 0.34615384615384615,
+        "normalized_entropy": 0.8700960500750943,
+        "effective_clients": 4.0566826991265,
+        "clients_with_samples": 5
+      },
+      "Potato___Late_blight": {
+        "counts": [
+          8,
+          40,
+          80,
+          48,
+          32
+        ],
+        "shares": [
+          0.038461538461538464,
+          0.19230769230769232,
+          0.38461538461538464,
+          0.23076923076923078,
+          0.15384615384615385
+        ],
+        "monopoly": 0.38461538461538464,
+        "normalized_entropy": 0.8923740238298082,
+        "effective_clients": 4.204774166439756,
+        "clients_with_samples": 5
+      },
+      "Potato___healthy": {
+        "counts": [
+          4,
+          16,
+          40,
+          0,
+          44
+        ],
+        "shares": [
+          0.038461538461538464,
+          0.15384615384615385,
+          0.38461538461538464,
+          0.0,
+          0.4230769230769231
+        ],
+        "monopoly": 0.4230769230769231,
+        "normalized_entropy": 0.7112524618644818,
+        "effective_clients": 3.1415511584118025,
+        "clients_with_samples": 4
+      },
+      "Tomato___Bacterial_spot": {
+        "counts": [
+          4,
+          128,
+          8,
+          44,
+          24
+        ],
+        "shares": [
+          0.019230769230769232,
+          0.6153846153846154,
+          0.038461538461538464,
+          0.21153846153846154,
+          0.11538461538461539
+        ],
+        "monopoly": 0.6153846153846154,
+        "normalized_entropy": 0.6696966025119319,
+        "effective_clients": 2.9383115154938966,
+        "clients_with_samples": 5
+      },
+      "Tomato___Early_blight": {
+        "counts": [
+          0,
+          4,
+          184,
+          20,
+          0
+        ],
+        "shares": [
+          0.0,
+          0.019230769230769232,
+          0.8846153846153846,
+          0.09615384615384616,
+          0.0
+        ],
+        "monopoly": 0.8846153846153846,
+        "normalized_entropy": 0.25450810402868496,
+        "effective_clients": 1.506237759341406,
+        "clients_with_samples": 3
+      },
+      "Tomato___Leaf_Mold": {
+        "counts": [
+          108,
+          8,
+          44,
+          28,
+          20
+        ],
+        "shares": [
+          0.5192307692307693,
+          0.038461538461538464,
+          0.21153846153846154,
+          0.1346153846153846,
+          0.09615384615384616
+        ],
+        "monopoly": 0.5192307692307693,
+        "normalized_entropy": 0.8011083403557622,
+        "effective_clients": 3.6303684152663447,
+        "clients_with_samples": 5
+      },
+      "Tomato___Spider_mites": {
+        "counts": [
+          0,
+          12,
+          4,
+          152,
+          40
+        ],
+        "shares": [
+          0.0,
+          0.057692307692307696,
+          0.019230769230769232,
+          0.7307692307692307,
+          0.19230769230769232
+        ],
+        "monopoly": 0.7307692307692307,
+        "normalized_entropy": 0.488879607553935,
+        "effective_clients": 2.1964037747156966,
+        "clients_with_samples": 4
+      }
+    },
+    "mean_class_monopoly": 0.5389631793650964,
+    "mean_class_normalized_entropy": 0.6692021491539045
+  },
+  "total_groups": 685,
+  "assigned_groups": 685
+}

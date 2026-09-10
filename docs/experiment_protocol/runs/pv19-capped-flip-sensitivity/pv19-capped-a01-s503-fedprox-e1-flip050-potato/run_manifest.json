@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip050-potato",
+  "alpha_label": "a01",
+  "seed": 503,
+  "algorithm": "fedprox",
+  "local_epochs": 1,
+  "pair": "potato",
+  "attacker_client": 1,
+  "flip_fraction": 0.5,
+  "started_utc": "2026-08-28T06:36:14Z",
+  "finished_utc": "2026-08-28T06:41:36Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "eval_clients": 1,
+  "proximal_mu": 0.01,
+  "role": "phase4-label-flip-sensitivity",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip050-potato",
+  "aggregation": "fedprox"
+}

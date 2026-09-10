@@ -1,0 +1,4640 @@
+{
+ "client_id": 4,
+ "mode": "dirichlet",
+ "alpha": 0.5,
+ "seed": 401,
+ "classes": [
+  "Apple___Apple_scab",
+  "Apple___Black_rot",
+  "Apple___Cedar_apple_rust",
+  "Apple___healthy",
+  "Blueberry___healthy",
+  "Cherry___Powdery_mildew",
+  "Cherry___healthy",
+  "Grape___Black_rot",
+  "Grape___Esca",
+  "Grape___Leaf_blight",
+  "Pepper___Bacterial_spot",
+  "Pepper___healthy",
+  "Potato___Early_blight",
+  "Potato___Late_blight",
+  "Potato___healthy",
+  "Tomato___Bacterial_spot",
+  "Tomato___Early_blight",
+  "Tomato___Leaf_Mold",
+  "Tomato___Spider_mites"
+ ],
+ "samples": [
+  [
+   "Apple___Cedar_apple_rust/a4e8bc4c-4522-4a7d-b7c9-70c4b220561e___FREC_C.Rust 3570.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/bc863aa7-2cb6-44f1-b060-4cd78237d7a3___FREC_C.Rust 3566.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/e1140e29-f2c5-43ca-b69c-981f278d0b86___FREC_C.Rust 3569.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/ea119d19-1b3a-4767-af1d-e8b148a3bb8d___FREC_C.Rust 3579.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/4e469367-da28-4b4b-a06e-18d64f0433bc___FREC_C.Rust 4014.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/b845075b-dbb8-4b69-bec2-36e99cee7f3c___FREC_C.Rust 4038.JPG",
+   2
+  ],
+  [
+   "Apple___Cedar_apple_rust/d46c67aa-e05c-48f7-9287-fbc727396c9e___FREC_C.Rust 4036.JPG",
+   2
+  ],
+  [
+   "Apple___healthy/1477ac33-4284-4db3-9a91-dbd61e6183e3___RS_HL 8059.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/2d7f4c07-f4f4-4589-aa82-49e05e5b253b___RS_HL 8056.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/3ecbb982-2844-4662-ad65-9a94fee38fa3___RS_HL 8060.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/5c320c7a-e164-43d0-adab-b966ff9e2c1a___RS_HL 8055.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/8a311714-e680-4c68-8f3a-60f4bfc16ada___RS_HL 8062.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/a09b0571-6876-487c-bf88-bb378dd4f0cc___RS_HL 8057.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/bfe9c599-e0d3-4ce6-8d8a-403df3d265cc___RS_HL 8058.JPG",
+   3
+  ],
+  [
+   "Apple___healthy/c1c192eb-1b3d-4fc5-b2c1-4eba9445536d___RS_HL 8061.JPG",
+   3
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/22259775-b4b5-4e64-a56f-b2be4260346d___FREC_Pwd.M 5133.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/30f5084a-f9c5-4ba0-839f-c000a0ad0608___FREC_Pwd.M 5131.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/86aceb2d-8be8-4077-b79f-4178dcb970c7___FREC_Pwd.M 5132.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/16842219-4e88-460a-bdf0-36bea112a8b6___FREC_Pwd.M 0343.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/324c0529-3992-4015-91f2-1f8c8b87940f___FREC_Pwd.M 0323.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/3928d15a-b841-4524-a5be-b34546c358f2___FREC_Pwd.M 0324.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/455bb24d-94f8-4914-8fdc-6e1fd8008e78___FREC_Pwd.M 0342.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/4bc900b6-d994-4356-920b-8e44574a4b4e___FREC_Pwd.M 0334.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/4c823529-3235-4215-b13d-e74c16ea761a___FREC_Pwd.M 0331.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/5f7b4b75-2cb6-4deb-bd86-56f336357d83___FREC_Pwd.M 0340.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/6ca92452-78c5-422b-bec6-afe04e862a62___FREC_Pwd.M 0341.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/776bd11d-e7d0-404c-a356-2168ab65bb7c___FREC_Pwd.M 0339.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/874f041d-b07c-4fe3-a847-72bafd5f6075___FREC_Pwd.M 0326.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/91f27d9d-080a-4590-b72f-a85053f02d22___FREC_Pwd.M 0336.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/9772d53b-c48b-472c-86cb-24d0de2446a6___FREC_Pwd.M 0327.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/a0e5fb1a-b456-4f0c-9fa2-e7f9976c72c9___FREC_Pwd.M 0332.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/a4922bd5-2911-478c-bb02-f801c834bfeb___FREC_Pwd.M 0337.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/b94ee91a-27c4-4eca-ab18-f1f6f7a0c495___FREC_Pwd.M 0335.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/baf48061-d4ee-45b3-8806-d26ad15bb8ad___FREC_Pwd.M 0328.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/c6d3f6f6-479f-41f0-adb2-6674181932f2___FREC_Pwd.M 0330.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/ca96a7a3-f34e-4796-86b7-b2826b760002___FREC_Pwd.M 0338.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/d1ba4536-2485-4096-a4a9-b29ee62d05d6___FREC_Pwd.M 0344.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/d5510570-6f71-4af0-9fda-07eee0e55442___FREC_Pwd.M 0333.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/e5ca68e7-17cb-4aee-bf65-7abba2629a29___FREC_Pwd.M 0325.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___Powdery_mildew/f5f49058-a1ed-4ea4-ab77-e588914b763e___FREC_Pwd.M 0329.JPG",
+   5
+  ],
+  [
+   "Cherry_(including_sour)___healthy/1de4d428-5a02-4774-811c-1634acc7a5f6___JR_HL 4216.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/276ae5a6-460d-4a22-af95-0a4f8182610e___JR_HL 4222.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/6b20c6d1-da8f-43c8-800a-2864976481d2___JR_HL 4218.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/871dddc4-1a16-4ad6-9990-301fed42974f___JR_HL 4223.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/8afb6bdf-203d-44f9-bea7-0d7648505c50___JR_HL 4215.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/b101d58c-2db2-413a-b37e-cba6a8a1415a___JR_HL 4224.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/c37f8678-ed86-42ab-9a8b-f4172d94bf1e___JR_HL 4220.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/d74cc406-6b82-4300-a21a-52a9c021cbb7___JR_HL 4219.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/f9b20931-a503-421f-a8d2-59fa99d0b41a___JR_HL 4221.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/fcaab4fb-6317-4cae-b798-238ef0e32c1a___JR_HL 4217.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/472fd482-aec7-4e73-86d1-7161f6a5024b___JR_HL 4178.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/4ca16717-c27c-44e6-963b-160e16277ee1___JR_HL 4174.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/54dc1419-0abe-4289-9944-f087be1dadc8___JR_HL 4181.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/69de380a-4fd8-4c50-bdff-a983495dcd8c___JR_HL 4175.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/9085e422-36a7-44fc-958b-5212f8a29c79___JR_HL 4173.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/917ccab2-935b-4eba-9f97-f81b24cbb523___JR_HL 4176.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/92da1286-a52e-4ceb-bb92-2a6eba988a14___JR_HL 4177.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/9b15b47c-53e0-4873-b51c-d2b6e316d56c___JR_HL 4180.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/b87b1766-d629-4bfb-b9d3-6d5fe336cfef___JR_HL 4182.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/c89bc3c2-97d5-4e38-a090-3ba121a17adf___JR_HL 4179.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/1c45c880-bf5d-482a-a798-fd60e004096e___JR_HL 4133.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/50a406be-c648-44a6-9021-98d6359f7aec___JR_HL 4134.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/68efa134-12ed-4417-add7-d1bd13f9f780___JR_HL 4137.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/6fbe0c51-55ce-4623-8c81-7cf7f52009db___JR_HL 4142.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/7570daf6-28e6-4aee-8583-209160f0cd5e___JR_HL 4139.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/80bdbf48-7285-4c38-981b-7f754cd99834___JR_HL 4138.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/b740bd4d-0d9f-4949-b84d-56a0c952be72___JR_HL 4135.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/de350ce9-21b8-4b1f-a5ff-767eac8ba8f2___JR_HL 4136.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/efa7860b-6a2b-400e-8671-9a3226c08a37___JR_HL 4140.JPG",
+   6
+  ],
+  [
+   "Cherry_(including_sour)___healthy/fe976376-e7b0-4052-831d-86e7c7a85c03___JR_HL 4141.JPG",
+   6
+  ],
+  [
+   "Grape___Black_rot/11f66442-5612-499c-a0a1-77f8c3668234___FAM_B.Rot 0727.JPG",
+   7
+  ],
+  [
+   "Grape___Black_rot/a6c171eb-ae85-42ec-b4c1-02fbb2b647ac___FAM_B.Rot 0728.JPG",
+   7
+  ],
+  [
+   "Grape___Black_rot/ada23412-b2ee-46db-8958-5d7163acb03e___FAM_B.Rot 0725.JPG",
+   7
+  ],
+  [
+   "Grape___Black_rot/c5df7947-a457-42e9-990c-01372fbce8fc___FAM_B.Rot 0726.JPG",
+   7
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/2632746e-bfbd-4e25-bad1-16e66e6bedfb___FAM_L.Blight 1381.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/33489f41-ac64-4a51-85a8-0a628c128b29___FAM_L.Blight 1384.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/69641513-2bfe-4281-804d-303295c9e735___FAM_L.Blight 1382.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ef1eaf4e-50fa-48d2-8ff9-3f3953043409___FAM_L.Blight 1383.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/24dd13d4-ea7c-4abd-a41f-b99baadaf77c___FAM_L.Blight 1627.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/35d01fef-46ec-4a5e-ba92-f2a6c0485fda___FAM_L.Blight 1625.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5f23077a-5f9a-440c-89be-662b5011d0f7___FAM_L.Blight 1626.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f0e644ee-aa1f-416c-a308-d2b9170986da___FAM_L.Blight 1624.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/080bc705-65e6-4dbb-82b7-61925c2cd917___FAM_L.Blight 1416.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/155832d6-127a-4d8c-89f0-39ad289a25e7___FAM_L.Blight 1414.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/74290c7b-f998-46b0-9681-eacb44dbb022___FAM_L.Blight 1413.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d4c5388d-0347-4754-94ff-c54f9e3f4a49___FAM_L.Blight 1415.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4028195c-2b48-437e-8661-64614b59af57___FAM_L.Blight 1399.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/581d1b61-8c59-4470-9985-6f4d53750aca___FAM_L.Blight 1398.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8624f4b8-5861-40a9-91a9-90db77e4cbd4___FAM_L.Blight 1397.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e662234f-6ffa-447a-872a-95c8eeeec95f___FAM_L.Blight 1400.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4195a89c-b6b5-47b7-95e2-537446ef3a68___FAM_L.Blight 4614.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5ed51a97-4772-420a-a99d-60ce1d7d96d7___FAM_L.Blight 4616.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/c40605b6-9ceb-4a9b-b86d-bd211ab0baed___FAM_L.Blight 4617.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e1b01c6e-aca3-4c23-928b-3fa8d3512ee2___FAM_L.Blight 4615.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/258600e9-8638-41b2-9d83-b2cbbecda02c___FAM_L.Blight 1717.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/2c278897-0113-4a1a-b243-1f44deb6e495___FAM_L.Blight 1716.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ab0d3eec-a4fa-49ad-a1b3-d7a76ad280a1___FAM_L.Blight 1718.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ce301c49-341e-43da-830c-f5a2d3b00fd5___FAM_L.Blight 1719.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/594fbe5a-a79c-44e6-a4b8-86064bcc5115___FAM_L.Blight 1465.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/61580347-a393-4521-bec9-dc195a94b7f2___FAM_L.Blight 1468.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8d009d9c-3ce5-4420-83bd-0274c75accfd___FAM_L.Blight 1467.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d5a4f65f-7d27-43cf-a4bd-d89e0b462f6c___FAM_L.Blight 1466.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5e84f792-949c-4ff6-834a-d6df1ae7e024___FAM_L.Blight 1680.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/893f33d3-64f2-4e65-b07a-e29f02f8061c___FAM_L.Blight 1681.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/a0842718-9e1b-442d-a158-a2f62423aa8d___FAM_L.Blight 1682.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/b0dfd9ec-fa42-4ca4-ad8b-76be947df409___FAM_L.Blight 1683.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/38f5aaf4-d1c2-496f-b122-d2a0634d5290___FAM_L.Blight 4971.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/66611e37-7ab9-4b37-a6b2-57ac36024b78___FAM_L.Blight 4968.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/6ef1c3be-ce3e-416a-ba51-d7b6b53d3faf___FAM_L.Blight 4969.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e9bb7f70-2d50-4500-b068-3ac1dfd15b62___FAM_L.Blight 4970.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/15aa16b2-7bcb-40b6-938e-be72cb6a9eb0___FAM_L.Blight 4662.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/1def114d-13d9-4e06-ad6e-556fa4137a10___FAM_L.Blight 4665.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ca3c21b5-b7ac-48d5-a8fe-543b7a26ac54___FAM_L.Blight 4663.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ec3747c3-6cae-48d7-b166-0457d7f6ff26___FAM_L.Blight 4664.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/7324704d-d384-4940-910d-55bbcfe55941___FAM_L.Blight 4759.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8301c5c6-c999-45b1-b386-387e0a012c7e___FAM_L.Blight 4758.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/a3f8d893-6d31-4115-bd62-c6af363e8f6c___FAM_L.Blight 4760.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/cb428fa4-5b33-4ac6-b473-009c6f48a801___FAM_L.Blight 4761.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/aa11694d-d464-421b-a5d5-2835100ee413___FAM_L.Blight 4554.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e598b8fd-f1ba-4037-ac58-fd931bf8cd56___FAM_L.Blight 4557.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e8d45d85-2665-4276-8fa9-5ee550e9650d___FAM_L.Blight 4555.JPG",
+   9
+  ],
+  [
+   "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f2b27716-3d46-41b3-9937-c0fd76b93be2___FAM_L.Blight 4556.JPG",
+   9
+  ],
+  [
+   "Potato___Early_blight/28f275f9-4dd9-479a-a005-ed442362840a___RS_Early.B 6790.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/38aa30f4-14d5-446f-80c3-ec60ce67ccc3___RS_Early.B 6789.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/7a3630ed-a43c-4957-a604-1de05e8e7f32___RS_Early.B 6795.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/cb615e16-034f-465a-89a6-91e091698723___RS_Early.B 6796.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/0182e991-97f0-4805-a1f7-6e1b4306d518___RS_Early.B 7015.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/0d987d4a-26bc-4f74-8a16-12f8969dfed8___RS_Early.B 7013.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/3db185d7-7c05-42f9-b508-7a3883e50660___RS_Early.B 7011.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/49f13f57-6881-4caa-839b-d93215ce1b77___RS_Early.B 7009.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/2fe81ef1-d7ec-4395-b071-c74d5beb4037___RS_Early.B 7242.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/d87f93fa-f6f8-49f1-b9e1-8f196f377df8___RS_Early.B 7244.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/dea6a6e4-cfb0-4c00-a0f7-bdd1e52f82e0___RS_Early.B 7246.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/e786a4fe-5aa1-4da2-a16f-4ee82c56e317___RS_Early.B 7245.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/4bba904e-b4af-4a81-8252-b8d997bc5057___RS_Early.B 7695.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/af0ee942-50f5-43a7-a9fe-486ba1f5f989___RS_Early.B 7700.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/d472b6e3-a00c-4b4e-b13a-cdababff9d24___RS_Early.B 7699.JPG",
+   12
+  ],
+  [
+   "Potato___Early_blight/ec4e730c-02c1-4b4e-b9fc-9387e2f30a8a___RS_Early.B 7701.JPG",
+   12
+  ],
+  [
+   "Potato___Late_blight/55fa97d3-71b6-4487-9757-f9195f97ba5a___RS_LB 4047.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/5c1c57f6-6aff-4bba-892e-43ff02311c3f___RS_LB 4046.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/9fa8f0a5-50ba-41d9-8132-077a807fcf86___RS_LB 4045.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/f5cf6151-96d1-49bb-af1b-fa6026d749e8___RS_LB 4048.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/62d41420-8e32-47d2-9a37-698c07f7dc16___RS_LB 2543.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/9933b288-b5fe-4cbf-a9fa-58ef769b6f7c___RS_LB 2540.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/b9474ec5-5a67-4207-98ec-5671c19f8f59___RS_LB 2545.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/f7936082-7315-477d-9710-529a7024b32d___RS_LB 2546.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/08ce9666-2dda-4fa8-8d58-55bb9fa19484___RS_LB 3318.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/1dc41475-aa79-43f1-8648-0c8733d246ca___RS_LB 3319.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/df6898c4-f3a1-4ff2-8f44-3bc45a8d4ec5___RS_LB 3316.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/f083d357-23f8-45e6-9fac-87e5d0ab9cac___RS_LB 3317.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/006cc01a-1888-4326-9b62-a65cb55a6377___RS_LB 5207.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/8ecb7cf3-9be5-4c3e-9714-2d5987987ad0___RS_LB 5205.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/d38d9e28-89a0-4650-8a2d-dc5e6744b3b9___RS_LB 5204.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/dac19eb9-e4e3-4ca1-8183-268b839901c4___RS_LB 5208.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/8bf37a1e-4535-4919-953e-69376f5be48a___RS_LB 2611.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/b9cde1e2-71f8-46a2-9fa4-0bfc7d16815f___RS_LB 2610.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/befda082-9237-4371-bd11-5d3513a365a5___RS_LB 2608.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/d1ae329b-19bc-40c3-afb1-404ecf3c98ee___RS_LB 2613.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/551f74c9-3212-4a08-8f5e-a101b4195e1e___RS_LB 2593.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/762a9cd9-7da1-4885-b677-870da1e41768___RS_LB 2592.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/b8b4064f-208a-46f9-b13e-5096fdbdb429___RS_LB 2591.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/ec958877-f479-4c8c-a947-3686039f8921___RS_LB 2587.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/09a215a1-a539-4635-a27f-232229ff11f4___RS_LB 4529.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/1e0326a5-b208-447f-9d60-f788ec4b6e3f___RS_LB 4526.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/37dbf454-f189-4fae-a9e7-a088e7be3f2e___RS_LB 4530.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/6e9fc91a-e20f-4431-bc54-8492d7ec788e___RS_LB 4527.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/440adc9e-3f21-4373-ab9a-ed003c3588f3___RS_LB 4152.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/53367bb0-3f38-4c90-a71d-05592341e4aa___RS_LB 4149.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/df40ffa7-8efd-4720-8786-a30b9011dcfc___RS_LB 4150.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/e2326741-ee59-4e3c-86bf-9e81ccf50b6b___RS_LB 4147.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/0651be8e-a2d1-4b8a-97b8-1dc89d79fd26___RS_LB 3261.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/755c96cf-1bfa-4d35-9ad2-c04dba9f64c8___RS_LB 3262.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/919150bd-372b-44e0-a70e-a13e60dccbce___RS_LB 3263.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/a6f75dd1-c290-4116-be6a-e3c94e40aa2a___RS_LB 3265.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/01ad74ce-eb28-42c7-9204-778d17cfd45c___RS_LB 2669.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/489107b2-13f2-401b-b931-39ca7fd4be2b___RS_LB 2665.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/e0e15d89-8c3b-43f5-8617-136b720e39cd___RS_LB 2668.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/eb2bd15b-a92b-4302-98a1-bbc13a0f95bb___RS_LB 2671.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/13b1b19c-6720-4238-b384-4c86ea119ace___RS_LB 2765.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/1a674846-9d13-4a7f-ba03-8931c5dd3d2c___RS_LB 2768.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/2572d994-464a-461e-a0c8-597dc2229c09___RS_LB 2763.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/cbb653f7-72fd-4499-9d90-efdcd8c30077___RS_LB 2764.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/74d5c9b6-c99f-4ba2-8180-6c35bb5de820___RS_LB 2811.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/c268fd1d-0a6d-46f1-bbcd-81b4e79894e6___RS_LB 2808.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/c60533e5-8080-4c77-8ae4-7c1f2f7350cb___RS_LB 2810.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/c98f32e2-c52c-4a35-bc34-c32af5a18b07___RS_LB 2807.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/0acdc2b2-0dde-4073-8542-6fca275ab974___RS_LB 4857.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/1736a728-bae9-4133-bfca-60a7c3b6382c___RS_LB 4855.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/2e18248f-e251-44c0-b9a5-a198455f43ee___RS_LB 4858.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/3c20c90a-788c-4d06-acdb-107f695d901b___RS_LB 4856.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/29d49eb8-84d0-402d-9f00-c1149b8b3e16___RS_LB 3031.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/7220e643-be85-4361-8c34-f647ebed5dd8___RS_LB 3027.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/f87fce12-78df-4a8c-92ff-8c0b83cc82b9___RS_LB 3025.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/fc759d3f-64c7-4e45-9a0c-5a2f07fd1055___RS_LB 3030.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/790eb0ba-6878-4b5a-85fb-481aa37783a3___RS_LB 3872.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/c7853012-d4e6-4c0d-a14d-1220a0a6d3b1___RS_LB 3871.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/d1a28228-aae8-4348-b7a1-545dcf72d842___RS_LB 3875.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/f93b9fc8-469b-4a2f-8c0b-ca3d1a093185___RS_LB 3870.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/5e8203e5-b699-4d5a-acb5-08a5f06ee984___RS_LB 5291.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/80a20af8-9759-4c07-8d0c-d48edc9925c6___RS_LB 5289.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/b0eebb8f-c322-4b56-8897-2cc98d474440___RS_LB 5286.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/dd9b9122-fd29-4986-9dc3-330d4a48ccc3___RS_LB 5290.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/2a3e5c22-1e37-4ba0-8686-cf7482e4e8d3___RS_LB 4126.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/35c3e2fe-7b97-4137-adc6-aada45306425___RS_LB 4123.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/6af65e0d-c1a5-4a28-9ecb-19e7e6d91a70___RS_LB 4128.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/9cd7c33b-e29a-4300-ba19-183fb6c82aca___RS_LB 4124.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/19323229-6fdc-4231-bd3e-a46ddcff2111___RS_LB 3196.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/2269e6d9-bb15-49f1-8349-2f0126165960___RS_LB 3197.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/96a70433-9204-4a41-acad-d39932559068___RS_LB 3200.JPG",
+   13
+  ],
+  [
+   "Potato___Late_blight/b64e4518-147a-4a75-9f9b-33db8902aa12___RS_LB 3202.JPG",
+   13
+  ],
+  [
+   "Potato___healthy/14484ea5-9c34-427c-abe4-2743265aced0___RS_HL 4204.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/36bdc44c-96a4-40bb-86f7-63a91d706e96___RS_HL 4203.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/413bc2e9-eb2a-48fd-ba65-48b5121fd85c___RS_HL 4200.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/ec6e43d3-512d-4908-99f2-c9e2a0be54be___RS_HL 4202.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/07dfb451-4378-49d1-b699-33a5fc49ff07___RS_HL 5399.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/142fb983-2166-4a0f-b99b-a6c21e99987e___RS_HL 5398.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/57e24d88-fd01-4422-b8b5-d688d2296184___RS_HL 5401.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/ee052892-e935-4fbb-9344-4d23c57c6890___RS_HL 5400.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/1a1184f8-c414-4ead-a4c4-41ae78e29a82___RS_HL 1971.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/31a09d39-6791-4ecb-8f44-af2ed85dbd33___RS_HL 1970.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/aa04db6d-645f-4e8a-88dc-c9f9396f0800___RS_HL 1975.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/d287be3d-cac6-4485-8c31-674fb8b459be___RS_HL 1973.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/1106c3fc-92cb-41a6-a6c6-8f08b9b45108___RS_HL 1914.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/b89db9d3-a413-4781-bc88-5f6c2085ab5f___RS_HL 1909.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/d1752ed4-a0a7-4075-917d-205c0e785dcf___RS_HL 1911.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/de9a8669-d437-40f0-aa56-fe2d8276a1e0___RS_HL 1910.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/2dee1571-ef6b-40ef-8c46-334e89aad3f1___RS_HL 1950.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/71c06efe-089f-49b3-beed-095bd7640e32___RS_HL 1947.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/ef7005dc-1d44-412e-b858-145a2d7a6fa9___RS_HL 1951.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/f30983c0-6e20-43cc-8672-4622ca34c830___RS_HL 1949.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/3edf7c3f-73e0-439c-870d-76cfd7c3bc45___RS_HL 1859.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/683b04ad-7941-4819-9965-ba32c725eb22___RS_HL 1861.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/b8b7b98a-eb1a-4213-9b0b-aeef4df427e8___RS_HL 1858.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/ff700844-68ad-4e99-8427-58a39c07f817___RS_HL 1860.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/04481ca2-f94c-457e-b785-1ac05800b7ec___RS_HL 1930.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/8665efd2-fa3d-45f8-b1c0-746c99fb7d1e___RS_HL 1924.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/ad9b6cf4-e065-496d-91c7-5713ce14e19e___RS_HL 1926.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/fd92bd9c-02cb-4599-8673-9316159504a1___RS_HL 1927.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/00fc2ee5-729f-4757-8aeb-65c3355874f2___RS_HL 1864.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/56ae1281-5ee5-4f2a-8678-c2e4491878c6___RS_HL 1869.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/7e6c8297-dfe1-4826-826e-01d696cc263b___RS_HL 1863.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/af15ac00-67ff-4114-ace8-6dca48b94665___RS_HL 1865.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/5d505af8-3f73-4781-980c-a4a696a04550___RS_HL 1934.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/5ea316eb-10a2-42c0-b781-40d90356ccaa___RS_HL 1935.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/929107f1-4ae9-4dae-8319-ae7cf4804236___RS_HL 1932.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/c6204cb3-cd9f-4d7b-92a6-9773fe562cab___RS_HL 1939.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/54f86311-9d76-421b-b401-0b02f6e738a5___RS_HL 4172.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/8c1e1281-5937-4559-a02f-02817de6e122___RS_HL 4173.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/b0fe9fe9-52e7-40e4-b4c0-769f1a0c7fb9___RS_HL 4175.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/b925ad3e-fc49-497d-a6eb-115f0de20800___RS_HL 4170.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/170f1f57-0fd4-421f-9c82-3b1804be63ad___RS_HL 1771.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/c3caa84b-6078-4489-80ac-919d92d25ff7___RS_HL 1772.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/c548fe0e-21c2-4241-b806-1e438a1213bd___RS_HL 1770.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/d340704d-cc00-4068-bb8a-ae70840b7bfa___RS_HL 1773.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/369479a9-3c28-4d77-8731-9ae54e719af3___RS_HL 1785.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/3c0d6888-c7e1-4cf8-9c25-9a0b8c62ba72___RS_HL 1780.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/51a03694-82cd-43a5-9877-ddce42c1a5ad___RS_HL 1779.JPG",
+   14
+  ],
+  [
+   "Potato___healthy/f4be3632-42a1-415a-9f7e-1d5ecb9f49d7___RS_HL 1783.JPG",
+   14
+  ],
+  [
+   "Tomato___Early_blight/07409e2c-a730-4b11-b25e-31025bd63a91___RS_Erly.B 9578.JPG",
+   16
+  ],
+  [
+   "Tomato___Early_blight/141bbdef-ba38-49ed-9d6f-fe8d9de38e6f___RS_Erly.B 9579.JPG",
+   16
+  ],
+  [
+   "Tomato___Early_blight/5b71fe03-84fc-4866-9bf8-e557ce918c6e___RS_Erly.B 9580.JPG",
+   16
+  ],
+  [
+   "Tomato___Early_blight/90ede7d6-c45b-4a97-8e77-9e8f66206418___RS_Erly.B 9581.JPG",
+   16
+  ],
+  [
+   "Tomato___Leaf_Mold/16081062-4baf-4be7-923b-d197803282da___Crnl_L.Mold 8686.JPG",
+   17
+  ],
+  [
+   "Tomato___Leaf_Mold/662d31b7-5dcb-4af1-b645-20b83610d1ee___Crnl_L.Mold 8687.JPG",
+   17
+  ],
+  [
+   "Tomato___Leaf_Mold/66e2cbf6-82f1-49b6-9f62-727cfadef50a___Crnl_L.Mold 8684.JPG",
+   17
+  ],
+  [
+   "Tomato___Leaf_Mold/f3113f81-fff3-4b7d-b171-7315216c4d10___Crnl_L.Mold 8683.JPG",
+   17
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/301d485a-0ee5-46a8-89fd-30f8165dae18___Com.G_SpM_FL 8510.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/86f49ade-7fe5-4434-a5d6-c671a0ed2f6d___Com.G_SpM_FL 8508.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/c55448f3-e375-4b37-9b38-58ff1444b592___Com.G_SpM_FL 8509.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/ff0f33d2-9e9f-4b74-861d-a7e0fdf8d248___Com.G_SpM_FL 8511.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/4924c274-46b7-4ee6-8464-3274c179c9ba___Com.G_SpM_FL 1235.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/6875b9cf-a558-4b8f-9c85-bef8825c2a7a___Com.G_SpM_FL 1234.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/8a7c99f2-32eb-4599-9160-c7541fe82b40___Com.G_SpM_FL 1233.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/bf2d639c-f2a2-429a-9f37-61aaa399f773___Com.G_SpM_FL 1236.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/41f98f75-b866-4393-8b0b-f72c008fe250___Com.G_SpM_FL 8468.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/9ff87248-eb27-4f0c-93b9-87eb7a86c32c___Com.G_SpM_FL 8471.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/d4e45af9-ab53-4ed4-a534-ad10c11fb7c6___Com.G_SpM_FL 8469.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/e413f08a-f5dd-454a-b059-b81bb35c8509___Com.G_SpM_FL 8470.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/3046afbf-4a9a-41fb-a64f-3f9e75af08e7___Com.G_SpM_FL 1623.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/95379b0d-f7b4-4f9c-8eb4-860556e2eabb___Com.G_SpM_FL 1621.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/d962b1f4-8356-4c0b-ad76-da308c00a7b3___Com.G_SpM_FL 1622.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/d9d22025-cee6-4963-ac70-bfa8a7af30a2___Com.G_SpM_FL 1624.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/673bfa4d-54b5-4fee-86d3-1ada11adca40___Com.G_SpM_FL 9498.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/68ccf56d-4bd7-4538-ae95-9915fe8d5886___Com.G_SpM_FL 9500.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/6bbc0d44-dffc-49fe-873e-9dae229ce2e4___Com.G_SpM_FL 9497.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/71c23873-073d-4ab2-a608-edaff9d2cda1___Com.G_SpM_FL 9499.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/4ab2b9cc-67cd-417c-934c-5e76a4f9fa49___Com.G_SpM_FL 8845.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/989cea27-2233-441c-b2cc-f5166e3582f1___Com.G_SpM_FL 8846.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/e5515850-5866-4ba5-a049-347b14d0bc4f___Com.G_SpM_FL 8844.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/e888eec7-f355-4611-a28f-137f034474e5___Com.G_SpM_FL 8847.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/31b90f40-9316-44a5-b582-a9229ac63f6d___Com.G_SpM_FL 1754.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/90b28f76-c548-4b20-8421-fc0a6687f755___Com.G_SpM_FL 1756.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/b321a516-da4c-4e95-8239-a33b281e05d1___Com.G_SpM_FL 1755.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/e1bc3655-3e79-46d9-9e8b-38e600b73611___Com.G_SpM_FL 1753.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/91e2b204-69a4-4170-82bd-fb9cb8b1407d___Com.G_SpM_FL 8973.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/9a0314a7-fefe-4687-a357-4f72859627fd___Com.G_SpM_FL 8974.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/cb6ac171-2ca1-47cc-a295-4dbe7c9b2103___Com.G_SpM_FL 8975.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/ea3ad541-4a21-4c24-925d-0d98d7aaca44___Com.G_SpM_FL 8972.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/0dd13a82-3fd8-426b-8a87-4e695c92d3b2___Com.G_SpM_FL 8829.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/18663563-6c5e-43f0-bed8-72e7c9adc3ee___Com.G_SpM_FL 8831.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/4c9e9795-8252-4c13-84e8-1dd5564f6517___Com.G_SpM_FL 8828.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/7c3b7797-2ca7-4c35-af30-ca0ca7217015___Com.G_SpM_FL 8830.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/5e01fe8b-38c3-4de6-beee-50266519f226___Com.G_SpM_FL 9376.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/ae60fb8a-1774-422b-a141-869d27d74e22___Com.G_SpM_FL 9378.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/d9107a2d-f6be-441a-a0d1-3e6daf981704___Com.G_SpM_FL 9379.JPG",
+   18
+  ],
+  [
+   "Tomato___Spider_mites Two-spotted_spider_mite/fbd9d6dd-1141-42e8-84d5-7ca48ba4632c___Com.G_SpM_FL 9377.JPG",
+   18
+  ]
+ ],
+ "source_dataset_id": "pv19-capped-62b5b2119fb2",
+ "source_dataset_manifest_sha256": "62b5b2119fb2e12b004e59c5fdfdef29765e2e4bb9c1b6cf79aeb3155ba8f872",
+ "source_split": "train",
+ "group_safe": true,
+ "records": [
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-8981ca2c4be1ac049f14",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::15.0",
+   "path": "Apple___Cedar_apple_rust/a4e8bc4c-4522-4a7d-b7c9-70c4b220561e___FREC_C.Rust 3570.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "6bb069c0698307159e3703310ca33364ac6f9e5372a807db22a267cff0817c8f",
+   "size_bytes": 10074,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-8981ca2c4be1ac049f14",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::15.0",
+   "path": "Apple___Cedar_apple_rust/bc863aa7-2cb6-44f1-b060-4cd78237d7a3___FREC_C.Rust 3566.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "ba3d4a97a425614764f7c0fe29696d2dcb00abdbce3da77fd98982d300ae0b49",
+   "size_bytes": 10013,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-8981ca2c4be1ac049f14",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::15.0",
+   "path": "Apple___Cedar_apple_rust/e1140e29-f2c5-43ca-b69c-981f278d0b86___FREC_C.Rust 3569.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "ad3ef3f9d05a254aee69d38f4e797f420fe2d6ca2552f19bbd05818f0ab35d47",
+   "size_bytes": 10318,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-8981ca2c4be1ac049f14",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::15.0",
+   "path": "Apple___Cedar_apple_rust/ea119d19-1b3a-4767-af1d-e8b148a3bb8d___FREC_C.Rust 3579.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "0002811ffd5484e96fd125e098b166bdeb006a9d28e440afcc3fee6ed8c9f5b4",
+   "size_bytes": 10166,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-7a0d6bac64922a404f19",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::40.0",
+   "path": "Apple___Cedar_apple_rust/09239528-a0a0-4a2d-af03-c5d5f7a27710___FREC_C.Rust 4024.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "09a9da0bcb84871fb0aea227275aa0a0e40f9410785a4c9ba9148c17324be1c2",
+   "size_bytes": 12182,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-7a0d6bac64922a404f19",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::40.0",
+   "path": "Apple___Cedar_apple_rust/4e469367-da28-4b4b-a06e-18d64f0433bc___FREC_C.Rust 4014.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "33aa2edbf1d14a3d59e6674f83197d27dab98b2ef573b470040730a9d4038d5f",
+   "size_bytes": 10129,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-7a0d6bac64922a404f19",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::40.0",
+   "path": "Apple___Cedar_apple_rust/b845075b-dbb8-4b69-bec2-36e99cee7f3c___FREC_C.Rust 4038.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "72b11d558bfcb0e2d1c555360cf0caeaf8a6c04302b86420dfc2406832193fcf",
+   "size_bytes": 11435,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___Cedar_apple_rust",
+   "group_id": "pv-7a0d6bac64922a404f19",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___Cedar_apple_rust:::40.0",
+   "path": "Apple___Cedar_apple_rust/d46c67aa-e05c-48f7-9287-fbc727396c9e___FREC_C.Rust 4036.JPG",
+   "raw_class": "Apple___Cedar_apple_rust",
+   "sha256": "043c5c6c7cf094ba0e6dbc8ad459929fb17bb7a793060fc9889da01941d102b1",
+   "size_bytes": 10900,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/1477ac33-4284-4db3-9a91-dbd61e6183e3___RS_HL 8059.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "cd64ace19c7779c8b3fe558085bd1d2b5d7644e60c9527de908e98ee4b3ed362",
+   "size_bytes": 14210,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/2d7f4c07-f4f4-4589-aa82-49e05e5b253b___RS_HL 8056.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "0354269dda29a25ebecfa6a0af76af3dfe8d8ae078658e495c73f2d56174ff5a",
+   "size_bytes": 12521,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/3ecbb982-2844-4662-ad65-9a94fee38fa3___RS_HL 8060.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "6b0e07a5467c9f572e94fd97b00c1f5a6a26049e0630c6bfb91e00f090424233",
+   "size_bytes": 14780,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/5c320c7a-e164-43d0-adab-b966ff9e2c1a___RS_HL 8055.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "66073c6640c8a40286884a5f122508f4fc5d6857530d1c20e1bb153032aecc8d",
+   "size_bytes": 12601,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/8a311714-e680-4c68-8f3a-60f4bfc16ada___RS_HL 8062.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "1d02740ca7435e88b6376bcee8adda7bab3990c78002306d709c4bd7ce324b24",
+   "size_bytes": 12855,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/a09b0571-6876-487c-bf88-bb378dd4f0cc___RS_HL 8057.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "78105741c3596d69e935753dfbd934a5226b031f8d33e32210339c70cb3bee70",
+   "size_bytes": 13778,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/bfe9c599-e0d3-4ce6-8d8a-403df3d265cc___RS_HL 8058.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "ec289e864fbbf17d05e1c1665d4dc034dbfb5e1ef73d29f6a3f48491620ca323",
+   "size_bytes": 12515,
+   "split": "train"
+  },
+  {
+   "class_name": "Apple___healthy",
+   "group_id": "pv-e5a06538e61b07f51836",
+   "group_source": "leaf_id",
+   "leaf_id": "Apple___healthy:::238.0",
+   "path": "Apple___healthy/c1c192eb-1b3d-4fc5-b2c1-4eba9445536d___RS_HL 8061.JPG",
+   "raw_class": "Apple___healthy",
+   "sha256": "1202909ae61845005d0eab8ff8efce0044bd7c3b2bc9a69d5b00cba460747cb9",
+   "size_bytes": 14029,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-b72381460cbd8873ae7f",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::53.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/22259775-b4b5-4e64-a56f-b2be4260346d___FREC_Pwd.M 5133.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "d4be8260a878c69c10d7c21439f18e66bcdb75c52a6f02b568ba0fa5bf520e25",
+   "size_bytes": 16228,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-b72381460cbd8873ae7f",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::53.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/30f5084a-f9c5-4ba0-839f-c000a0ad0608___FREC_Pwd.M 5131.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "924fea76234a3a2965a7a3d2418dc414e1db14bd09af546cf7b65fa4f182a9eb",
+   "size_bytes": 19198,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-b72381460cbd8873ae7f",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::53.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/86aceb2d-8be8-4077-b79f-4178dcb970c7___FREC_Pwd.M 5132.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "95fe8e7c822c24ddbb7cb5538e304703ac88e171d25cf02838306d896ddac6e9",
+   "size_bytes": 21770,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/16842219-4e88-460a-bdf0-36bea112a8b6___FREC_Pwd.M 0343.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "5d5e3fa38338af086b75b311110d84b9da6be6c0b0dc246e1a93f36137a70ade",
+   "size_bytes": 7773,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/324c0529-3992-4015-91f2-1f8c8b87940f___FREC_Pwd.M 0323.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "c93f0e852a5947a80a360533d5a5b5d59437b61975781ec0af68873f6173b328",
+   "size_bytes": 6198,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/3928d15a-b841-4524-a5be-b34546c358f2___FREC_Pwd.M 0324.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "42285ba35dc17dd79b600dbebd986b69db18f2e557bfbba561ff124437266017",
+   "size_bytes": 7742,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/455bb24d-94f8-4914-8fdc-6e1fd8008e78___FREC_Pwd.M 0342.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "474512d758c66dad6406e812b60f36000b1ec7fb3f7a7385c0c3a2ec60a829d8",
+   "size_bytes": 6414,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/4bc900b6-d994-4356-920b-8e44574a4b4e___FREC_Pwd.M 0334.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "efb444f6a7b94501128a968adb3a78418a2600083c49844a1246a0ae2b39bfcc",
+   "size_bytes": 8062,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/4c823529-3235-4215-b13d-e74c16ea761a___FREC_Pwd.M 0331.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "e5ea49d0d65b82fd2ee313839020c33bea5832854c3495667ce866ba22e79127",
+   "size_bytes": 7993,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/5f7b4b75-2cb6-4deb-bd86-56f336357d83___FREC_Pwd.M 0340.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "3c82c762c47d4e7c9e5f19278d9f367fa051bd8766c9f738638f658d7c5caea4",
+   "size_bytes": 8405,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/6ca92452-78c5-422b-bec6-afe04e862a62___FREC_Pwd.M 0341.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "99a0d475ff781ceebd0d3b51bc0be42b741fbbf10636d3a5cdacf97328cf721c",
+   "size_bytes": 8889,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/776bd11d-e7d0-404c-a356-2168ab65bb7c___FREC_Pwd.M 0339.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "c1eff93544ffdd24738cc322191d75cb3dd684980e5baeca9ecb3ee60a2dbd49",
+   "size_bytes": 9521,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/874f041d-b07c-4fe3-a847-72bafd5f6075___FREC_Pwd.M 0326.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "c6a7901623003229a0e1434d748392bf601f658f3feed6f0d71de21c4d964cd0",
+   "size_bytes": 9097,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/91f27d9d-080a-4590-b72f-a85053f02d22___FREC_Pwd.M 0336.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "5b722aacb2476f86cd819150ded614089024c2376e1ec00176d2acb8963614f7",
+   "size_bytes": 9175,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/9772d53b-c48b-472c-86cb-24d0de2446a6___FREC_Pwd.M 0327.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "a939502e56eba9fdbd790a6a3fd4dfeef1e9a3b566435c382ed78c369eb23712",
+   "size_bytes": 12754,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/a0e5fb1a-b456-4f0c-9fa2-e7f9976c72c9___FREC_Pwd.M 0332.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "a8259c82da5457428572435b5dea5b757f8dfa5a2d488a71b4056a7e199cd359",
+   "size_bytes": 8027,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/a4922bd5-2911-478c-bb02-f801c834bfeb___FREC_Pwd.M 0337.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "99470b6fc238c06eb70136561f17503344c58c2805fa09d3e828cfd79f426ea7",
+   "size_bytes": 10911,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/b94ee91a-27c4-4eca-ab18-f1f6f7a0c495___FREC_Pwd.M 0335.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "1843ee8c5d98b199cfedf7159a1a16dc8847dc3301601601187002c08bf2151c",
+   "size_bytes": 7124,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/baf48061-d4ee-45b3-8806-d26ad15bb8ad___FREC_Pwd.M 0328.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "05bba1784d8a3cece4167b06fe03de55fcb9cf444c74a9a6f78b364f28635360",
+   "size_bytes": 10984,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/c6d3f6f6-479f-41f0-adb2-6674181932f2___FREC_Pwd.M 0330.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "99dab72d06086f339029660e8d63fd220c29d900141244fd6ce56fe6d71498e8",
+   "size_bytes": 9147,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/ca96a7a3-f34e-4796-86b7-b2826b760002___FREC_Pwd.M 0338.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "b7414496c9a0478b6ffdbbdedb21f29e77f32bc03dbab4aa21207da983c29b41",
+   "size_bytes": 10817,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/d1ba4536-2485-4096-a4a9-b29ee62d05d6___FREC_Pwd.M 0344.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "cb6447fa44c3b0b92c0cab7efd7e6a9c85765a82b88636a5e8841fb77442cc22",
+   "size_bytes": 8205,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/d5510570-6f71-4af0-9fda-07eee0e55442___FREC_Pwd.M 0333.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "8f091cbf8e898917b97ab985ad5575fdd35ea7a1130e3d2d01fd32dbb6c03a24",
+   "size_bytes": 8568,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/e5ca68e7-17cb-4aee-bf65-7abba2629a29___FREC_Pwd.M 0325.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "61312ff480389bbdddccce40622f459a17ee0ecb7e840b64341f1bcb86d5f37b",
+   "size_bytes": 8568,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___Powdery_mildew",
+   "group_id": "pv-67dfaf3a994642767daa",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___Powdery_mildew:::5.0",
+   "path": "Cherry_(including_sour)___Powdery_mildew/f5f49058-a1ed-4ea4-ab77-e588914b763e___FREC_Pwd.M 0329.JPG",
+   "raw_class": "Cherry_(including_sour)___Powdery_mildew",
+   "sha256": "df0ab74e816f55c7dfafd51b0493e5f8060e85a01bf8f313657c630f06add082",
+   "size_bytes": 10054,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/1de4d428-5a02-4774-811c-1634acc7a5f6___JR_HL 4216.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "3942bfa4b27bb1f6095be97ceef97b4314512209c373210ab17dd6c20f7a22dc",
+   "size_bytes": 14362,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/276ae5a6-460d-4a22-af95-0a4f8182610e___JR_HL 4222.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "1f73dd0526b2befbe3772c88624cbe52d7080e2494dca020e197bdb3ef4738e1",
+   "size_bytes": 15819,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/6b20c6d1-da8f-43c8-800a-2864976481d2___JR_HL 4218.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "bec8be4b86b82452ac2702aa53158df56fb5bcb6b744c5cd539df3c1d0585c1f",
+   "size_bytes": 16656,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/871dddc4-1a16-4ad6-9990-301fed42974f___JR_HL 4223.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "bf5240c9c918305a4c56d9b00e5ff3f7ed096ebd6d9a7159c997cfde1cca7da6",
+   "size_bytes": 16620,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/8afb6bdf-203d-44f9-bea7-0d7648505c50___JR_HL 4215.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "a185808f1abf2f2792788f6ceecefdafdf3750647d8d4f8c178309ebd7b08ac4",
+   "size_bytes": 19254,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/b101d58c-2db2-413a-b37e-cba6a8a1415a___JR_HL 4224.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "b86e2e7a2958f6f8b54aafaadd5d2d3ecd6d964866ba6b407b582321f4637228",
+   "size_bytes": 18557,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/c37f8678-ed86-42ab-9a8b-f4172d94bf1e___JR_HL 4220.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "5ef66f79a033c7005c230ce8382ee7a4993e86246ff22d9bb4cea51bd705afa9",
+   "size_bytes": 14876,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/d74cc406-6b82-4300-a21a-52a9c021cbb7___JR_HL 4219.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "03a54fe2b7f3ae6eea1932e9e104fd4b6f18955d598eef9c9d797af3fa91d0a3",
+   "size_bytes": 14306,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/f9b20931-a503-421f-a8d2-59fa99d0b41a___JR_HL 4221.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "fcbde3193af050a136cbbd190d76722e889cb36884ad813e80da0a3c61c761b5",
+   "size_bytes": 16757,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-c053927d3de21116970b",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::28.0",
+   "path": "Cherry_(including_sour)___healthy/fcaab4fb-6317-4cae-b798-238ef0e32c1a___JR_HL 4217.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "a5c23fb80aed593d523f46f1820c93da16cf3bb995cef7d23f29d16e8107b679",
+   "size_bytes": 19343,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/472fd482-aec7-4e73-86d1-7161f6a5024b___JR_HL 4178.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "8001c85a49e9bba489fc1ca21aca63964854d6ce21a654bf44fb34e143c59995",
+   "size_bytes": 15252,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/4ca16717-c27c-44e6-963b-160e16277ee1___JR_HL 4174.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "3be67f16b157ccec70e4bd0e21e3adc3764062b9c3918f676a7dd463730080bd",
+   "size_bytes": 17791,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/54dc1419-0abe-4289-9944-f087be1dadc8___JR_HL 4181.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "636460a6de4e8277683f7242b387cdc7fa18eb4b167978c3d15864eef44de0f7",
+   "size_bytes": 12163,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/69de380a-4fd8-4c50-bdff-a983495dcd8c___JR_HL 4175.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "d6b73aee03c1172e791bd445e7a04096f3743357710d21174352b3a57d4c73c7",
+   "size_bytes": 18741,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/9085e422-36a7-44fc-958b-5212f8a29c79___JR_HL 4173.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "62b01e076b25e74f120a5cfe6bc0ecbdb5f80fc5bb80cce1be69c58c28261451",
+   "size_bytes": 19535,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/917ccab2-935b-4eba-9f97-f81b24cbb523___JR_HL 4176.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "28b346c27d315fbe680b53128fdc136d0e544ab6d1caf37c74dc9bea707d3668",
+   "size_bytes": 19827,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/92da1286-a52e-4ceb-bb92-2a6eba988a14___JR_HL 4177.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "bf2c1e5d76e292f44aa4ef0fd42e57d4da10bb273ff59f152f5f41f1b2ffe107",
+   "size_bytes": 21119,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/9b15b47c-53e0-4873-b51c-d2b6e316d56c___JR_HL 4180.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "404fc59056be010bc4e8405e26d422e0cef88acc00104b0881985bd7168af129",
+   "size_bytes": 18435,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/b87b1766-d629-4bfb-b9d3-6d5fe336cfef___JR_HL 4182.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "41412caa0066dd04ea456090ac72a76b3302d251238dd583878e8e848c305fea",
+   "size_bytes": 16201,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-6938978575b1badecd1d",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::24.0",
+   "path": "Cherry_(including_sour)___healthy/c89bc3c2-97d5-4e38-a090-3ba121a17adf___JR_HL 4179.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "9d613cb2321782dd8f1286794be0d2fd7dea565b16a13c20e9466e6b44dafca7",
+   "size_bytes": 15679,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/1c45c880-bf5d-482a-a798-fd60e004096e___JR_HL 4133.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "94bfece067c8f90b926ef2c53494f586e6d8dc7b1365a769bb1b60dad2370c82",
+   "size_bytes": 15926,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/50a406be-c648-44a6-9021-98d6359f7aec___JR_HL 4134.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "abcdc0e670b90a9f94b464f0d6292fafe96e1864af413afe34429e1bc42148fe",
+   "size_bytes": 14055,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/68efa134-12ed-4417-add7-d1bd13f9f780___JR_HL 4137.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "19d7277532e7b41aadac6aa0db0efdd60144fcf6b1dd7cd5dc8d9546ae383fe5",
+   "size_bytes": 18431,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/6fbe0c51-55ce-4623-8c81-7cf7f52009db___JR_HL 4142.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "db90e711c42a955487f8f5a7098addb7a3bbcd065a842218417a26da326c94e5",
+   "size_bytes": 14784,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/7570daf6-28e6-4aee-8583-209160f0cd5e___JR_HL 4139.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "d52f5a4bf33361b0e290719df7b315b152f9f2fc520602975267e1a6bc4c3989",
+   "size_bytes": 14859,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/80bdbf48-7285-4c38-981b-7f754cd99834___JR_HL 4138.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "4db08d089eb336b0d4d40ce092ec6209d39473b71e3dbdfda06923cca3a45151",
+   "size_bytes": 14308,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/b740bd4d-0d9f-4949-b84d-56a0c952be72___JR_HL 4135.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "835d3780e1ba91ff674889624f6266e4166e2e1606153db45dcdc62a7ae18dfe",
+   "size_bytes": 16895,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/de350ce9-21b8-4b1f-a5ff-767eac8ba8f2___JR_HL 4136.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "a73ed401db2636ff8589e71ae6539271fe7b5958ec99e297ca701d7e02f5a3d9",
+   "size_bytes": 17461,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/efa7860b-6a2b-400e-8671-9a3226c08a37___JR_HL 4140.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "deaf3acd5356975ecd4dec90b1ad94d11fa18961c58fcc5a672b7e978cc8bdc3",
+   "size_bytes": 13840,
+   "split": "train"
+  },
+  {
+   "class_name": "Cherry___healthy",
+   "group_id": "pv-3a5f7a6daf204a7881f4",
+   "group_source": "leaf_id",
+   "leaf_id": "Cherry_(including_sour)___healthy:::20.0",
+   "path": "Cherry_(including_sour)___healthy/fe976376-e7b0-4052-831d-86e7c7a85c03___JR_HL 4141.JPG",
+   "raw_class": "Cherry_(including_sour)___healthy",
+   "sha256": "f3020f1a96565cd0d2d4b94bf55fe3da5d60c8f90043cb52be45f7afceddf925",
+   "size_bytes": 12258,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Black_rot",
+   "group_id": "pv-31ad4fe90b4934a6a9c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Black_rot:::101.0",
+   "path": "Grape___Black_rot/11f66442-5612-499c-a0a1-77f8c3668234___FAM_B.Rot 0727.JPG",
+   "raw_class": "Grape___Black_rot",
+   "sha256": "76644b76b70c4c2d95392ee3ddc409c7c179490a5393300fb7c0a79deea12aa9",
+   "size_bytes": 14414,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Black_rot",
+   "group_id": "pv-31ad4fe90b4934a6a9c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Black_rot:::101.0",
+   "path": "Grape___Black_rot/a6c171eb-ae85-42ec-b4c1-02fbb2b647ac___FAM_B.Rot 0728.JPG",
+   "raw_class": "Grape___Black_rot",
+   "sha256": "c93f93ab775f51559f04ca04a07ead5e25b8487362dcb676a8a0ce02fb25a77c",
+   "size_bytes": 15409,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Black_rot",
+   "group_id": "pv-31ad4fe90b4934a6a9c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Black_rot:::101.0",
+   "path": "Grape___Black_rot/ada23412-b2ee-46db-8958-5d7163acb03e___FAM_B.Rot 0725.JPG",
+   "raw_class": "Grape___Black_rot",
+   "sha256": "1eec728423392e95c080ad7f02462905b3333525edf2507da3765a9bab2459ee",
+   "size_bytes": 14238,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Black_rot",
+   "group_id": "pv-31ad4fe90b4934a6a9c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Black_rot:::101.0",
+   "path": "Grape___Black_rot/c5df7947-a457-42e9-990c-01372fbce8fc___FAM_B.Rot 0726.JPG",
+   "raw_class": "Grape___Black_rot",
+   "sha256": "136e0f96428530ba4ad6e1e0269091c61aae3ca061dee0117eff54bb607e3163",
+   "size_bytes": 14957,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-1907cf7a850549afcf81",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::18.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/2632746e-bfbd-4e25-bad1-16e66e6bedfb___FAM_L.Blight 1381.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "3ee4d19b8d3dd3871f69a3a518c33a99e003b2d773123b15e18b405e50cb1994",
+   "size_bytes": 19024,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-1907cf7a850549afcf81",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::18.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/33489f41-ac64-4a51-85a8-0a628c128b29___FAM_L.Blight 1384.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "a53d4ef6ebc554a9ae816d3fa326ef13185228d3fa2dc12dec687a20c090821a",
+   "size_bytes": 18480,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-1907cf7a850549afcf81",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::18.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/69641513-2bfe-4281-804d-303295c9e735___FAM_L.Blight 1382.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "3752b79e752a21c2ae5c39fbb0a1c9bd9e80c2f2f4c32f51a5914793c7690a2f",
+   "size_bytes": 19616,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-1907cf7a850549afcf81",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::18.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ef1eaf4e-50fa-48d2-8ff9-3f3953043409___FAM_L.Blight 1383.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "89204a59cb36f76abc3b9018da22383253d476b4a5f4694812708eb5a4619493",
+   "size_bytes": 19887,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-b7c433edaf56322e3a51",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::78.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/24dd13d4-ea7c-4abd-a41f-b99baadaf77c___FAM_L.Blight 1627.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "1b73c0da652fc8693deb33b5e310957054af0a41097ed79bf615fa917b95e09a",
+   "size_bytes": 18247,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-b7c433edaf56322e3a51",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::78.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/35d01fef-46ec-4a5e-ba92-f2a6c0485fda___FAM_L.Blight 1625.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "d35bc300977c06d483475880ab32235183f862add96e9551161439443ef07113",
+   "size_bytes": 18234,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-b7c433edaf56322e3a51",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::78.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5f23077a-5f9a-440c-89be-662b5011d0f7___FAM_L.Blight 1626.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "321fd91a769806db51257ab452cd921c3023ccc2a17601a0a367fbd3e9e1d432",
+   "size_bytes": 18078,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-b7c433edaf56322e3a51",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::78.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f0e644ee-aa1f-416c-a308-d2b9170986da___FAM_L.Blight 1624.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "708483e8a58fdeea6a2aae3428eb46412a631bc335e24eb669504e7e111d8321",
+   "size_bytes": 18247,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-6c583a7163d809c80be9",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::26.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/080bc705-65e6-4dbb-82b7-61925c2cd917___FAM_L.Blight 1416.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "dd4cdcbab93b83d337f672346a6a5c6b3a1ac8a6555f5af8530af4317a61a354",
+   "size_bytes": 19998,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-6c583a7163d809c80be9",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::26.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/155832d6-127a-4d8c-89f0-39ad289a25e7___FAM_L.Blight 1414.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "247a23e346a98777ab1a981a3e320c0ca05d5fa0b57ac630e68494a54a8505ba",
+   "size_bytes": 20155,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-6c583a7163d809c80be9",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::26.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/74290c7b-f998-46b0-9681-eacb44dbb022___FAM_L.Blight 1413.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "4b5b3d60c6e28b5e25b94c24b7e3319584da71ffcf11050536076ec194b0818c",
+   "size_bytes": 19896,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-6c583a7163d809c80be9",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::26.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d4c5388d-0347-4754-94ff-c54f9e3f4a49___FAM_L.Blight 1415.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "d228ac778cd3eed7c52f28442adee3b619567882a923d700519cb3784223ac82",
+   "size_bytes": 20106,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-ec026e3502bdb94a8698",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::22.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4028195c-2b48-437e-8661-64614b59af57___FAM_L.Blight 1399.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "7138c39e7ec5e3c5cc2d9c2bea1865b39467a3dcff4c6fb897cec881905446cb",
+   "size_bytes": 19039,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-ec026e3502bdb94a8698",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::22.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/581d1b61-8c59-4470-9985-6f4d53750aca___FAM_L.Blight 1398.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "0b07fa1cbb0f828eb7c77b6f89bfcf53087597d29e6e37986975201c74219c3d",
+   "size_bytes": 19445,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-ec026e3502bdb94a8698",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::22.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8624f4b8-5861-40a9-91a9-90db77e4cbd4___FAM_L.Blight 1397.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "6acda5c094a193dc0301b3af8603088dd3c86e016c73e8163d61fb677340063a",
+   "size_bytes": 19898,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-ec026e3502bdb94a8698",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::22.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e662234f-6ffa-447a-872a-95c8eeeec95f___FAM_L.Blight 1400.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "d76f979324b0a8040b1b2d7eeeb6532c6c27c86a772e70c3afd56109dc8a7650",
+   "size_bytes": 19209,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-d4fb0a7e0d160b28939f",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::173.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4195a89c-b6b5-47b7-95e2-537446ef3a68___FAM_L.Blight 4614.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "2e3282bd1e32cbde462eb553dfdb027d1de1b6ea73f5de82904774cdcec5c240",
+   "size_bytes": 16165,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-d4fb0a7e0d160b28939f",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::173.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5ed51a97-4772-420a-a99d-60ce1d7d96d7___FAM_L.Blight 4616.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "9bf721c13b5de29d7230a17930e473eb60e6a20314d32eb891da9d263ea1c27b",
+   "size_bytes": 16351,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-d4fb0a7e0d160b28939f",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::173.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/c40605b6-9ceb-4a9b-b86d-bd211ab0baed___FAM_L.Blight 4617.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "c26dffd5c984c2241fe39a1920de2255000dc91e7fef9edbaa1870bbd4d032b5",
+   "size_bytes": 16273,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-d4fb0a7e0d160b28939f",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::173.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e1b01c6e-aca3-4c23-928b-3fa8d3512ee2___FAM_L.Blight 4615.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "8abfb50a6b74f49df50b95e8d2a848347e0f2699eb56d637edcda8006bb646ee",
+   "size_bytes": 15099,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-25e1d739a5ef5c77f87b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::101.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/258600e9-8638-41b2-9d83-b2cbbecda02c___FAM_L.Blight 1717.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "f670fac0bc93fe101ed3e6963c590831ed3b36486e4f8adb2f19f6969ba5a31c",
+   "size_bytes": 18490,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-25e1d739a5ef5c77f87b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::101.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/2c278897-0113-4a1a-b243-1f44deb6e495___FAM_L.Blight 1716.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "b07dbb94626895bda2d620b034b54c30e45ed83d30e73ede78b103d0edcb219b",
+   "size_bytes": 19203,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-25e1d739a5ef5c77f87b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::101.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ab0d3eec-a4fa-49ad-a1b3-d7a76ad280a1___FAM_L.Blight 1718.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "2f307ee2973a3a6624a583ae3d39c2130501e3d804d292e3530b7e2451733847",
+   "size_bytes": 19313,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-25e1d739a5ef5c77f87b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::101.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ce301c49-341e-43da-830c-f5a2d3b00fd5___FAM_L.Blight 1719.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "c078f926c1c6c01a2369a1062ea8e435d70ef58743b59d5894873db8a7eaa664",
+   "size_bytes": 19871,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-db63c1d97a3399b21f7a",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::39.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/594fbe5a-a79c-44e6-a4b8-86064bcc5115___FAM_L.Blight 1465.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "8ac7dc9e9ebc6fabd852fb953a7b27a0af6bf82519c54c54a0796559ebfdccee",
+   "size_bytes": 15529,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-db63c1d97a3399b21f7a",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::39.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/61580347-a393-4521-bec9-dc195a94b7f2___FAM_L.Blight 1468.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "1b257752858b02f23ab8ae82fe95a3ee82e993ba7db858e12697883da67c922f",
+   "size_bytes": 17202,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-db63c1d97a3399b21f7a",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::39.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8d009d9c-3ce5-4420-83bd-0274c75accfd___FAM_L.Blight 1467.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "328012bd8259fbd790f9d86d4a05e27f508c7df1ff168cd2785977449ca00f1b",
+   "size_bytes": 17110,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-db63c1d97a3399b21f7a",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::39.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d5a4f65f-7d27-43cf-a4bd-d89e0b462f6c___FAM_L.Blight 1466.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "0c81c425176f56d44a20151e87f024cd8b2293423d7dfa9c5fd8c5ea1bc65d4a",
+   "size_bytes": 15123,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-92f075fd3d0180c5b91e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::92.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5e84f792-949c-4ff6-834a-d6df1ae7e024___FAM_L.Blight 1680.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "b051bdc5675d0f3681a14818a8cc16f2edc7f909bac76e64b6fd768c037b98f8",
+   "size_bytes": 18647,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-92f075fd3d0180c5b91e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::92.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/893f33d3-64f2-4e65-b07a-e29f02f8061c___FAM_L.Blight 1681.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "d86f9813a75e479edf2078258b1c82bc97ce17ab32e91bd35790d3223f9ee617",
+   "size_bytes": 18526,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-92f075fd3d0180c5b91e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::92.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/a0842718-9e1b-442d-a158-a2f62423aa8d___FAM_L.Blight 1682.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "868345cb178eafd7bd2322458d12b116d239657445922b4cb9e1bb018ea6c498",
+   "size_bytes": 17396,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-92f075fd3d0180c5b91e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::92.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/b0dfd9ec-fa42-4ca4-ad8b-76be947df409___FAM_L.Blight 1683.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "1efde21683d1b697716448e2284885538524d2c174c3972ac9911f841ec49ea3",
+   "size_bytes": 19206,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-2fe423898dc2a914797e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::260.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/38f5aaf4-d1c2-496f-b122-d2a0634d5290___FAM_L.Blight 4971.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "ab9d590d218aab74bb3691716ae53e512a72db77be6e696c92114cdca6d739ea",
+   "size_bytes": 20096,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-2fe423898dc2a914797e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::260.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/66611e37-7ab9-4b37-a6b2-57ac36024b78___FAM_L.Blight 4968.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "374dd73eae929b5013d135306046bb7449a1a19c62619777c92d63e44158c586",
+   "size_bytes": 15319,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-2fe423898dc2a914797e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::260.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/6ef1c3be-ce3e-416a-ba51-d7b6b53d3faf___FAM_L.Blight 4969.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "009e1e4c3b7e3a1ead016817438ff2e2dbe3f0d7ba6046bad318a64b19fb990b",
+   "size_bytes": 18022,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-2fe423898dc2a914797e",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::260.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e9bb7f70-2d50-4500-b068-3ac1dfd15b62___FAM_L.Blight 4970.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "fa0b61fd56a1a7800de349d24907d4c5fecba2602c7d7940749ca4a6fa5240f3",
+   "size_bytes": 20014,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-569643067a8ffbe5ae5b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::185.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/15aa16b2-7bcb-40b6-938e-be72cb6a9eb0___FAM_L.Blight 4662.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "a28bfe33a43241f50f3e725318705be92031df1baaecb31076453981958cdfa4",
+   "size_bytes": 16418,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-569643067a8ffbe5ae5b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::185.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/1def114d-13d9-4e06-ad6e-556fa4137a10___FAM_L.Blight 4665.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "ef7d4d789da69857f341646dc519da37860467db28ce99fceea22eb30859ce34",
+   "size_bytes": 15291,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-569643067a8ffbe5ae5b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::185.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ca3c21b5-b7ac-48d5-a8fe-543b7a26ac54___FAM_L.Blight 4663.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "96aeb97aeeb5976a7e8c7a02503a6949ff16ba0ed15d9ecad82cd845a6aedca8",
+   "size_bytes": 17415,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-569643067a8ffbe5ae5b",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::185.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ec3747c3-6cae-48d7-b166-0457d7f6ff26___FAM_L.Blight 4664.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "3ace109da69ea60286191e34ce3747f4f51363d379f212ad9d2d404f9879b808",
+   "size_bytes": 16815,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-836a47c844c0604bcfe4",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::209.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/7324704d-d384-4940-910d-55bbcfe55941___FAM_L.Blight 4759.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "4eece62709f8ae88f045c410468f4d2a7321905c7602e2336b954b4ff11d0419",
+   "size_bytes": 16085,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-836a47c844c0604bcfe4",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::209.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/8301c5c6-c999-45b1-b386-387e0a012c7e___FAM_L.Blight 4758.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "716e478603b96d81a07e9703bfccbb22bc81d6141b5059f77d081a5387d5b53e",
+   "size_bytes": 16360,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-836a47c844c0604bcfe4",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::209.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/a3f8d893-6d31-4115-bd62-c6af363e8f6c___FAM_L.Blight 4760.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "7a8d9cc2e887cc82e470f8a5b8ea9ae3667817cfc85cdb02a57d4260813e8ba0",
+   "size_bytes": 15872,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-836a47c844c0604bcfe4",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::209.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/cb428fa4-5b33-4ac6-b473-009c6f48a801___FAM_L.Blight 4761.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "fe048d132da35a6e38395575eb0523c0d7df3ee081262ff16cea3a2cbb5e7d54",
+   "size_bytes": 16417,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-00d6069b837e12d613ec",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::158.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/aa11694d-d464-421b-a5d5-2835100ee413___FAM_L.Blight 4554.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "62905e94af8dd75bad235afecce03a947d26fed572a9def674c5f679dcb3d193",
+   "size_bytes": 15433,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-00d6069b837e12d613ec",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::158.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e598b8fd-f1ba-4037-ac58-fd931bf8cd56___FAM_L.Blight 4557.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "5a55014e54979f5ed756e4edb385b1c3023d6d821590d22040ead4cb4cce4ec6",
+   "size_bytes": 17302,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-00d6069b837e12d613ec",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::158.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e8d45d85-2665-4276-8fa9-5ee550e9650d___FAM_L.Blight 4555.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "f12d80a87cd57917da543fe243a86abb3d9712c97091bbcb1809258b9d98c23d",
+   "size_bytes": 14107,
+   "split": "train"
+  },
+  {
+   "class_name": "Grape___Leaf_blight",
+   "group_id": "pv-00d6069b837e12d613ec",
+   "group_source": "leaf_id",
+   "leaf_id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot):::158.0",
+   "path": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f2b27716-3d46-41b3-9937-c0fd76b93be2___FAM_L.Blight 4556.JPG",
+   "raw_class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+   "sha256": "a3b5f92633f58e18c558742593abbc28a0808a76882ea618cb067e40ebae0c07",
+   "size_bytes": 16236,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-e3fb918813aab605300f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::16.0",
+   "path": "Potato___Early_blight/28f275f9-4dd9-479a-a005-ed442362840a___RS_Early.B 6790.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "0138bc78d63f6b8920a512584d8153ed1efec8bff3d966503df36d438d002515",
+   "size_bytes": 22029,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-e3fb918813aab605300f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::16.0",
+   "path": "Potato___Early_blight/38aa30f4-14d5-446f-80c3-ec60ce67ccc3___RS_Early.B 6789.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "63393d9d5243b0ffb57bd26a18661d5bc417df261f089c4499fe76bcf3c9e8d4",
+   "size_bytes": 21670,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-e3fb918813aab605300f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::16.0",
+   "path": "Potato___Early_blight/7a3630ed-a43c-4957-a604-1de05e8e7f32___RS_Early.B 6795.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "94f3d83839a4e2f64856b78bcfda888e8f8cb8c90addde4168c2b58f5593b03b",
+   "size_bytes": 20133,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-e3fb918813aab605300f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::16.0",
+   "path": "Potato___Early_blight/cb615e16-034f-465a-89a6-91e091698723___RS_Early.B 6796.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "950e83ef6ef401b494cf63315038a5a0e9b8f87e0f44d5a6baeef9d415438de5",
+   "size_bytes": 20551,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-b02660791168666be024",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::46.0",
+   "path": "Potato___Early_blight/0182e991-97f0-4805-a1f7-6e1b4306d518___RS_Early.B 7015.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "cc5b1868b8acb1e0f0c140e37a1fedf61c96fd4303d8259f90ce7563ca17f845",
+   "size_bytes": 19165,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-b02660791168666be024",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::46.0",
+   "path": "Potato___Early_blight/0d987d4a-26bc-4f74-8a16-12f8969dfed8___RS_Early.B 7013.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "f89990f5645f99c540ceb16c083d1f02f72be7b1903164dfadb6024854bd4ed2",
+   "size_bytes": 20055,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-b02660791168666be024",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::46.0",
+   "path": "Potato___Early_blight/3db185d7-7c05-42f9-b508-7a3883e50660___RS_Early.B 7011.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "6129f42e98737490e3d81fc266b4f40be519ca3f4f87b85edc1de70b5a92b13b",
+   "size_bytes": 21935,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-b02660791168666be024",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::46.0",
+   "path": "Potato___Early_blight/49f13f57-6881-4caa-839b-d93215ce1b77___RS_Early.B 7009.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "02b89f4a93a842a47068217792fcaca7442c27e504945864910f123c6ba14de4",
+   "size_bytes": 19344,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-703cc36545c17535786c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::77.0",
+   "path": "Potato___Early_blight/2fe81ef1-d7ec-4395-b071-c74d5beb4037___RS_Early.B 7242.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "762c573f38a40fc0a05d4fadaf2b5e7aeb71cc2a643d2dd2245d01e9b1eb8709",
+   "size_bytes": 19716,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-703cc36545c17535786c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::77.0",
+   "path": "Potato___Early_blight/d87f93fa-f6f8-49f1-b9e1-8f196f377df8___RS_Early.B 7244.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "ddd68c47f17f7dc247af1e7dc77e649d0f94bffe6c47f4da0568c5a9aa3baa4b",
+   "size_bytes": 18384,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-703cc36545c17535786c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::77.0",
+   "path": "Potato___Early_blight/dea6a6e4-cfb0-4c00-a0f7-bdd1e52f82e0___RS_Early.B 7246.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "63363b9875044ab7594f92be9a7e94ede61b9a0b7001cc8afed406cc540e56c3",
+   "size_bytes": 19420,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-703cc36545c17535786c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::77.0",
+   "path": "Potato___Early_blight/e786a4fe-5aa1-4da2-a16f-4ee82c56e317___RS_Early.B 7245.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "d40583ae3c8cf5a1a15f360a2eb929e0674f158aa680f28a52b21f86094b4a28",
+   "size_bytes": 18664,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-9938047746a66dbd12c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::132.0",
+   "path": "Potato___Early_blight/4bba904e-b4af-4a81-8252-b8d997bc5057___RS_Early.B 7695.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "ef28c0b7957e59298bd8fcec1ce1984efdaf1627df941d00cec641eb4011ee12",
+   "size_bytes": 19497,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-9938047746a66dbd12c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::132.0",
+   "path": "Potato___Early_blight/af0ee942-50f5-43a7-a9fe-486ba1f5f989___RS_Early.B 7700.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "9466b1f9691137d098cebe1786238ca6f2089499cf5143eaf3aeab46374d9ad7",
+   "size_bytes": 19680,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-9938047746a66dbd12c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::132.0",
+   "path": "Potato___Early_blight/d472b6e3-a00c-4b4e-b13a-cdababff9d24___RS_Early.B 7699.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "eb1d10a9f2560d9105809cf82c8e09a505693e0324c447d5d08450f3d602adf1",
+   "size_bytes": 19586,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Early_blight",
+   "group_id": "pv-9938047746a66dbd12c3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Early_blight:::132.0",
+   "path": "Potato___Early_blight/ec4e730c-02c1-4b4e-b9fc-9387e2f30a8a___RS_Early.B 7701.JPG",
+   "raw_class": "Potato___Early_blight",
+   "sha256": "9b58b6e7270b4b2ed9313c72464ee09a322228340afc3a6956cec911486ad17f",
+   "size_bytes": 18285,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-27d518ed82ab156b8a40",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::124.0",
+   "path": "Potato___Late_blight/55fa97d3-71b6-4487-9757-f9195f97ba5a___RS_LB 4047.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "e8c6e9be0b2ecfa6be2d0c6eda246656911c01cbffe90f6c01708cab27f65f5e",
+   "size_bytes": 12190,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-27d518ed82ab156b8a40",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::124.0",
+   "path": "Potato___Late_blight/5c1c57f6-6aff-4bba-892e-43ff02311c3f___RS_LB 4046.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3ef2cf030b2e9d0b3cbee6364b8ba5a51bad1495f2d1f66ac17512232237fabb",
+   "size_bytes": 12796,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-27d518ed82ab156b8a40",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::124.0",
+   "path": "Potato___Late_blight/9fa8f0a5-50ba-41d9-8132-077a807fcf86___RS_LB 4045.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "34e7f4cdb8ecc0352428f623d3a2675657f0335f066a394698b3a3e3f41e9b8d",
+   "size_bytes": 11443,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-27d518ed82ab156b8a40",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::124.0",
+   "path": "Potato___Late_blight/f5cf6151-96d1-49bb-af1b-fa6026d749e8___RS_LB 4048.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "ce641692f1a1df0b0b030881b896c58a05be9b2d9ba92407f143e4246f6e0bba",
+   "size_bytes": 12637,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-621b011e7c9e8da54e42",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::6.0",
+   "path": "Potato___Late_blight/62d41420-8e32-47d2-9a37-698c07f7dc16___RS_LB 2543.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "920304f62bcdffe6e52f5bafcd3b761fd68d9a3263fe68681f41642801a8d442",
+   "size_bytes": 18418,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-621b011e7c9e8da54e42",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::6.0",
+   "path": "Potato___Late_blight/9933b288-b5fe-4cbf-a9fa-58ef769b6f7c___RS_LB 2540.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3163bb851cd4dab5d7f73273ed4c758451e6edbeaafe7f8b8c3362eb92d1faf7",
+   "size_bytes": 16570,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-621b011e7c9e8da54e42",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::6.0",
+   "path": "Potato___Late_blight/b9474ec5-5a67-4207-98ec-5671c19f8f59___RS_LB 2545.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "05400506e601d5c44ff59f8c862abed578fc1b1bb7b723387a7319bb8cac003a",
+   "size_bytes": 18786,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-621b011e7c9e8da54e42",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::6.0",
+   "path": "Potato___Late_blight/f7936082-7315-477d-9710-529a7024b32d___RS_LB 2546.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "26f1c8649377b1b0e16958164fe4fa021c651513370c86502df2962a59a737e5",
+   "size_bytes": 17074,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-025ed783fc9bf66249a3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::96.0",
+   "path": "Potato___Late_blight/08ce9666-2dda-4fa8-8d58-55bb9fa19484___RS_LB 3318.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "b100769fc6c3749f2815300599f0b80dc4068c75862d9ecdd55d3b03d545066d",
+   "size_bytes": 19163,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-025ed783fc9bf66249a3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::96.0",
+   "path": "Potato___Late_blight/1dc41475-aa79-43f1-8648-0c8733d246ca___RS_LB 3319.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "63c187acc1ee2b8e222e36370da0e318a5c2c69bde310ead61b6a9a7314d766e",
+   "size_bytes": 18215,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-025ed783fc9bf66249a3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::96.0",
+   "path": "Potato___Late_blight/df6898c4-f3a1-4ff2-8f44-3bc45a8d4ec5___RS_LB 3316.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "9faa0d92f7dd9182cf0c62ee13001258b6b63cc7ddbe207d5ba211ef08069dbb",
+   "size_bytes": 17511,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-025ed783fc9bf66249a3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::96.0",
+   "path": "Potato___Late_blight/f083d357-23f8-45e6-9fac-87e5d0ab9cac___RS_LB 3317.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "6d51c178cfea14c41f1f86f1371ecf001c1b2fedc40c3ec61dc13729d5cfa941",
+   "size_bytes": 20189,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-57fada41024f66f16b2e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::235.0",
+   "path": "Potato___Late_blight/006cc01a-1888-4326-9b62-a65cb55a6377___RS_LB 5207.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "e2736064b143d773743c06c957b00ca5c2fc6c8dc81fc750e812732eac6bd6a8",
+   "size_bytes": 14157,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-57fada41024f66f16b2e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::235.0",
+   "path": "Potato___Late_blight/8ecb7cf3-9be5-4c3e-9714-2d5987987ad0___RS_LB 5205.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "dbfc16bd5b2be2cdf89a1b27e731538e189a7c2717d15ff6987756d1b2a58408",
+   "size_bytes": 15098,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-57fada41024f66f16b2e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::235.0",
+   "path": "Potato___Late_blight/d38d9e28-89a0-4650-8a2d-dc5e6744b3b9___RS_LB 5204.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "ba28a829e6b55a9720b1c387a455c99b2a517046cd191a840efc4c827b6bd671",
+   "size_bytes": 15895,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-57fada41024f66f16b2e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::235.0",
+   "path": "Potato___Late_blight/dac19eb9-e4e3-4ca1-8183-268b839901c4___RS_LB 5208.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "26e05705bcbe78683f7eaffd80ed5a4fc7806c421cfcc1e5206ee4752b16c317",
+   "size_bytes": 14870,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-0e08271ab437ea69572c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::14.0",
+   "path": "Potato___Late_blight/8bf37a1e-4535-4919-953e-69376f5be48a___RS_LB 2611.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "1ceacd3e162d991142d45956d793725de45f30091ab75db8c3476da1021b338c",
+   "size_bytes": 15870,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-0e08271ab437ea69572c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::14.0",
+   "path": "Potato___Late_blight/b9cde1e2-71f8-46a2-9fa4-0bfc7d16815f___RS_LB 2610.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "0da998eae3310e290744240877f36b1437f26df6834354efb59b19d94c73c2d0",
+   "size_bytes": 15887,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-0e08271ab437ea69572c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::14.0",
+   "path": "Potato___Late_blight/befda082-9237-4371-bd11-5d3513a365a5___RS_LB 2608.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3c67c1f7d06cefe82b1419f719539d4d35692b7a62bd38aa88f0ad1550182de4",
+   "size_bytes": 14745,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-0e08271ab437ea69572c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::14.0",
+   "path": "Potato___Late_blight/d1ae329b-19bc-40c3-afb1-404ecf3c98ee___RS_LB 2613.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "abe58d21a1db974b3a5af088cf63b971570e5ff035184230b56c2970b5153331",
+   "size_bytes": 14411,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-6efc13c53ddcc1fcb5ef",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::11.0",
+   "path": "Potato___Late_blight/551f74c9-3212-4a08-8f5e-a101b4195e1e___RS_LB 2593.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "130307e4c1e1f58c547dd73104ee22dff6fdf127be141546327346711d4907e0",
+   "size_bytes": 13906,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-6efc13c53ddcc1fcb5ef",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::11.0",
+   "path": "Potato___Late_blight/762a9cd9-7da1-4885-b677-870da1e41768___RS_LB 2592.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "2f435be796089ea3ad25117eaf0e0cd60b77274f432bdb1b44219cc5701dd12e",
+   "size_bytes": 14595,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-6efc13c53ddcc1fcb5ef",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::11.0",
+   "path": "Potato___Late_blight/b8b4064f-208a-46f9-b13e-5096fdbdb429___RS_LB 2591.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "c0660fb8394abc77c7f5999de90a1fdb4c6678c4de1c2c114a6c08914bead454",
+   "size_bytes": 15080,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-6efc13c53ddcc1fcb5ef",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::11.0",
+   "path": "Potato___Late_blight/ec958877-f479-4c8c-a947-3686039f8921___RS_LB 2587.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "7759e7c863e71774e9dbc0a1ceb6d256ca88c01a280cf231250c62d7222be003",
+   "size_bytes": 18352,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f8fda82e2d8fb61ebb9d",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::169.0",
+   "path": "Potato___Late_blight/09a215a1-a539-4635-a27f-232229ff11f4___RS_LB 4529.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "8e221e1fa39836e1cbf89d37d5e6d9c9471ba1368b29a010d11d8da6e556e7c9",
+   "size_bytes": 19356,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f8fda82e2d8fb61ebb9d",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::169.0",
+   "path": "Potato___Late_blight/1e0326a5-b208-447f-9d60-f788ec4b6e3f___RS_LB 4526.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "6d4da4e20bd9643f2fa089e4ca5be170c68ae7d4e686abd1e595c646a2ab5d3d",
+   "size_bytes": 21809,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f8fda82e2d8fb61ebb9d",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::169.0",
+   "path": "Potato___Late_blight/37dbf454-f189-4fae-a9e7-a088e7be3f2e___RS_LB 4530.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "785a59e561b9aaf8f7bf7d399fb3426cc7094f0b94f595f5bd7991226aebfb41",
+   "size_bytes": 13097,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f8fda82e2d8fb61ebb9d",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::169.0",
+   "path": "Potato___Late_blight/6e9fc91a-e20f-4431-bc54-8492d7ec788e___RS_LB 4527.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "16de1a93b223a4330b3662d50e4743686d12146a48aa6a34d6a46e9855acd28c",
+   "size_bytes": 14685,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f30308203c4e5ff64c81",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::141.0",
+   "path": "Potato___Late_blight/440adc9e-3f21-4373-ab9a-ed003c3588f3___RS_LB 4152.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "9ebabded9b9447ac597504ccc219bd7ac0a85f7be94738089d048ac7503fb9f7",
+   "size_bytes": 12741,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f30308203c4e5ff64c81",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::141.0",
+   "path": "Potato___Late_blight/53367bb0-3f38-4c90-a71d-05592341e4aa___RS_LB 4149.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "9bdfb5d55eeee99dd9178b6ae5784c0ea6bf0ab5707418fc5f33e2b88a33849c",
+   "size_bytes": 15637,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f30308203c4e5ff64c81",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::141.0",
+   "path": "Potato___Late_blight/df40ffa7-8efd-4720-8786-a30b9011dcfc___RS_LB 4150.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "4d3311942b3cc92b561540e853528bebaca22c005611d759dd08f98177b5b2c1",
+   "size_bytes": 13875,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f30308203c4e5ff64c81",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::141.0",
+   "path": "Potato___Late_blight/e2326741-ee59-4e3c-86bf-9e81ccf50b6b___RS_LB 4147.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "b7dae6e46acf8c0944e9d9fb30da28f7f363536c3de912b849189609a504583d",
+   "size_bytes": 13646,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a0cc4ba61ea7015a8ccc",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::88.0",
+   "path": "Potato___Late_blight/0651be8e-a2d1-4b8a-97b8-1dc89d79fd26___RS_LB 3261.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3c43d9831dcc494f27dd12096814f26d1ccaca66cac43d3284e969d2fee7bb1b",
+   "size_bytes": 18633,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a0cc4ba61ea7015a8ccc",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::88.0",
+   "path": "Potato___Late_blight/755c96cf-1bfa-4d35-9ad2-c04dba9f64c8___RS_LB 3262.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "db2b40f358aeb0c91be0889909cd69436f8f898a04850d968377b14d6a1ace37",
+   "size_bytes": 19141,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a0cc4ba61ea7015a8ccc",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::88.0",
+   "path": "Potato___Late_blight/919150bd-372b-44e0-a70e-a13e60dccbce___RS_LB 3263.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "eda24593228d98a559a19833755dd3fffa76df152a200f4a605864353f1fe28d",
+   "size_bytes": 18046,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a0cc4ba61ea7015a8ccc",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::88.0",
+   "path": "Potato___Late_blight/a6f75dd1-c290-4116-be6a-e3c94e40aa2a___RS_LB 3265.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "bca87360acb68bbd34f80ec2811092b87610126b81f7c3f414451b9da758c9d2",
+   "size_bytes": 17241,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-13e6e8618b59967b6b38",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::20.0",
+   "path": "Potato___Late_blight/01ad74ce-eb28-42c7-9204-778d17cfd45c___RS_LB 2669.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "4975349cb0ed34630ede27cba6b65ab67b4bc00c12bfbe344618fb194527ee56",
+   "size_bytes": 18586,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-13e6e8618b59967b6b38",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::20.0",
+   "path": "Potato___Late_blight/489107b2-13f2-401b-b931-39ca7fd4be2b___RS_LB 2665.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "575c718e63258925349f6e8e42c6578cd74326e1d2171c3acd0a8448b91cb668",
+   "size_bytes": 16898,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-13e6e8618b59967b6b38",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::20.0",
+   "path": "Potato___Late_blight/e0e15d89-8c3b-43f5-8617-136b720e39cd___RS_LB 2668.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "0e78ea3059c9a2d77ac5f5de6a2a1f6a2faeaf3f66ced6f2495ce48d356cafd2",
+   "size_bytes": 18035,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-13e6e8618b59967b6b38",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::20.0",
+   "path": "Potato___Late_blight/eb2bd15b-a92b-4302-98a1-bbc13a0f95bb___RS_LB 2671.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "fbb9b9ed9a17748eaf877f63d167d63390b7e284e72f2afa33b18f84a12e0131",
+   "size_bytes": 18041,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-426c2b6b92abe563dd95",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::31.0",
+   "path": "Potato___Late_blight/13b1b19c-6720-4238-b384-4c86ea119ace___RS_LB 2765.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3e93213376140a8d7ed40a9c5b423e718a25768af0c0edf06ebacadba55d572c",
+   "size_bytes": 17582,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-426c2b6b92abe563dd95",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::31.0",
+   "path": "Potato___Late_blight/1a674846-9d13-4a7f-ba03-8931c5dd3d2c___RS_LB 2768.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "13364833e65ff4c2925966e773d3149d5697c1cad9a288ba72e61ade6cb8be5a",
+   "size_bytes": 16969,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-426c2b6b92abe563dd95",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::31.0",
+   "path": "Potato___Late_blight/2572d994-464a-461e-a0c8-597dc2229c09___RS_LB 2763.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3acda86d9b766044d26211061721db0e57c849524d8e0030389199be33c1a417",
+   "size_bytes": 18416,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-426c2b6b92abe563dd95",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::31.0",
+   "path": "Potato___Late_blight/cbb653f7-72fd-4499-9d90-efdcd8c30077___RS_LB 2764.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "43fea0533c36872e39d8553fe0217a75c580fb1ad561df4d3697112d21c2d4fa",
+   "size_bytes": 16956,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-b726247a142bc1901434",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::37.0",
+   "path": "Potato___Late_blight/74d5c9b6-c99f-4ba2-8180-6c35bb5de820___RS_LB 2811.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "306d36d3455976e7ee490bbf000472d75871a9f16af50ab9776510fc40e76b09",
+   "size_bytes": 18397,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-b726247a142bc1901434",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::37.0",
+   "path": "Potato___Late_blight/c268fd1d-0a6d-46f1-bbcd-81b4e79894e6___RS_LB 2808.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "c3325f76ba659c5f43797442c340487b2f382c87606221cd02d489d333c42249",
+   "size_bytes": 19356,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-b726247a142bc1901434",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::37.0",
+   "path": "Potato___Late_blight/c60533e5-8080-4c77-8ae4-7c1f2f7350cb___RS_LB 2810.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "17fd6ad4f8e5f2e8e3cb3be5432d6a31f02e10303d468f3eb486f54ece541dac",
+   "size_bytes": 17896,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-b726247a142bc1901434",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::37.0",
+   "path": "Potato___Late_blight/c98f32e2-c52c-4a35-bc34-c32af5a18b07___RS_LB 2807.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "f1d9e2f806224717daeec412a6790840d0374a60208e44cdb44f725e68eff705",
+   "size_bytes": 16978,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f61e599c5e9b28f795f9",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::199.0",
+   "path": "Potato___Late_blight/0acdc2b2-0dde-4073-8542-6fca275ab974___RS_LB 4857.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "12ddeb393c76aa5491c8e2c8c5c841da748f1267c420beb92c8bfae4804959da",
+   "size_bytes": 17908,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f61e599c5e9b28f795f9",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::199.0",
+   "path": "Potato___Late_blight/1736a728-bae9-4133-bfca-60a7c3b6382c___RS_LB 4855.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "8fdd3b14b4359e08b1875b23d5e5f0493e6cc52f513c09eb741b6c4395d883d5",
+   "size_bytes": 18186,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f61e599c5e9b28f795f9",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::199.0",
+   "path": "Potato___Late_blight/2e18248f-e251-44c0-b9a5-a198455f43ee___RS_LB 4858.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "8168dda5a77c767342d5e4a67f5409558d82795d6b2bdfffd175e4ccc7bf5d73",
+   "size_bytes": 17452,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f61e599c5e9b28f795f9",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::199.0",
+   "path": "Potato___Late_blight/3c20c90a-788c-4d06-acdb-107f695d901b___RS_LB 4856.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "575156b45a5b4fad3612a14961d0e34ef6fe62e5ce195b54f83397acafd2283e",
+   "size_bytes": 18755,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f22bcdf047c515877b6c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::62.0",
+   "path": "Potato___Late_blight/29d49eb8-84d0-402d-9f00-c1149b8b3e16___RS_LB 3031.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "08d0907e3d490e00fb626631979479e02c63d0aaf3e1bd55f31f306a181a27f9",
+   "size_bytes": 14898,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f22bcdf047c515877b6c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::62.0",
+   "path": "Potato___Late_blight/7220e643-be85-4361-8c34-f647ebed5dd8___RS_LB 3027.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "27e52eeae53764187656b52ac704731521345515d070da0064f1f015ee82343d",
+   "size_bytes": 16351,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f22bcdf047c515877b6c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::62.0",
+   "path": "Potato___Late_blight/f87fce12-78df-4a8c-92ff-8c0b83cc82b9___RS_LB 3025.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "f1391989161303fb52df69d97924e4689362c7e919b993e9d27582e6f00604e1",
+   "size_bytes": 14815,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-f22bcdf047c515877b6c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::62.0",
+   "path": "Potato___Late_blight/fc759d3f-64c7-4e45-9a0c-5a2f07fd1055___RS_LB 3030.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "ca1842da3adf1c0c19e4d573587ec75dc00c93f83bdce241ad62a2e21ff82945",
+   "size_bytes": 15688,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a9a49edca38aed316eda",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::104.0",
+   "path": "Potato___Late_blight/790eb0ba-6878-4b5a-85fb-481aa37783a3___RS_LB 3872.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "fe4f66a3aa7a5f8fad1b1bc56c59bd9d5d2675d4b7bce80231961a395cf8ba03",
+   "size_bytes": 15073,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a9a49edca38aed316eda",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::104.0",
+   "path": "Potato___Late_blight/c7853012-d4e6-4c0d-a14d-1220a0a6d3b1___RS_LB 3871.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "f4faa517455170abeb65446ac068c9ceaba856c21dd31bde3cc7d69205005ee5",
+   "size_bytes": 15618,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a9a49edca38aed316eda",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::104.0",
+   "path": "Potato___Late_blight/d1a28228-aae8-4348-b7a1-545dcf72d842___RS_LB 3875.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "ebae091487ea3d673c26fdee6633cc18ef5e4694bbc8c954f8862a8e4a0ef5a5",
+   "size_bytes": 15060,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-a9a49edca38aed316eda",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::104.0",
+   "path": "Potato___Late_blight/f93b9fc8-469b-4a2f-8c0b-ca3d1a093185___RS_LB 3870.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "3b8e0511f6768b4fb89ebe52e5a3036d68f9e17603a5289155201ebecbabbf83",
+   "size_bytes": 13975,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-1b5d32ed77dd0da75377",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::243.0",
+   "path": "Potato___Late_blight/5e8203e5-b699-4d5a-acb5-08a5f06ee984___RS_LB 5291.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "7778dc4d1e33b28d85761f5bfdde5cde266a1e5990052f22cad3b14efa34cd31",
+   "size_bytes": 14006,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-1b5d32ed77dd0da75377",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::243.0",
+   "path": "Potato___Late_blight/80a20af8-9759-4c07-8d0c-d48edc9925c6___RS_LB 5289.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "0a9d1b484b664527e2fa9cb6bf5ae2d5a554b933846b4ee52c6c144c753e99f9",
+   "size_bytes": 15457,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-1b5d32ed77dd0da75377",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::243.0",
+   "path": "Potato___Late_blight/b0eebb8f-c322-4b56-8897-2cc98d474440___RS_LB 5286.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "c99bc2ca175a951ff6fdb48169687e5e253a7510458e818ec0ad72d231a7950b",
+   "size_bytes": 14592,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-1b5d32ed77dd0da75377",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::243.0",
+   "path": "Potato___Late_blight/dd9b9122-fd29-4986-9dc3-330d4a48ccc3___RS_LB 5290.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "ca57b6ae38a304ee970137dc785b379ecb3ddeb115a2cee69b07ea9bc2d67348",
+   "size_bytes": 14811,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-9bba5796d3d3f6684340",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::137.0",
+   "path": "Potato___Late_blight/2a3e5c22-1e37-4ba0-8686-cf7482e4e8d3___RS_LB 4126.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "4cd9ecf726d4dd85db8f86353bae6d98165ccf117e561204037577be21d226c4",
+   "size_bytes": 11020,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-9bba5796d3d3f6684340",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::137.0",
+   "path": "Potato___Late_blight/35c3e2fe-7b97-4137-adc6-aada45306425___RS_LB 4123.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "c55ee9ba98b39fecebca1123851c82fa82bf672d51f70ede9d47c5177142e98b",
+   "size_bytes": 11910,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-9bba5796d3d3f6684340",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::137.0",
+   "path": "Potato___Late_blight/6af65e0d-c1a5-4a28-9ecb-19e7e6d91a70___RS_LB 4128.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "562465202391d29540116ab37d08a2f3fc9196cff5a8370ec4fc1511585b4ea2",
+   "size_bytes": 13548,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-9bba5796d3d3f6684340",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::137.0",
+   "path": "Potato___Late_blight/9cd7c33b-e29a-4300-ba19-183fb6c82aca___RS_LB 4124.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "61b42029c7ec266b4908a73fe5ea598e4dad03d636dcdb8ab3d234eac4c34f65",
+   "size_bytes": 13976,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-2b5b2b94e215bc1c4f8c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::80.0",
+   "path": "Potato___Late_blight/19323229-6fdc-4231-bd3e-a46ddcff2111___RS_LB 3196.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "954445fc8d7114c39bc02e50fa72f658fc0700abff19d3464f157168c4533e55",
+   "size_bytes": 17817,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-2b5b2b94e215bc1c4f8c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::80.0",
+   "path": "Potato___Late_blight/2269e6d9-bb15-49f1-8349-2f0126165960___RS_LB 3197.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "85a8fa266d00a7b55331e80dc680ce79ce10a9d39000b75a869218ca69d5c9e8",
+   "size_bytes": 19662,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-2b5b2b94e215bc1c4f8c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::80.0",
+   "path": "Potato___Late_blight/96a70433-9204-4a41-acad-d39932559068___RS_LB 3200.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "027fe4f975a52ef32533b1b594e2d97d8e594f0186b1b9ebdba56dfb705dc912",
+   "size_bytes": 20002,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___Late_blight",
+   "group_id": "pv-2b5b2b94e215bc1c4f8c",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___Late_blight:::80.0",
+   "path": "Potato___Late_blight/b64e4518-147a-4a75-9f9b-33db8902aa12___RS_LB 3202.JPG",
+   "raw_class": "Potato___Late_blight",
+   "sha256": "e6918265a79546d4f1610ba31b7879b62e5319cecc8c1b99bede6d1d72d605bf",
+   "size_bytes": 17967,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-554d372f20fb48a4c6f3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::33.0",
+   "path": "Potato___healthy/14484ea5-9c34-427c-abe4-2743265aced0___RS_HL 4204.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "a0c43497abeebe5a1022e99315a9352943f156778e8a65a6e40f5ecf33f0ed08",
+   "size_bytes": 16643,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-554d372f20fb48a4c6f3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::33.0",
+   "path": "Potato___healthy/36bdc44c-96a4-40bb-86f7-63a91d706e96___RS_HL 4203.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "fb3e937b447382752f31804214040518a6af3cd4e230c13d6885830c852a1ec1",
+   "size_bytes": 17855,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-554d372f20fb48a4c6f3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::33.0",
+   "path": "Potato___healthy/413bc2e9-eb2a-48fd-ba65-48b5121fd85c___RS_HL 4200.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "a5eb55aca6e99b10719aac043f7fffbc87fea4156a4044f9e98b7af1f0a81f70",
+   "size_bytes": 17131,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-554d372f20fb48a4c6f3",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::33.0",
+   "path": "Potato___healthy/ec6e43d3-512d-4908-99f2-c9e2a0be54be___RS_HL 4202.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "b6da280f8bf18d3861a25ec172bb48ec8eadf2c1b52e64a867af720a598ce858",
+   "size_bytes": 15666,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-10fffbc4e7604fbd6779",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::35.0",
+   "path": "Potato___healthy/07dfb451-4378-49d1-b699-33a5fc49ff07___RS_HL 5399.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "5b8d8f9041f427aa28dcb6bc36b8e4d7a8c92d7b7a60905ab62c329a1024bd13",
+   "size_bytes": 20048,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-10fffbc4e7604fbd6779",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::35.0",
+   "path": "Potato___healthy/142fb983-2166-4a0f-b99b-a6c21e99987e___RS_HL 5398.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "786a7d203443a46a34b93bcb5f3bb520287c9dcd1f474bb3d5b47eebf4d7b13b",
+   "size_bytes": 20618,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-10fffbc4e7604fbd6779",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::35.0",
+   "path": "Potato___healthy/57e24d88-fd01-4422-b8b5-d688d2296184___RS_HL 5401.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "3e120ed724efb8dadd0f2198cf2aa11a4a5126346aacd998da346076a8cfb069",
+   "size_bytes": 21751,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-10fffbc4e7604fbd6779",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::35.0",
+   "path": "Potato___healthy/ee052892-e935-4fbb-9344-4d23c57c6890___RS_HL 5400.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "b582baab8f7d8252d0e2d36f1b8d7d2b8416f171e453fac4033f976608e944c4",
+   "size_bytes": 20519,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-38f50dbf4ae0cf0054d4",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::29.0",
+   "path": "Potato___healthy/1a1184f8-c414-4ead-a4c4-41ae78e29a82___RS_HL 1971.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "22a4b976ad6f7fc439abdbfa6ec4e0e4e5a713ddd1adb14dead55b2e4c0ae5fe",
+   "size_bytes": 19143,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-38f50dbf4ae0cf0054d4",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::29.0",
+   "path": "Potato___healthy/31a09d39-6791-4ecb-8f44-af2ed85dbd33___RS_HL 1970.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "54aad0a15c17ee2fa54775aac16f85aad8644d36897c40693bf6cf1f9fc56098",
+   "size_bytes": 22962,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-38f50dbf4ae0cf0054d4",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::29.0",
+   "path": "Potato___healthy/aa04db6d-645f-4e8a-88dc-c9f9396f0800___RS_HL 1975.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "65b065c500ba6aa2420a20df4a8d3ac2c891038e3b1987fa1026b920e51b5365",
+   "size_bytes": 16738,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-38f50dbf4ae0cf0054d4",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::29.0",
+   "path": "Potato___healthy/d287be3d-cac6-4485-8c31-674fb8b459be___RS_HL 1973.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "e64267e6ca7bbb8b367a9462dffd15cdcdafb9b7dc0005e01dedbb2ff72433ec",
+   "size_bytes": 17530,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-3b0406893ca07abfe0f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::21.0",
+   "path": "Potato___healthy/1106c3fc-92cb-41a6-a6c6-8f08b9b45108___RS_HL 1914.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "cd1ef2774e1af39ca7b1916188fb59d2ebef111dc86c9191810bc615dc442564",
+   "size_bytes": 23700,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-3b0406893ca07abfe0f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::21.0",
+   "path": "Potato___healthy/b89db9d3-a413-4781-bc88-5f6c2085ab5f___RS_HL 1909.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "90ff6e9232f91ba8f459b85baf4363d8e33e0f6b2deee5d3cee7a49cd4031f32",
+   "size_bytes": 24355,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-3b0406893ca07abfe0f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::21.0",
+   "path": "Potato___healthy/d1752ed4-a0a7-4075-917d-205c0e785dcf___RS_HL 1911.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "3a3849d90065b18371843ce005086215ca2dcc82187fd5356881c946a44af7f8",
+   "size_bytes": 23529,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-3b0406893ca07abfe0f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::21.0",
+   "path": "Potato___healthy/de9a8669-d437-40f0-aa56-fe2d8276a1e0___RS_HL 1910.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "19b06033c2e6ae81bc8012fae7541ae380f492d0758168992c15628540b15026",
+   "size_bytes": 21490,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-e9c96c9ece561bae2ffa",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::26.0",
+   "path": "Potato___healthy/2dee1571-ef6b-40ef-8c46-334e89aad3f1___RS_HL 1950.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "393b556bfdbca0629e8ef9db922eeea6f322ac7deb8bd8e80ba6503feee6e91f",
+   "size_bytes": 19247,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-e9c96c9ece561bae2ffa",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::26.0",
+   "path": "Potato___healthy/71c06efe-089f-49b3-beed-095bd7640e32___RS_HL 1947.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "c3a7f4edfc03af8fb2cbe5d88971408b2d93a24ae3d78732b41280bbd00d17f3",
+   "size_bytes": 20394,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-e9c96c9ece561bae2ffa",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::26.0",
+   "path": "Potato___healthy/ef7005dc-1d44-412e-b858-145a2d7a6fa9___RS_HL 1951.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "70dfad43f8d50501470c59af496fc9bca2f2280473d980d12fbaa1004f745d1e",
+   "size_bytes": 23400,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-e9c96c9ece561bae2ffa",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::26.0",
+   "path": "Potato___healthy/f30983c0-6e20-43cc-8672-4622ca34c830___RS_HL 1949.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "a8ed0c605480ff9881229a772583b5740ffb0b882846380454310ec2fb46a81d",
+   "size_bytes": 23365,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-796fec0961fee1f9938a",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::15.0",
+   "path": "Potato___healthy/3edf7c3f-73e0-439c-870d-76cfd7c3bc45___RS_HL 1859.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "0443835f56c9ac4a7b7b1bfa732d100dde58e6ccade0d5fc271772d1248d1314",
+   "size_bytes": 23878,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-796fec0961fee1f9938a",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::15.0",
+   "path": "Potato___healthy/683b04ad-7941-4819-9965-ba32c725eb22___RS_HL 1861.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "ee09db8f85a6d9e2780c0eb422fdc2a08ad5ce6d208f907665696d10cdee8e4d",
+   "size_bytes": 20748,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-796fec0961fee1f9938a",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::15.0",
+   "path": "Potato___healthy/b8b7b98a-eb1a-4213-9b0b-aeef4df427e8___RS_HL 1858.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "e90fa394857caaa3f4853bae3b3a57a1b424e12b1163ced5911e15e0be37fcfe",
+   "size_bytes": 20180,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-796fec0961fee1f9938a",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::15.0",
+   "path": "Potato___healthy/ff700844-68ad-4e99-8427-58a39c07f817___RS_HL 1860.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "73c70944c9e3a096b2d59439327a98c692cff8c40254f7fc35c765de48cb7ec5",
+   "size_bytes": 22214,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-098274f2f1c34ddd217f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::23.0",
+   "path": "Potato___healthy/04481ca2-f94c-457e-b785-1ac05800b7ec___RS_HL 1930.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "aed52452d81d81597b1bac54981bcae6952906110f7aa47be945a6a28f4a7e60",
+   "size_bytes": 21257,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-098274f2f1c34ddd217f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::23.0",
+   "path": "Potato___healthy/8665efd2-fa3d-45f8-b1c0-746c99fb7d1e___RS_HL 1924.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "2afe098c3ee7f6b6c4712ad7f2a60ee67023b682f691ee0d873dd79403a5ce6a",
+   "size_bytes": 23883,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-098274f2f1c34ddd217f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::23.0",
+   "path": "Potato___healthy/ad9b6cf4-e065-496d-91c7-5713ce14e19e___RS_HL 1926.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "b94dc423169dd43c35ede2a68ae1a306889473868526cacd6f50099ba33ab083",
+   "size_bytes": 24084,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-098274f2f1c34ddd217f",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::23.0",
+   "path": "Potato___healthy/fd92bd9c-02cb-4599-8673-9316159504a1___RS_HL 1927.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "f493f46d86663366b8e5c53176477ef177aa4604e6299577058c5125d4b86248",
+   "size_bytes": 21224,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-58578b50cf712fe8eb27",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::16.0",
+   "path": "Potato___healthy/00fc2ee5-729f-4757-8aeb-65c3355874f2___RS_HL 1864.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "1c057430715c288100b64ac6136b69f23f8708f92e7e4f0410ac16b110325946",
+   "size_bytes": 21345,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-58578b50cf712fe8eb27",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::16.0",
+   "path": "Potato___healthy/56ae1281-5ee5-4f2a-8678-c2e4491878c6___RS_HL 1869.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "a3caa0f0d7f152e91674649bf84e906b43fd438ee9dc3e08732a98518f58f597",
+   "size_bytes": 20724,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-58578b50cf712fe8eb27",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::16.0",
+   "path": "Potato___healthy/7e6c8297-dfe1-4826-826e-01d696cc263b___RS_HL 1863.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "cb7f24b3d93c1c4e7759d812c1f07a1b31e2d695082c2747d37c57ae9831c1d7",
+   "size_bytes": 23534,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-58578b50cf712fe8eb27",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::16.0",
+   "path": "Potato___healthy/af15ac00-67ff-4114-ace8-6dca48b94665___RS_HL 1865.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "21370ab6620a588a4bb9b6af20ae40929db42eebdd8aedf93cf68334a34e7393",
+   "size_bytes": 22560,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-bb29755c127988fe487e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::24.0",
+   "path": "Potato___healthy/5d505af8-3f73-4781-980c-a4a696a04550___RS_HL 1934.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "3ccd13d16aafa862722696f05ff26306118fe77d3f4c9665e11b85432809f0ff",
+   "size_bytes": 22619,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-bb29755c127988fe487e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::24.0",
+   "path": "Potato___healthy/5ea316eb-10a2-42c0-b781-40d90356ccaa___RS_HL 1935.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "459c285e78f6f682807bd6608832f6eac763a10d7991213eae5b1748934127d9",
+   "size_bytes": 21163,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-bb29755c127988fe487e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::24.0",
+   "path": "Potato___healthy/929107f1-4ae9-4dae-8319-ae7cf4804236___RS_HL 1932.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "dbc454d0272e14c3955bde82eeb84201dcf456c665eca4586cea0db4a95ba96e",
+   "size_bytes": 22739,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-bb29755c127988fe487e",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::24.0",
+   "path": "Potato___healthy/c6204cb3-cd9f-4d7b-92a6-9773fe562cab___RS_HL 1939.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "5368fa118326aaa886efc0ff065649a1f3fc89127ceeca38d3e604cd5f1a4cb6",
+   "size_bytes": 21661,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-83038c4227f108265a62",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::31.0",
+   "path": "Potato___healthy/54f86311-9d76-421b-b401-0b02f6e738a5___RS_HL 4172.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "ae8756beae5d897f2f0e359642385f55c59f1724435745be2cb29548b3a820f7",
+   "size_bytes": 18425,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-83038c4227f108265a62",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::31.0",
+   "path": "Potato___healthy/8c1e1281-5937-4559-a02f-02817de6e122___RS_HL 4173.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "8d4b8a14e52926fcd9b3220266790fbc25b57eeb309eff7c9697a3d6ce863f90",
+   "size_bytes": 17831,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-83038c4227f108265a62",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::31.0",
+   "path": "Potato___healthy/b0fe9fe9-52e7-40e4-b4c0-769f1a0c7fb9___RS_HL 4175.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "2096ec8d310892b74b8e7fec12ea767c5f128a86e1eb0d4bbdf5ef246993c4a2",
+   "size_bytes": 17448,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-83038c4227f108265a62",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::31.0",
+   "path": "Potato___healthy/b925ad3e-fc49-497d-a6eb-115f0de20800___RS_HL 4170.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "355b5b20d2adc2018b2484389c2997ef93e074ae13061a8709fef209bbec9d61",
+   "size_bytes": 20394,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-272f37d8523d376d4ce5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::6.0",
+   "path": "Potato___healthy/170f1f57-0fd4-421f-9c82-3b1804be63ad___RS_HL 1771.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "43c2666ad8304046ab8f03ae0e49637502ab3864030c215f4ece4816e088f988",
+   "size_bytes": 18647,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-272f37d8523d376d4ce5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::6.0",
+   "path": "Potato___healthy/c3caa84b-6078-4489-80ac-919d92d25ff7___RS_HL 1772.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "c33f80896152f9df6946b4fa23de37cb5854b9bfc8de3ecc64e3e1a4feedadc6",
+   "size_bytes": 19650,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-272f37d8523d376d4ce5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::6.0",
+   "path": "Potato___healthy/c548fe0e-21c2-4241-b806-1e438a1213bd___RS_HL 1770.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "b248838515e8dbd0f9a4deade3e18974e57b7ac82f1081681e8f2f1d21138b30",
+   "size_bytes": 20611,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-272f37d8523d376d4ce5",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::6.0",
+   "path": "Potato___healthy/d340704d-cc00-4068-bb8a-ae70840b7bfa___RS_HL 1773.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "c13fc411a63eaf28d0af0b22352a4bfd7f49855b7bb084928830a959fc2b3e9e",
+   "size_bytes": 19472,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-846344b9ae35498b7554",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::7.0",
+   "path": "Potato___healthy/369479a9-3c28-4d77-8731-9ae54e719af3___RS_HL 1785.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "756fa522d2bfa2bad0bf35cd0ef6b1b44686af2467a68dfbccaec27401bac24b",
+   "size_bytes": 21564,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-846344b9ae35498b7554",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::7.0",
+   "path": "Potato___healthy/3c0d6888-c7e1-4cf8-9c25-9a0b8c62ba72___RS_HL 1780.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "4e763dbfa5c183fa2aae930ddbcedb86273238ed806d141b5b8ee13a189ee907",
+   "size_bytes": 18055,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-846344b9ae35498b7554",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::7.0",
+   "path": "Potato___healthy/51a03694-82cd-43a5-9877-ddce42c1a5ad___RS_HL 1779.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "17a954f569f33792edc1ed260d1f85f8c03e3e9b1148931608a35f5c3cd3f0e9",
+   "size_bytes": 19021,
+   "split": "train"
+  },
+  {
+   "class_name": "Potato___healthy",
+   "group_id": "pv-846344b9ae35498b7554",
+   "group_source": "leaf_id",
+   "leaf_id": "Potato___healthy:::7.0",
+   "path": "Potato___healthy/f4be3632-42a1-415a-9f7e-1d5ecb9f49d7___RS_HL 1783.JPG",
+   "raw_class": "Potato___healthy",
+   "sha256": "4d34ce5b8506af0777ddba2bfc189ba0c18e28d26f1b5140ceec72538f991b61",
+   "size_bytes": 17245,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Early_blight",
+   "group_id": "pv-81c65f0e2885e8c97ca3",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Early_blight:::240.0",
+   "path": "Tomato___Early_blight/07409e2c-a730-4b11-b25e-31025bd63a91___RS_Erly.B 9578.JPG",
+   "raw_class": "Tomato___Early_blight",
+   "sha256": "11751e71eb7dcbf0420787c0fda6624c3988a241358ff8432d44f0ece7f56e94",
+   "size_bytes": 12605,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Early_blight",
+   "group_id": "pv-81c65f0e2885e8c97ca3",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Early_blight:::240.0",
+   "path": "Tomato___Early_blight/141bbdef-ba38-49ed-9d6f-fe8d9de38e6f___RS_Erly.B 9579.JPG",
+   "raw_class": "Tomato___Early_blight",
+   "sha256": "3314ccdda74aff658d2d3dccaf8f2ab7346381dec5a937195f3b9588c116ee21",
+   "size_bytes": 13820,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Early_blight",
+   "group_id": "pv-81c65f0e2885e8c97ca3",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Early_blight:::240.0",
+   "path": "Tomato___Early_blight/5b71fe03-84fc-4866-9bf8-e557ce918c6e___RS_Erly.B 9580.JPG",
+   "raw_class": "Tomato___Early_blight",
+   "sha256": "755d4955b1dd548d9bafb08394af1731e252dd414766f4531e9ef9dac691c22e",
+   "size_bytes": 13654,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Early_blight",
+   "group_id": "pv-81c65f0e2885e8c97ca3",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Early_blight:::240.0",
+   "path": "Tomato___Early_blight/90ede7d6-c45b-4a97-8e77-9e8f66206418___RS_Erly.B 9581.JPG",
+   "raw_class": "Tomato___Early_blight",
+   "sha256": "d3bb95ab77dcfc359a8079262e8ae4f65b2f01008d60269b5dff951695d19cca",
+   "size_bytes": 14638,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Leaf_Mold",
+   "group_id": "pv-d4ce7d6a914f4e355f54",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Leaf_Mold:::144.0",
+   "path": "Tomato___Leaf_Mold/16081062-4baf-4be7-923b-d197803282da___Crnl_L.Mold 8686.JPG",
+   "raw_class": "Tomato___Leaf_Mold",
+   "sha256": "64d25953af41a1a1eec1fe17e76284059fa039d64bf75216b40e656387acacb8",
+   "size_bytes": 18451,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Leaf_Mold",
+   "group_id": "pv-d4ce7d6a914f4e355f54",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Leaf_Mold:::144.0",
+   "path": "Tomato___Leaf_Mold/662d31b7-5dcb-4af1-b645-20b83610d1ee___Crnl_L.Mold 8687.JPG",
+   "raw_class": "Tomato___Leaf_Mold",
+   "sha256": "43d82a5aa8f667a99e8f36d3eb585c7077119e7e6e5a78b472db11c81bb1e157",
+   "size_bytes": 18849,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Leaf_Mold",
+   "group_id": "pv-d4ce7d6a914f4e355f54",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Leaf_Mold:::144.0",
+   "path": "Tomato___Leaf_Mold/66e2cbf6-82f1-49b6-9f62-727cfadef50a___Crnl_L.Mold 8684.JPG",
+   "raw_class": "Tomato___Leaf_Mold",
+   "sha256": "d0d0389d60d19f0d9af7b2a8b36593c021fb4b108a4a2773639bdb7f1aae5dab",
+   "size_bytes": 19484,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Leaf_Mold",
+   "group_id": "pv-d4ce7d6a914f4e355f54",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Leaf_Mold:::144.0",
+   "path": "Tomato___Leaf_Mold/f3113f81-fff3-4b7d-b171-7315216c4d10___Crnl_L.Mold 8683.JPG",
+   "raw_class": "Tomato___Leaf_Mold",
+   "sha256": "fda334d8d9b965b688b151b86aed2ec402879793e67b81f71a80dafa3e068782",
+   "size_bytes": 17844,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-521a26d0f09856060784",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::186.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/301d485a-0ee5-46a8-89fd-30f8165dae18___Com.G_SpM_FL 8510.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "ef07f3512b7ec8c431fad68665cde5fac93b3aa799be4d7f951d4ff20cb7645d",
+   "size_bytes": 18716,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-521a26d0f09856060784",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::186.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/86f49ade-7fe5-4434-a5d6-c671a0ed2f6d___Com.G_SpM_FL 8508.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "b14283507670efe69bd79883a6a12e54eb4710ce8057b14237b3088c8b954701",
+   "size_bytes": 18498,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-521a26d0f09856060784",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::186.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/c55448f3-e375-4b37-9b38-58ff1444b592___Com.G_SpM_FL 8509.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "af5e26a7561a254a137afb53be7a00a25e96ef492081086e17de7be6a754f34a",
+   "size_bytes": 19385,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-521a26d0f09856060784",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::186.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/ff0f33d2-9e9f-4b74-861d-a7e0fdf8d248___Com.G_SpM_FL 8511.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "99b773db97414b68c88dbf768b68344e9f3a3aef2d872de5cccbf479c4511155",
+   "size_bytes": 17698,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-c2a1969be6fca6858165",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::26.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/4924c274-46b7-4ee6-8464-3274c179c9ba___Com.G_SpM_FL 1235.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "f6a621818f6e00438a317ee32923b1e24c2641e46e03aa2aa66d825177402be2",
+   "size_bytes": 23789,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-c2a1969be6fca6858165",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::26.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/6875b9cf-a558-4b8f-9c85-bef8825c2a7a___Com.G_SpM_FL 1234.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "08fe8b2dbe905e4ba199647b7b49d1a5e9c3f44621937bcdcc80773ec02f825c",
+   "size_bytes": 19732,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-c2a1969be6fca6858165",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::26.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/8a7c99f2-32eb-4599-9160-c7541fe82b40___Com.G_SpM_FL 1233.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "c078c1ddb0c1bd668f2cffad9380e8570c7ece1cbb22720506b648eda54980c2",
+   "size_bytes": 22885,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-c2a1969be6fca6858165",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::26.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/bf2d639c-f2a2-429a-9f37-61aaa399f773___Com.G_SpM_FL 1236.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "4a352c2efd5d22e8dd19b0e9275a99d9de7aab7082c7f9edb7ff28ff9cbe51fe",
+   "size_bytes": 22501,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-7f5774aac922c10988c4",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::176.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/41f98f75-b866-4393-8b0b-f72c008fe250___Com.G_SpM_FL 8468.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "52870b1fea918b944b099ed18a86a82dfc7636541fd58bcbaae693df6df5856f",
+   "size_bytes": 16051,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-7f5774aac922c10988c4",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::176.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/9ff87248-eb27-4f0c-93b9-87eb7a86c32c___Com.G_SpM_FL 8471.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "302b9ccfb410478c5da0f457dff18b6f43a03f52daff34a5df330fafbe48df8b",
+   "size_bytes": 18439,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-7f5774aac922c10988c4",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::176.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/d4e45af9-ab53-4ed4-a534-ad10c11fb7c6___Com.G_SpM_FL 8469.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "53af741bf1671aa4b0cc9498c97e123c02c66381f31a424fd58eb49fc0f62b4d",
+   "size_bytes": 19358,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-7f5774aac922c10988c4",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::176.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/e413f08a-f5dd-454a-b059-b81bb35c8509___Com.G_SpM_FL 8470.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "7b6d167b39572ea2d6a6fd72d250c11624640cd0c342d75db45506b2613146cc",
+   "size_bytes": 17839,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-8fa553bf0e00a49cf5f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::122.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/3046afbf-4a9a-41fb-a64f-3f9e75af08e7___Com.G_SpM_FL 1623.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "5be4576138db68177b57ef42fe4d52b64b26f230391640ae52aeb87b84112980",
+   "size_bytes": 22242,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-8fa553bf0e00a49cf5f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::122.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/95379b0d-f7b4-4f9c-8eb4-860556e2eabb___Com.G_SpM_FL 1621.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "1dfe0610e0b24e9ec6508a053e9c4e59340cbe6d4670a8dfca7491496a345114",
+   "size_bytes": 21880,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-8fa553bf0e00a49cf5f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::122.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/d962b1f4-8356-4c0b-ad76-da308c00a7b3___Com.G_SpM_FL 1622.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "96c6f30ab0375a14d8913905c94cb2f4a84086db5e95270edf52f9a5af62bd36",
+   "size_bytes": 22425,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-8fa553bf0e00a49cf5f5",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::122.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/d9d22025-cee6-4963-ac70-bfa8a7af30a2___Com.G_SpM_FL 1624.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "0fda787cdc0e1c2a3d692957150a88918809092d6349cc897e21647d56d01853",
+   "size_bytes": 22632,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-4503232a9860e6cd254e",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::380.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/673bfa4d-54b5-4fee-86d3-1ada11adca40___Com.G_SpM_FL 9498.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "336d7156426e4c89ef8b0c866352eb715fb30f802007c5c7438630c8675ad2ad",
+   "size_bytes": 17203,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-4503232a9860e6cd254e",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::380.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/68ccf56d-4bd7-4538-ae95-9915fe8d5886___Com.G_SpM_FL 9500.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "bf0dce19a1c5e423aaf393399388ef064086ec3b7d5d9846618db8839f0afad3",
+   "size_bytes": 16562,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-4503232a9860e6cd254e",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::380.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/6bbc0d44-dffc-49fe-873e-9dae229ce2e4___Com.G_SpM_FL 9497.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "f307c7f2aed63c5301821dc504b6bec288dc075b4e575c9db75066715ceb6ff1",
+   "size_bytes": 16151,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-4503232a9860e6cd254e",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::380.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/71c23873-073d-4ab2-a608-edaff9d2cda1___Com.G_SpM_FL 9499.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "b4448599e9a14e35c3aba3239e6aa7d1cc83f7a41523d728b8564b5c6cd4b85b",
+   "size_bytes": 15581,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-18e73320d2448b8f9e97",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::270.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/4ab2b9cc-67cd-417c-934c-5e76a4f9fa49___Com.G_SpM_FL 8845.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "ce40a9cd4b1e7e918202610dc44e852aaf39639c2cc977f69ba67fd549a8bab7",
+   "size_bytes": 20036,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-18e73320d2448b8f9e97",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::270.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/989cea27-2233-441c-b2cc-f5166e3582f1___Com.G_SpM_FL 8846.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "55c628289a7771b263c481d0ece14f17b7e371c3ede44ec5f35ac48932d3f3a0",
+   "size_bytes": 20898,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-18e73320d2448b8f9e97",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::270.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/e5515850-5866-4ba5-a049-347b14d0bc4f___Com.G_SpM_FL 8844.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "4f5c4b535013968c0b0ac95baef32dc20b3c5ed2ea2a80d278454c9968f33b65",
+   "size_bytes": 19161,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-18e73320d2448b8f9e97",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::270.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/e888eec7-f355-4611-a28f-137f034474e5___Com.G_SpM_FL 8847.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "e4d49b7f0f1eb58504adb85acfc365e5bac7160f818f0752c4a8cd3803e823ef",
+   "size_bytes": 20372,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-1c78654a6bae6c14a2d7",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::155.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/31b90f40-9316-44a5-b582-a9229ac63f6d___Com.G_SpM_FL 1754.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "8b4037880eddbf3e2215a854f7b975a6877a52335dbb594dd8c4a45ba770137e",
+   "size_bytes": 21271,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-1c78654a6bae6c14a2d7",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::155.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/90b28f76-c548-4b20-8421-fc0a6687f755___Com.G_SpM_FL 1756.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "7197ebeb31570424474d7fef62ddb424abcb1c8dbd815e741580c80fc2fb1498",
+   "size_bytes": 22264,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-1c78654a6bae6c14a2d7",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::155.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/b321a516-da4c-4e95-8239-a33b281e05d1___Com.G_SpM_FL 1755.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "80c6a57c4a2ae6816a21c669498b78778c502a0e1770dc5771ed02aea3d89f62",
+   "size_bytes": 23598,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-1c78654a6bae6c14a2d7",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::155.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/e1bc3655-3e79-46d9-9e8b-38e600b73611___Com.G_SpM_FL 1753.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "84bc083b87d6151a1b2e2fde835551b4bb1de6a47edaaf3d9edc74dd1ed8a982",
+   "size_bytes": 21867,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-2cd1755b9a0b3626b2e9",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::302.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/91e2b204-69a4-4170-82bd-fb9cb8b1407d___Com.G_SpM_FL 8973.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "af0fe88c209819cd49b9b4c04644868773fae15b27577aa6d23ac8c1112221cf",
+   "size_bytes": 22546,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-2cd1755b9a0b3626b2e9",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::302.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/9a0314a7-fefe-4687-a357-4f72859627fd___Com.G_SpM_FL 8974.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "f273680aa5dd32cc15b05af685b5f4b1a076dbf9027fe8f80f6d34e140c06d13",
+   "size_bytes": 22712,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-2cd1755b9a0b3626b2e9",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::302.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/cb6ac171-2ca1-47cc-a295-4dbe7c9b2103___Com.G_SpM_FL 8975.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "6531a7bcd1b6a6a521367e536350274d10a602aeac31400db8d2152d6bfbc660",
+   "size_bytes": 22759,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-2cd1755b9a0b3626b2e9",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::302.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/ea3ad541-4a21-4c24-925d-0d98d7aaca44___Com.G_SpM_FL 8972.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "cd230caeb93db5167d375302517958ac2fdbaecb50c4014732b1e0ec134c5d7c",
+   "size_bytes": 20915,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f2fcddee4e6a44153a13",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::266.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/0dd13a82-3fd8-426b-8a87-4e695c92d3b2___Com.G_SpM_FL 8829.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "f3a8ed10381b39ce2b926395f3375ecb4edf3ca5357101562abba6ad2facbda2",
+   "size_bytes": 21889,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f2fcddee4e6a44153a13",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::266.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/18663563-6c5e-43f0-bed8-72e7c9adc3ee___Com.G_SpM_FL 8831.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "0161218bf6519e3be6e495959e348ec334f28dd08d1f71c7e893aa38f1b7a79d",
+   "size_bytes": 21790,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f2fcddee4e6a44153a13",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::266.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/4c9e9795-8252-4c13-84e8-1dd5564f6517___Com.G_SpM_FL 8828.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "c80b0c4537f0202c1b465cef17dd657fa29987e52628ef6293cbeef17bb5cba4",
+   "size_bytes": 20442,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f2fcddee4e6a44153a13",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::266.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/7c3b7797-2ca7-4c35-af30-ca0ca7217015___Com.G_SpM_FL 8830.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "78641ed804c2999efb21430bbc33ce0bd4442bb3bfcfd60352fa76fd316f4bea",
+   "size_bytes": 20876,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f27c03ae0e722418fa73",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::350.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/5e01fe8b-38c3-4de6-beee-50266519f226___Com.G_SpM_FL 9376.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "4cddfc7749f9d40e9c9c951e9d908ec265eb9b764ccb43d2e049264ca1f7f2ea",
+   "size_bytes": 17984,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f27c03ae0e722418fa73",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::350.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/ae60fb8a-1774-422b-a141-869d27d74e22___Com.G_SpM_FL 9378.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "0c3843358f8c9ed399ea8659a6d57bbd593a8cb26540da577bd7b15f36a9d08c",
+   "size_bytes": 18682,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f27c03ae0e722418fa73",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::350.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/d9107a2d-f6be-441a-a0d1-3e6daf981704___Com.G_SpM_FL 9379.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "8d038298f5e412026cc8114156745735882e7f07f8a1fc89d815255fbe652e6c",
+   "size_bytes": 19527,
+   "split": "train"
+  },
+  {
+   "class_name": "Tomato___Spider_mites",
+   "group_id": "pv-f27c03ae0e722418fa73",
+   "group_source": "leaf_id",
+   "leaf_id": "Tomato___Spider_mites Two-spotted_spider_mite:::350.0",
+   "path": "Tomato___Spider_mites Two-spotted_spider_mite/fbd9d6dd-1141-42e8-84d5-7ca48ba4632c___Com.G_SpM_FL 9377.JPG",
+   "raw_class": "Tomato___Spider_mites Two-spotted_spider_mite",
+   "sha256": "a8c08d750c1a349151a0bbfa5e19785be762e70c69985b67d1e1722b7d578b9b",
+   "size_bytes": 18752,
+   "split": "train"
+  }
+ ]
+}

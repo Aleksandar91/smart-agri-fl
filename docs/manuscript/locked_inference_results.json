@@ -1,0 +1,2873 @@
+{
+  "plan": "docs/experiment_protocol/locked_inference_plan.md",
+  "plan_amendment": "2026-09-08 (1) F2a/F2b/F2c/F3.1\u2013F3.4 use partition-seed means (n=5). (2) Secondary \u03b1-vs-monopoly and qMc dose analysis. (3) Secondary LMM specification audit (job intercept, attack_job, collinearity, paired-harm); Table 10 protocol formula unchanged. (4) 2026-09-09 aggregator own-baseline source harm (Table 7). (5) 2026-09-10 visibility-gap arithmetic and source-to-target confusion. See locked_inference_plan.md.",
+  "rng_seed": 20260824,
+  "n_bootstrap": 10000,
+  "targeted_coding": "targeted=1 iff the class is the locked label-flip source in that job",
+  "tests": [
+    {
+      "family": "F1",
+      "id": "F1.1",
+      "comparison": "FedProx - FedAvg, alpha=0.1, E=1, clean",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": 0.05771075814006508,
+      "sd_diff": 0.024559048631105362,
+      "cohens_dz": 2.3498775952978606,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.039006766729839534,
+        0.07641474955029062
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F1",
+      "id": "F1.2",
+      "comparison": "FedProx - FedAvg, alpha=0.5, E=1, clean",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": 0.014205566130683333,
+      "sd_diff": 0.02290985463194696,
+      "cohens_dz": 0.6200635647366434,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.002347690610657982,
+        0.03507618539986392
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F1",
+      "id": "F1.3",
+      "comparison": "FedProx - FedAvg, alpha=IID, E=1, clean",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": -0.005069079330626036,
+      "sd_diff": 0.0074776011328995026,
+      "cohens_dz": -0.6779018084186657,
+      "permutation_p": 0.3125,
+      "wilcoxon_p": 0.22491588401596185,
+      "boot_ci95": [
+        -0.011343962757606584,
+        0.0004695401704839952
+      ],
+      "n_positive": 2,
+      "n_negative": 3,
+      "n_zero": 0,
+      "all_same_sign": false,
+      "notes": "",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.3125,
+      "reject_0.05": false
+    },
+    {
+      "family": "F1b",
+      "id": "F1b.1",
+      "comparison": "FedAvg E=1 clean, alpha=0.1 - IID",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": -0.26971116862751254,
+      "sd_diff": 0.07858168490961226,
+      "cohens_dz": -3.4322395725892734,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        -0.3387179819190198,
+        -0.21468286532569195
+      ],
+      "n_positive": 0,
+      "n_negative": 5,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Paired by seed list, not by identical image assignment.",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.125,
+      "reject_0.05": false
+    },
+    {
+      "family": "F1b",
+      "id": "F1b.2",
+      "comparison": "FedAvg E=1 clean, alpha=0.5 - IID",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": -0.0551884873879535,
+      "sd_diff": 0.03234736451536708,
+      "cohens_dz": -1.7061200569133048,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        -0.08018144756310826,
+        -0.030195527212798744
+      ],
+      "n_positive": 0,
+      "n_negative": 5,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Paired by seed list, not by identical image assignment.",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.125,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2a",
+      "id": "F2a.1",
+      "comparison": "FedAvg flip 1.0 source harm vs 0, alpha=0.1",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": 0.5978164251207729,
+      "sd_diff": 0.12485725659151521,
+      "cohens_dz": 4.787999043392389,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.5059855072463768,
+        0.6896473429951689
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.76,
+            "cherry": 0.47826086956521735,
+            "potato": 0.29166666666666663
+          },
+          "mean": 0.509975845410628
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.12,
+            "cherry": 0.6086956521739131,
+            "potato": 0.7916666666666666
+          },
+          "mean": 0.5067874396135266
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.48000000000000004,
+            "cherry": 0.8478260869565217,
+            "potato": 0.875
+          },
+          "mean": 0.7342753623188406
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.64,
+            "cherry": 0.8695652173913043,
+            "potato": 0.0
+          },
+          "mean": 0.5031884057971014
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.96,
+            "cherry": 0.3695652173913043,
+            "potato": 0.875
+          },
+          "mean": 0.734855072463768
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.5978164251207729,
+        "permutation_p": 0.0001220703125,
+        "boot_ci95": [
+          0.44549263285024154,
+          0.7352368357487923
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2a",
+      "id": "F2a.2",
+      "comparison": "FedAvg flip 1.0 source harm vs 0, alpha=0.5",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": 0.37220289855072464,
+      "sd_diff": 0.15009113682929692,
+      "cohens_dz": 2.4798459550215943,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.2552705314009662,
+        0.4785169082125604
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.68,
+            "cherry": 0.08695652173913038,
+            "potato": 0.25
+          },
+          "mean": 0.3389855072463768
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.36,
+            "cherry": 0.15217391304347827,
+            "potato": 0.5416666666666666
+          },
+          "mean": 0.35128019323671494
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.30000000000000004,
+            "cherry": 0.8695652173913043,
+            "potato": 0.29166666666666674
+          },
+          "mean": 0.4870772946859904
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.8,
+            "cherry": 0.7173913043478262,
+            "potato": 0.08333333333333337
+          },
+          "mean": 0.5335748792270532
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.28,
+            "cherry": 0.08695652173913049,
+            "potato": 0.08333333333333337
+          },
+          "mean": 0.15009661835748797
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.3722028985507247,
+        "permutation_p": 6.103515625e-05,
+        "boot_ci95": [
+          0.24131352657004831,
+          0.5107062801932366
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2a",
+      "id": "F2a.3",
+      "comparison": "FedAvg flip 1.0 source harm vs 0, alpha=IID",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": 0.12717391304347822,
+      "sd_diff": 0.03493014202399047,
+      "cohens_dz": 3.6408072133269185,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.10215942028985506,
+        0.15641062801932365
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.12,
+            "cherry": 0.04347826086956519,
+            "potato": 0.20833333333333326
+          },
+          "mean": 0.12393719806763281
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.09999999999999998,
+            "cherry": 0.06521739130434778,
+            "potato": 0.375
+          },
+          "mean": 0.18007246376811592
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.12,
+            "cherry": 0.06521739130434778,
+            "potato": 0.125
+          },
+          "mean": 0.10340579710144926
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.039999999999999925,
+            "cherry": 0.021739130434782594,
+            "potato": 0.20833333333333337
+          },
+          "mean": 0.09002415458937196
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.12,
+            "cherry": 0.08695652173913038,
+            "potato": 0.20833333333333326
+          },
+          "mean": 0.1384299516908212
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.12717391304347825,
+        "permutation_p": 6.103515625e-05,
+        "boot_ci95": [
+          0.0867236714975845,
+          0.1765272946859903
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2b",
+      "id": "F2b.1",
+      "comparison": "FedAvg flip 1.0 visibility gap (harm - acc drop), alpha=0.1",
+      "metric": "harm minus accuracy drop",
+      "n": 5,
+      "mean_diff": 0.5772674055129298,
+      "sd_diff": 0.11978165382821492,
+      "cohens_dz": 4.819330732741584,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.4880247229326513,
+        0.6665373685706166
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.7458823529411766,
+            "cherry": 0.448849104859335,
+            "potato": 0.3104901960784313
+          },
+          "mean": 0.5017405512929809
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.14823529411764702,
+            "cherry": 0.5663427109974425,
+            "potato": 0.7857843137254902
+          },
+          "mean": 0.5001207729468599
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.4741176470588236,
+            "cherry": 0.789002557544757,
+            "potato": 0.8573529411764707
+          },
+          "mean": 0.7068243819266837
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.6058823529411764,
+            "cherry": 0.808388746803069,
+            "potato": -0.007058823529411784
+          },
+          "mean": 0.4690707587382779
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.908235294117647,
+            "cherry": 0.35191815856777486,
+            "potato": 0.8655882352941177
+          },
+          "mean": 0.7085805626598466
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.5772674055129298,
+        "permutation_p": 0.0001220703125,
+        "boot_ci95": [
+          0.4323820971867009,
+          0.708279951690821
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2b",
+      "id": "F2b.2",
+      "comparison": "FedAvg flip 1.0 visibility gap (harm - acc drop), alpha=0.5",
+      "metric": "harm minus accuracy drop",
+      "n": 5,
+      "mean_diff": 0.35228132992327366,
+      "sd_diff": 0.13795443488101933,
+      "cohens_dz": 2.5536064152421303,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.24742739414606424,
+        0.4506737709576584
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.6458823529411765,
+            "cherry": 0.06342710997442447,
+            "potato": 0.2535294117647059
+          },
+          "mean": 0.3209462915601023
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.3329411764705882,
+            "cherry": 0.14040920716112526,
+            "potato": 0.522843137254902
+          },
+          "mean": 0.33206450696220513
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.30352941176470594,
+            "cherry": 0.8225063938618925,
+            "potato": 0.29284313725490196
+          },
+          "mean": 0.47295964762716675
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.7329411764705883,
+            "cherry": 0.6644501278772379,
+            "potato": 0.06568627450980391
+          },
+          "mean": 0.4876925262858767
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.2741176470588236,
+            "cherry": 0.07872122762148348,
+            "potato": 0.09039215686274515
+          },
+          "mean": 0.1477436771810174
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.3522813299232737,
+        "permutation_p": 6.103515625e-05,
+        "boot_ci95": [
+          0.22859643364592214,
+          0.4819872620062517
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2b",
+      "id": "F2b.3",
+      "comparison": "FedAvg flip 1.0 visibility gap (harm - acc drop), alpha=IID",
+      "metric": "harm minus accuracy drop",
+      "n": 5,
+      "mean_diff": 0.12199744245524294,
+      "sd_diff": 0.03295832438391378,
+      "cohens_dz": 3.70156689503266,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        0.09745353793691386,
+        0.14864592213697073
+      ],
+      "n_positive": 5,
+      "n_negative": 0,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.12470588235294122,
+            "cherry": 0.03406649616368285,
+            "potato": 0.19892156862745092
+          },
+          "mean": 0.11923131571469166
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.09529411764705875,
+            "cherry": 0.04874680306905366,
+            "potato": 0.36205882352941177
+          },
+          "mean": 0.16869991474850807
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.11882352941176477,
+            "cherry": 0.058158567774936,
+            "potato": 0.12029411764705888
+          },
+          "mean": 0.09909207161125322
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.0352941176470587,
+            "cherry": 0.013503836317135476,
+            "potato": 0.2059803921568627
+          },
+          "mean": 0.08492611537368562
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.12470588235294111,
+            "cherry": 0.07754475703324804,
+            "potato": 0.21186274509803915
+          },
+          "mean": 0.1380377948280761
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.12199744245524294,
+        "permutation_p": 6.103515625e-05,
+        "boot_ci95": [
+          0.08068483944302353,
+          0.1710156152315998
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.1875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2c",
+      "id": "F2c.1",
+      "comparison": "FedProx - FedAvg source harm, flip 1.0, alpha=0.1",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": 0.029666666666666668,
+      "sd_diff": 0.06798651578268324,
+      "cohens_dz": 0.43636103902566853,
+      "permutation_p": 0.375,
+      "wilcoxon_p": 0.22491588401596185,
+      "boot_ci95": [
+        -0.023057971014492758,
+        0.08148792270531399
+      ],
+      "n_positive": 3,
+      "n_negative": 2,
+      "n_zero": 0,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.12,
+            "cherry": -0.13043478260869562,
+            "potato": -0.08333333333333326
+          },
+          "mean": -0.031256038647342964
+        },
+        "211": {
+          "pairs": {
+            "apple": -0.05999999999999994,
+            "cherry": -0.21739130434782616,
+            "potato": 0.125
+          },
+          "mean": -0.05079710144927537
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.09999999999999992,
+            "cherry": 0.021739130434782594,
+            "potato": 0.08333333333333337
+          },
+          "mean": 0.0683574879227053
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.16000000000000003,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.053333333333333344
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.32608695652173914,
+            "potato": 0.0
+          },
+          "mean": 0.10869565217391304
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.02966666666666667,
+        "permutation_p": 0.40625,
+        "boot_ci95": [
+          -0.03392814009661837,
+          0.09637270531400963
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.75,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2c",
+      "id": "F2c.2",
+      "comparison": "FedProx - FedAvg source harm, flip 1.0, alpha=0.5",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": -0.03786956521739132,
+      "sd_diff": 0.06790201227863762,
+      "cohens_dz": -0.5577090272670066,
+      "permutation_p": 0.25,
+      "wilcoxon_p": 0.22491588401596185,
+      "boot_ci95": [
+        -0.09730434782608703,
+        0.007265700483091794
+      ],
+      "n_positive": 1,
+      "n_negative": 4,
+      "n_zero": 0,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": -0.06000000000000005,
+            "cherry": 0.0652173913043479,
+            "potato": 0.08333333333333337
+          },
+          "mean": 0.029516908212560405
+        },
+        "211": {
+          "pairs": {
+            "apple": -0.039999999999999925,
+            "cherry": -0.021739130434782594,
+            "potato": -0.04166666666666663
+          },
+          "mean": -0.03446859903381638
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.019999999999999907,
+            "cherry": 0.0,
+            "potato": -0.04166666666666674
+          },
+          "mean": -0.007222222222222278
+        },
+        "401": {
+          "pairs": {
+            "apple": -0.08000000000000007,
+            "cherry": -0.4565217391304349,
+            "potato": 0.08333333333333326
+          },
+          "mean": -0.15106280193236724
+        },
+        "503": {
+          "pairs": {
+            "apple": -0.12,
+            "cherry": 0.0,
+            "potato": 0.04166666666666663
+          },
+          "mean": -0.026111111111111123
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": -0.03786956521739133,
+        "permutation_p": 0.32763671875,
+        "boot_ci95": [
+          -0.11028067632850244,
+          0.01468128019323669
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.75,
+      "reject_0.05": false
+    },
+    {
+      "family": "F2c",
+      "id": "F2c.3",
+      "comparison": "FedProx - FedAvg source harm, flip 1.0, alpha=IID",
+      "metric": "source-recall harm",
+      "n": 5,
+      "mean_diff": -0.0014444444444444329,
+      "sd_diff": 0.035020695314757294,
+      "cohens_dz": -0.041245453051749134,
+      "permutation_p": 0.875,
+      "wilcoxon_p": 0.892738400944348,
+      "boot_ci95": [
+        -0.02900966183574879,
+        0.026120772946859928
+      ],
+      "n_positive": 2,
+      "n_negative": 3,
+      "n_zero": 0,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.020000000000000018,
+            "cherry": 0.021739130434782705,
+            "potato": 0.04166666666666674
+          },
+          "mean": 0.027801932367149822
+        },
+        "211": {
+          "pairs": {
+            "apple": -0.040000000000000036,
+            "cherry": 0.021739130434782594,
+            "potato": -0.08333333333333326
+          },
+          "mean": -0.0338647342995169
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.05999999999999994,
+            "cherry": -0.04347826086956519,
+            "potato": -0.04166666666666674
+          },
+          "mean": -0.008381642512077328
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.020000000000000018,
+            "cherry": 0.021739130434782594,
+            "potato": 0.08333333333333337
+          },
+          "mean": 0.04169082125603866
+        },
+        "503": {
+          "pairs": {
+            "apple": -0.040000000000000036,
+            "cherry": -0.021739130434782594,
+            "potato": -0.04166666666666663
+          },
+          "mean": -0.03446859903381642
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": -0.0014444444444444333,
+        "permutation_p": 0.90753173828125,
+        "boot_ci95": [
+          -0.024555676328502404,
+          0.02177306763285024
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 0.875,
+      "reject_0.05": false
+    },
+    {
+      "family": "F3",
+      "id": "F3.1",
+      "comparison": "median - attacked FedAvg source-recall recovery, alpha=0.1",
+      "metric": "source-recall recovery",
+      "n": 5,
+      "mean_diff": -0.02883574879227053,
+      "sd_diff": 0.06310100749373614,
+      "cohens_dz": -0.4569776290043067,
+      "permutation_p": 0.5,
+      "wilcoxon_p": 0.28504940740261275,
+      "boot_ci95": [
+        -0.08483574879227053,
+        0.0053333333333333375
+      ],
+      "n_positive": 1,
+      "n_negative": 2,
+      "n_zero": 2,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.2391304347826087,
+            "potato": -0.2916666666666667
+          },
+          "mean": -0.017512077294685995
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.040000000000000036,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.013333333333333345
+        },
+        "307": {
+          "pairs": {
+            "apple": -0.42,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": -0.13999999999999999
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.0
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.0
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": -0.02883574879227053,
+        "permutation_p": 0.5,
+        "boot_ci95": [
+          -0.10577777777777778,
+          0.03455072463768116
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 1.0,
+      "reject_0.05": false
+    },
+    {
+      "family": "F3",
+      "id": "F3.2",
+      "comparison": "trimmed_mean - attacked FedAvg source-recall recovery, alpha=0.1",
+      "metric": "source-recall recovery",
+      "n": 5,
+      "mean_diff": 0.004632850241545887,
+      "sd_diff": 0.08772886074189806,
+      "cohens_dz": 0.05280873594353315,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.7150006546880893,
+      "boot_ci95": [
+        -0.06133333333333333,
+        0.08345410628019323
+      ],
+      "n_positive": 1,
+      "n_negative": 3,
+      "n_zero": 1,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.3478260869565218,
+            "potato": 0.08333333333333326
+          },
+          "mean": 0.14371980676328502
+        },
+        "211": {
+          "pairs": {
+            "apple": -0.020000000000000018,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": -0.006666666666666672
+        },
+        "307": {
+          "pairs": {
+            "apple": -0.3,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": -0.09999999999999999
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": -0.04166666666666674
+          },
+          "mean": -0.013888888888888914
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.0
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.004632850241545887,
+        "permutation_p": 0.8125,
+        "boot_ci95": [
+          -0.05711111111111111,
+          0.06834939613526561
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 1.0,
+      "reject_0.05": false
+    },
+    {
+      "family": "F3",
+      "id": "F3.3",
+      "comparison": "multikrum - attacked FedAvg source-recall recovery, alpha=0.1",
+      "metric": "source-recall recovery",
+      "n": 5,
+      "mean_diff": -0.0015362318840579728,
+      "sd_diff": 0.06337384656234785,
+      "cohens_dz": -0.02424078649773313,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 1.0,
+      "boot_ci95": [
+        -0.055169082125603876,
+        0.04278260869565218
+      ],
+      "n_positive": 2,
+      "n_negative": 2,
+      "n_zero": 1,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.41304347826086957,
+            "potato": -0.7083333333333334
+          },
+          "mean": -0.09842995169082126
+        },
+        "211": {
+          "pairs": {
+            "apple": 0.040000000000000036,
+            "cherry": 0.17391304347826086,
+            "potato": 0.0
+          },
+          "mean": 0.07130434782608697
+        },
+        "307": {
+          "pairs": {
+            "apple": 0.10000000000000003,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.03333333333333335
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": -0.04166666666666674
+          },
+          "mean": -0.013888888888888914
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.0
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": -0.001536231884057974,
+        "permutation_p": 0.96875,
+        "boot_ci95": [
+          -0.12444444444444444,
+          0.0967584541062802
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 1.0,
+      "reject_0.05": false
+    },
+    {
+      "family": "F3",
+      "id": "F3.4",
+      "comparison": "krum - attacked FedAvg source-recall recovery, alpha=0.1",
+      "metric": "source-recall recovery",
+      "n": 5,
+      "mean_diff": 0.08634299516908213,
+      "sd_diff": 0.1599365019262849,
+      "cohens_dz": 0.5398579694388828,
+      "permutation_p": 0.4375,
+      "wilcoxon_p": 0.5001842570707944,
+      "boot_ci95": [
+        -0.028420289855072462,
+        0.22111968599033666
+      ],
+      "n_positive": 3,
+      "n_negative": 2,
+      "n_zero": 0,
+      "all_same_sign": false,
+      "notes": "Confirmatory unit is the partition seed (n=5): the three locked pairs are averaged within seed, then signs are flipped at the seed level. A percentile bootstrap on five same-sign gaps does not rescue the exact test, whose two-sided floor is 0.0625.",
+      "inference_unit": "partition-seed mean of three locked pairs",
+      "n_jobs": 15,
+      "seed_means": {
+        "101": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": -0.43478260869565216,
+            "potato": 0.29166666666666663
+          },
+          "mean": -0.047705314009661846
+        },
+        "211": {
+          "pairs": {
+            "apple": -0.07999999999999996,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": -0.026666666666666655
+        },
+        "307": {
+          "pairs": {
+            "apple": -0.44,
+            "cherry": 0.0,
+            "potato": 0.9583333333333334
+          },
+          "mean": 0.17277777777777778
+        },
+        "401": {
+          "pairs": {
+            "apple": 0.0,
+            "cherry": 0.9782608695652174,
+            "potato": -0.9583333333333334
+          },
+          "mean": 0.006642512077294678
+        },
+        "503": {
+          "pairs": {
+            "apple": 0.98,
+            "cherry": 0.0,
+            "potato": 0.0
+          },
+          "mean": 0.32666666666666666
+        }
+      },
+      "legacy_job_level": {
+        "n": 15,
+        "mean_diff": 0.08634299516908213,
+        "permutation_p": 0.546875,
+        "boot_ci95": [
+          -0.17919335748792273,
+          0.35735797101449235
+        ],
+        "note": "Not confirmatory. Treats three source pairs that share a partition and a clean reference as independently sign-flippable."
+      },
+      "holm_p": 1.0,
+      "reject_0.05": false
+    },
+    {
+      "family": "F3",
+      "id": "F3.5",
+      "comparison": "clean Krum - clean FedAvg, alpha=0.1, E=1",
+      "metric": "macro-F1",
+      "n": 5,
+      "mean_diff": -0.4204949029674624,
+      "sd_diff": 0.086654721428675,
+      "cohens_dz": -4.852533088039171,
+      "permutation_p": 0.0625,
+      "wilcoxon_p": 0.043114446783075355,
+      "boot_ci95": [
+        -0.4858993545088651,
+        -0.35509045142605966
+      ],
+      "n_positive": 0,
+      "n_negative": 5,
+      "n_zero": 0,
+      "all_same_sign": true,
+      "notes": "",
+      "inference_unit": "partition seed (one clean job per seed)",
+      "n_jobs": 5,
+      "holm_p": 0.3125,
+      "reject_0.05": false
+    }
+  ],
+  "spearman_fedavg": {
+    "n_jobs": 45,
+    "rho": 0.7756258234519103,
+    "seed_clustered_boot_ci95": [
+      0.7110671936758892,
+      0.8413702239789196
+    ],
+    "note": "Descriptive association on 45 FedAvg jobs; CI resamples the five seeds."
+  },
+  "mixedlm": {
+    "formula": "recall ~ monopoly + entropy + C(algorithm) + targeted + monopoly:targeted + C(algorithm):targeted",
+    "grouping": "crossed_seed_class",
+    "n_rows": 2280,
+    "n_targeted": 90,
+    "n_jobs": 120,
+    "n_targeted_classes": 3,
+    "converged": true,
+    "method": "crossed LMM, (1|seed)+(1|class), REML L-BFGS",
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "estimate": 0.08544510493291964,
+        "se": 0.06288189205662642,
+        "p": 0.17420397499580464,
+        "ci95": [
+          -0.03780113877780346,
+          0.20869134864364275
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]",
+        "estimate": 0.017199934558651552,
+        "se": 0.006487452724590767,
+        "p": 0.00801916932690392,
+        "ci95": [
+          0.004484760867047402,
+          0.0299151082502557
+        ]
+      },
+      {
+        "term": "monopoly",
+        "estimate": 0.43493586416448354,
+        "se": 0.054614734117841846,
+        "p": 1.6695727821241592e-15,
+        "ci95": [
+          0.32789295226828263,
+          0.5419787760606845
+        ]
+      },
+      {
+        "term": "entropy",
+        "estimate": 0.7153970351874737,
+        "se": 0.04523324928901456,
+        "p": 2.423687722969061e-56,
+        "ci95": [
+          0.6267414956772831,
+          0.8040525746976642
+        ]
+      },
+      {
+        "term": "targeted",
+        "estimate": -0.026864950244753008,
+        "se": 0.040318839624493084,
+        "p": 0.5052113233087621,
+        "ci95": [
+          -0.1058884238072059,
+          0.05215852331769988
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]:targeted",
+        "estimate": 0.014463511496098707,
+        "se": 0.03265279598487094,
+        "p": 0.6578028861059296,
+        "ci95": [
+          -0.049534792628782416,
+          0.07846181562097983
+        ]
+      },
+      {
+        "term": "monopoly:targeted",
+        "estimate": -0.7197963294916365,
+        "se": 0.0661951537630842,
+        "p": 1.5357623515582251e-27,
+        "ci95": [
+          -0.8495364468183726,
+          -0.5900562121649005
+        ]
+      }
+    ],
+    "random_effects": {},
+    "warning": null,
+    "variance_components": {
+      "seed": 0.01185853795618009,
+      "klass": 8.885246740364061e-05
+    },
+    "residual_var": 0.023042655962455586,
+    "residual_summary": {
+      "n": 2280,
+      "resid_mean": -2.438595134790695e-16,
+      "resid_sd": 0.15092109038360943,
+      "fitted_min": -0.13471585217916024,
+      "fitted_max": 1.0915081690916386,
+      "n_fitted_outside_01": 198,
+      "n_obs_at_0": 42,
+      "n_obs_at_1": 203
+    }
+  },
+  "mixedlm_support_sensitivity": {
+    "formula": "recall ~ monopoly + entropy + C(algorithm) + targeted + monopoly:targeted + C(algorithm):targeted + log_support",
+    "grouping": "crossed_seed_class",
+    "n_rows": 2280,
+    "n_targeted": 90,
+    "n_jobs": 120,
+    "n_targeted_classes": 3,
+    "converged": true,
+    "method": "crossed LMM, (1|seed)+(1|class), REML L-BFGS",
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "estimate": 0.5842281699491928,
+        "se": 0.5479279604649391,
+        "p": 0.286310660002031,
+        "ci95": [
+          -0.4896908986845744,
+          1.65814723858296
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]",
+        "estimate": 0.017199934558651354,
+        "se": 0.0064918009671599795,
+        "p": 0.008061435693558794,
+        "ci95": [
+          0.004476238468215505,
+          0.029923630649087204
+        ]
+      },
+      {
+        "term": "monopoly",
+        "estimate": 0.43533301448374767,
+        "se": 0.054689715566510304,
+        "p": 1.7196611119820659e-15,
+        "ci95": [
+          0.3281431416486479,
+          0.5425228873188475
+        ]
+      },
+      {
+        "term": "entropy",
+        "estimate": 0.7159977446264303,
+        "se": 0.04531020481322179,
+        "p": 3.007797960582735e-56,
+        "ci95": [
+          0.6271913750603821,
+          0.8048041141924784
+        ]
+      },
+      {
+        "term": "targeted",
+        "estimate": -0.02702444755050077,
+        "se": 0.040347465796008355,
+        "p": 0.5029897977177002,
+        "ci95": [
+          -0.10610402737813884,
+          0.05205513227713731
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]:targeted",
+        "estimate": 0.014463511496099174,
+        "se": 0.03267468165919227,
+        "p": 0.6580175037791787,
+        "ci95": [
+          -0.04957768776222912,
+          0.07850471075442747
+        ]
+      },
+      {
+        "term": "monopoly:targeted",
+        "estimate": -0.7193286018483361,
+        "se": 0.0662479787652128,
+        "p": 1.824639801961554e-27,
+        "ci95": [
+          -0.8491722542767275,
+          -0.5894849494199448
+        ]
+      },
+      {
+        "term": "log_support",
+        "estimate": -0.13175464844047324,
+        "se": 0.1436101374351403,
+        "p": 0.3589086043373183,
+        "ci95": [
+          -0.41322534562819563,
+          0.14971604874724914
+        ]
+      }
+    ],
+    "random_effects": {},
+    "warning": null,
+    "variance_components": {
+      "seed": 0.009392445789201674,
+      "klass": 0.00019979189759794334
+    },
+    "residual_var": 0.023073555188977555,
+    "residual_summary": {
+      "n": 2280,
+      "resid_mean": 1.4795182622899454e-15,
+      "resid_sd": 0.15089270950216038,
+      "fitted_min": -0.13446293531387724,
+      "fitted_max": 1.0923744038247303,
+      "n_fitted_outside_01": 191,
+      "n_obs_at_0": 42,
+      "n_obs_at_1": 203
+    },
+    "role": "exploratory: protocol LMM plus log test support"
+  },
+  "gee_binomial_sensitivity": {
+    "formula": "recall ~ monopoly + entropy + C(algorithm) + targeted + monopoly:targeted + C(algorithm):targeted",
+    "n_rows": 2280,
+    "n_clusters": 5,
+    "method": "binomial GEE, independence, clustered by seed, var_weights=support",
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "estimate": -1.592860887894928,
+        "se": 0.8675354931904165,
+        "p": 0.06634645311335505,
+        "ci95": [
+          -3.2931992098583374,
+          0.10747743406848165
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]",
+        "estimate": 0.11028373777760901,
+        "se": 0.013926128680616311,
+        "p": 2.390519270126961e-15,
+        "ci95": [
+          0.08298902711953074,
+          0.13757844843568728
+        ]
+      },
+      {
+        "term": "monopoly",
+        "estimate": 1.4430807655134288,
+        "se": 0.9067222082478774,
+        "p": 0.11148906747707439,
+        "ci95": [
+          -0.33406210663503777,
+          3.2202236376618956
+        ]
+      },
+      {
+        "term": "entropy",
+        "estimate": 3.3845202008825996,
+        "se": 0.6480234596570453,
+        "p": 1.762035139153031e-07,
+        "ci95": [
+          2.1144175588177463,
+          4.654622842947453
+        ]
+      },
+      {
+        "term": "targeted",
+        "estimate": 0.22139017314232315,
+        "se": 0.2656165257904034,
+        "p": 0.40456534706009106,
+        "ci95": [
+          -0.29920865110552197,
+          0.7419889973901682
+        ]
+      },
+      {
+        "term": "C(algorithm)[T.fedprox]:targeted",
+        "estimate": 0.07680830916860816,
+        "se": 0.047245140629677745,
+        "p": 0.10400500291363719,
+        "ci95": [
+          -0.01579046491009023,
+          0.16940708324730655
+        ]
+      },
+      {
+        "term": "monopoly:targeted",
+        "estimate": -3.3572596080196235,
+        "se": 0.6706617454826431,
+        "p": 5.560421210913975e-07,
+        "ci95": [
+          -4.671732474974372,
+          -2.042786741064875
+        ]
+      }
+    ],
+    "warning": "Five seed clusters make the sandwich SE a sensitivity check, not a substitute for the LMM."
+  },
+  "rq2_alpha_and_dose": {
+    "role": "Secondary analysis after reviews: does monopoly add prediction beyond \u03b1, and is that association distinct from poison dose qMc?",
+    "flip1_n": 90,
+    "dose_n": 270,
+    "flip1_Mc_equals_realized_max_abs_diff": 0.0,
+    "q_lt1_realized_vs_qMc_max_abs_diff": 0.003694581280788173,
+    "spearman_flip1": {
+      "all_90": 0.7867884924064699,
+      "fedavg_45": 0.7756258234519103,
+      "partial_given_alpha_all_90": 0.452146355517142,
+      "within_alpha": {
+        "a01": {
+          "n_all": 30,
+          "rho_all": 0.2978865406006674,
+          "n_fedavg": 15,
+          "rho_fedavg": 0.28928571428571426,
+          "Mc_min": 0.3076923076923077,
+          "Mc_max": 1.0
+        },
+        "a05": {
+          "n_all": 30,
+          "rho_all": 0.6186874304783093,
+          "n_fedavg": 15,
+          "rho_fedavg": 0.5464285714285714,
+          "Mc_min": 0.34615384615384615,
+          "Mc_max": 0.8309178743961353
+        },
+        "iid": {
+          "n_all": 30,
+          "rho_all": 0.625361512791991,
+          "n_fedavg": 15,
+          "rho_fedavg": 0.7857142857142856,
+          "Mc_min": 0.20689655172413793,
+          "Mc_max": 0.23076923076923078
+        }
+      }
+    },
+    "spearman_dose_270": {
+      "qMc": 0.7688747445095269,
+      "realized": 0.768992411113702,
+      "Mc": 0.5423464123117067,
+      "within_alpha": {
+        "a01": {
+          "n": 90,
+          "rho_qMc": 0.7657982466971232,
+          "rho_Mc": 0.45374326048483343,
+          "rho_realized": 0.7610733835452936
+        },
+        "a05": {
+          "n": 90,
+          "rho_qMc": 0.799646046837058,
+          "rho_Mc": 0.28773099559616416,
+          "rho_realized": 0.7967650327200888
+        },
+        "iid": {
+          "n": 90,
+          "rho_qMc": 0.6489443141128534,
+          "rho_Mc": 0.29879408980532574,
+          "rho_realized": 0.6657858994937647
+        }
+      }
+    },
+    "ols_flip1": [
+      {
+        "formula": "harm ~ C(alpha)",
+        "n": 90,
+        "r2": 0.41600323321981014,
+        "r2_adj": 0.40257802019038047,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.6126497584541067,
+            "se": 0.04370387589092383,
+            "p": 4.906291549784428e-24,
+            "ci95": [
+              0.5257835728022554,
+              0.6995159441059581
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.2593816425120776,
+            "se": 0.061806614013215015,
+            "p": 6.510770071705983e-05,
+            "ci95": [
+              -0.382228980372545,
+              -0.13653430465161026
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.48619806763285045,
+            "se": 0.061806614013215015,
+            "p": 9.237449388853468e-12,
+            "ci95": [
+              -0.6090454054933179,
+              -0.3633507297723831
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + Mc",
+        "n": 90,
+        "r2": 0.5767611736311322,
+        "r2_adj": 0.5619970285252415,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.0388018208331483,
+            "se": 0.10715155305935709,
+            "p": 0.7181499661361236,
+            "ci95": [
+              -0.17420841672832288,
+              0.25181205839461945
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.13887434069597743,
+            "se": 0.056967235168663005,
+            "p": 0.016836176112076037,
+            "ci95": [
+              -0.25212145611366144,
+              -0.025627225278293447
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.09342310562412166,
+            "se": 0.08673824711583931,
+            "p": 0.2844613601395005,
+            "ci95": [
+              -0.26585303404126354,
+              0.07900682279302022
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": 0.8353329043866335,
+            "se": 0.14615608364516283,
+            "p": 1.54495588343212e-07,
+            "ci95": [
+              0.5447842262814804,
+              1.1258815824917867
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + entropy",
+        "n": 90,
+        "r2": 0.6483222537598549,
+        "r2_adj": 0.6360544254026405,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.9764734496063898,
+            "se": 0.05910593095751618,
+            "p": 2.0376718105870546e-28,
+            "ci95": [
+              0.8589747476736418,
+              1.0939721515391378
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": 0.020669432522153343,
+            "se": 0.0608905028163966,
+            "p": 0.7350964512413549,
+            "ci95": [
+              -0.10037688085207383,
+              0.14171574589638053
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": 0.10012654703544949,
+            "se": 0.09153307701099708,
+            "p": 0.2770604147159214,
+            "ci95": [
+              -0.08183518774261953,
+              0.2820882818135185
+            ]
+          },
+          {
+            "term": "entropy",
+            "estimate": -0.9509359452480213,
+            "se": 0.12616302634288776,
+            "p": 4.5184722731210256e-11,
+            "ci95": [
+              -1.201739740857831,
+              -0.7001321496382116
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + C(pair) + C(algorithm) + Mc",
+        "n": 90,
+        "r2": 0.5853922524783778,
+        "r2_adj": 0.5554206080792243,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.06249901874782761,
+            "se": 0.11452875003389504,
+            "p": 0.5867317766590356,
+            "ci95": [
+              -0.16529405872179487,
+              0.2902920962174501
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.1367751916480852,
+            "se": 0.05743931324547712,
+            "p": 0.019544545291454083,
+            "ci95": [
+              -0.251019675483424,
+              -0.022530707812746367
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.08658125309642417,
+            "se": 0.08770749486510171,
+            "p": 0.3264336692236204,
+            "ci95": [
+              -0.26102793278654346,
+              0.08786542659369515
+            ]
+          },
+          {
+            "term": "C(pair)[T.cherry]",
+            "estimate": -0.06955039553362215,
+            "se": 0.053428418626534975,
+            "p": 0.19660356099652318,
+            "ci95": [
+              -0.17581737129011804,
+              0.036716580222873746
+            ]
+          },
+          {
+            "term": "C(pair)[T.potato]",
+            "estimate": -0.026705560642848694,
+            "se": 0.05336646637495824,
+            "p": 0.6181048389911581,
+            "ci95": [
+              -0.1328493158626788,
+              0.07943819457698142
+            ]
+          },
+          {
+            "term": "C(algorithm)[T.fedprox]",
+            "estimate": -0.0032157809983898444,
+            "se": 0.04353348025201413,
+            "p": 0.9412922434188409,
+            "ci95": [
+              -0.08980212230251207,
+              0.08337056030573238
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": 0.8498837925443667,
+            "se": 0.14810862190459975,
+            "p": 1.5147959957809584e-07,
+            "ci95": [
+              0.5553017005067897,
+              1.1444658845819438
+            ]
+          }
+        ]
+      }
+    ],
+    "ols_dose": [
+      {
+        "formula": "harm ~ C(alpha)",
+        "n": 270,
+        "r2": 0.2037342020868289,
+        "r2_adj": 0.19776966427474518,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.3224267310789052,
+            "se": 0.023163747733730207,
+            "p": 1.7404800463149167e-33,
+            "ci95": [
+              0.2768198917126907,
+              0.36803357044511964
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.169496779388084,
+            "se": 0.03275848620043029,
+            "p": 4.5034119104463813e-07,
+            "ci95": [
+              -0.23399459015675564,
+              -0.10499896861941235
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.26760305958132047,
+            "se": 0.03275848620043028,
+            "p": 1.2508435732788102e-14,
+            "ci95": [
+              -0.3321008703499921,
+              -0.20310524881264885
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + Mc",
+        "n": 270,
+        "r2": 0.29845983601578197,
+        "r2_adj": 0.29054772890317804,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": -0.027845279920556836,
+            "se": 0.0623736937859832,
+            "p": 0.655652285965676,
+            "ci95": [
+              -0.1506542380549078,
+              0.09496367821379413
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.09594012407929434,
+            "se": 0.0331610394883959,
+            "p": 0.004129608480480977,
+            "ci95": [
+              -0.16123163501971502,
+              -0.030648613138873654
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.027856487722228894,
+            "se": 0.050490960799600415,
+            "p": 0.5816086177086182,
+            "ci95": [
+              -0.12726926760788532,
+              0.07155629216342752
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": 0.5098802611133428,
+            "se": 0.08507851305890016,
+            "p": 6.6738924534025325e-09,
+            "ci95": [
+              0.34236727744696105,
+              0.6773932447797246
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + q",
+        "n": 270,
+        "r2": 0.49614867446951816,
+        "r2_adj": 0.4904661407229338,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.07467981749865754,
+            "se": 0.02717326735005894,
+            "p": 0.006400801563799686,
+            "ci95": [
+              0.02117776479327741,
+              0.12818187020403768
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.16949677938808388,
+            "se": 0.026107230801701947,
+            "p": 4.122915125922206e-10,
+            "ci95": [
+              -0.22089988893505383,
+              -0.11809366984111394
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.26760305958132047,
+            "se": 0.0261072308017019,
+            "p": 5.387547788891888e-21,
+            "ci95": [
+              -0.31900616912829033,
+              -0.2161999500343506
+            ]
+          },
+          {
+            "term": "q",
+            "estimate": 0.42470899470899526,
+            "se": 0.03418238895270904,
+            "p": 2.946926355008318e-28,
+            "ci95": [
+              0.3574065260075391,
+              0.49201146341045143
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + qMc",
+        "n": 270,
+        "r2": 0.6810470373830599,
+        "r2_adj": 0.6774498235189591,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": -0.03530061621025485,
+            "se": 0.023177723717835653,
+            "p": 0.12893645825565428,
+            "ci95": [
+              -0.08093575386107152,
+              0.01033452144056183
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.09437451339830785,
+            "se": 0.021110237144023457,
+            "p": 1.1559316204386717e-05,
+            "ci95": [
+              -0.1359389305790841,
+              -0.0528100962175316
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.022753621203116713,
+            "se": 0.024126137895583693,
+            "p": 0.3464800140970833,
+            "ci95": [
+              -0.07025611270103324,
+              0.024748870294799816
+            ]
+          },
+          {
+            "term": "qMc",
+            "estimate": 0.8926847422186239,
+            "se": 0.04474237745532148,
+            "p": 8.996286047091991e-55,
+            "ci95": [
+              0.8045904764117029,
+              0.980779008025545
+            ]
+          }
+        ]
+      },
+      {
+        "formula": "harm ~ C(alpha) + qMc + Mc",
+        "n": 270,
+        "r2": 0.6811011520099122,
+        "r2_adj": 0.6762875844930807,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": -0.027845279920557204,
+            "se": 0.04213272516458972,
+            "p": 0.5092542038468598,
+            "ci95": [
+              -0.1108027737828796,
+              0.0551122139417652
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.09594012407929431,
+            "se": 0.022399907366888478,
+            "p": 2.5804867126483013e-05,
+            "ci95": [
+              -0.1400445623905145,
+              -0.05183568576807413
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.027856487722228596,
+            "se": 0.03410607333862431,
+            "p": 0.41479904185546546,
+            "ci95": [
+              -0.09500985505377646,
+              0.03929687960931927
+            ]
+          },
+          {
+            "term": "qMc",
+            "estimate": 0.8975409199258948,
+            "se": 0.050334048720461544,
+            "p": 2.833001839098157e-47,
+            "ci95": [
+              0.798435378533028,
+              0.9966464613187616
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": -0.01368527551009558,
+            "se": 0.06453565899710316,
+            "p": 0.8322251250625232,
+            "ci95": [
+              -0.14075316666214066,
+              0.11338261564194951
+            ]
+          }
+        ]
+      }
+    ],
+    "loso_flip1": [
+      {
+        "formula": "harm ~ C(alpha)",
+        "n_jobs": 90,
+        "n_held_out_jobs": 90,
+        "rmse": 0.24860781413252048
+      },
+      {
+        "formula": "harm ~ C(alpha) + Mc",
+        "n_jobs": 90,
+        "n_held_out_jobs": 90,
+        "rmse": 0.21028978857964262
+      },
+      {
+        "formula": "harm ~ C(alpha) + entropy",
+        "n_jobs": 90,
+        "n_held_out_jobs": 90,
+        "rmse": 0.1938202166805861
+      }
+    ],
+    "loso_dose": [
+      {
+        "formula": "harm ~ C(alpha)",
+        "n_jobs": 270,
+        "n_held_out_jobs": 270,
+        "rmse": 0.2223387029571155
+      },
+      {
+        "formula": "harm ~ C(alpha) + q",
+        "n_jobs": 270,
+        "n_held_out_jobs": 270,
+        "rmse": 0.17935846972269426
+      },
+      {
+        "formula": "harm ~ C(alpha) + Mc",
+        "n_jobs": 270,
+        "n_held_out_jobs": 270,
+        "rmse": 0.20824556111493356
+      },
+      {
+        "formula": "harm ~ C(alpha) + qMc",
+        "n_jobs": 270,
+        "n_held_out_jobs": 270,
+        "rmse": 0.14293661058070692
+      },
+      {
+        "formula": "harm ~ C(alpha) + qMc + Mc",
+        "n_jobs": 270,
+        "n_held_out_jobs": 270,
+        "rmse": 0.14426455833972832
+      }
+    ],
+    "reading": "At flip 1.0, Mc equals the globally corrupted source-class fraction by the attacker rule. Across fractions 0.25/0.50/1.0, harm tracks qMc; adding Mc beside qMc does not improve the fit."
+  },
+  "lmm_specification_audit": {
+    "role": "Secondary specification audit of the protocol Gaussian LMM. Table 10 remains the protocol fit. Not a Holm family.",
+    "collinearity": {
+      "n_rows": 2280,
+      "pearson_all_rows": -0.9760271465392738,
+      "vif_two_predictor": 21.10995768296855,
+      "n_targeted": 90,
+      "pearson_targeted_rows": -0.9579972949351564,
+      "reading": "Monopoly and normalised entropy are two readings of the same five-client share vector; conditional main effects are not separable."
+    },
+    "protocol": {
+      "converged": true,
+      "method": "crossed LMM, (1|seed)+(1|class), REML L-BFGS",
+      "variance_components": {
+        "seed": 0.01185853795618009,
+        "klass": 8.885246740364061e-05
+      },
+      "residual_var": 0.023042655962455586,
+      "residual_summary": {
+        "n": 2280,
+        "resid_mean": -2.438595134790695e-16,
+        "resid_sd": 0.15092109038360943,
+        "fitted_min": -0.13471585217916024,
+        "fitted_max": 1.0915081690916386,
+        "n_fitted_outside_01": 198,
+        "n_obs_at_0": 42,
+        "n_obs_at_1": 203
+      },
+      "n_targeted_classes": 3,
+      "monopoly_targeted": {
+        "term": "monopoly:targeted",
+        "estimate": -0.7197963294916365,
+        "se": 0.0661951537630842,
+        "p": 1.5357623515582251e-27,
+        "ci95": [
+          -0.8495364468183726,
+          -0.5900562121649005
+        ]
+      },
+      "boundary_component": {
+        "name": "klass (class intercept)",
+        "estimate": 8.885246740364061e-05,
+        "seed_intercept": 0.01185853795618009,
+        "note": "The class intercept sits on the boundary relative to residual variance. Seed intercept is interior."
+      }
+    },
+    "sensitivities": {
+      "job_random_intercept": {
+        "monopoly_targeted": {
+          "term": "monopoly:targeted",
+          "estimate": -0.6919586773420693,
+          "se": 0.07756234244935642,
+          "p": 4.607524206365637e-19,
+          "ci95": [
+            -0.8439780750993701,
+            -0.5399392795847685
+          ]
+        },
+        "converged": true,
+        "method": "LMM, (1|job), REML L-BFGS",
+        "residual_var": 0.0309599706644121,
+        "warning": null
+      },
+      "attack_job_plus_targeted": {
+        "monopoly_targeted": {
+          "term": "monopoly:targeted",
+          "estimate": -0.7197963179339173,
+          "se": 0.06620708468213402,
+          "p": 1.5691151769005374e-27,
+          "ci95": [
+            -0.8495598194322934,
+            -0.5900328164355412
+          ]
+        },
+        "attack_job": {
+          "term": "attack_job",
+          "estimate": 0.00306633634479255,
+          "se": 0.007408143553104786,
+          "p": 0.6789368913968488,
+          "ci95": [
+            -0.01145335821159542,
+            0.01758603090118052
+          ]
+        },
+        "converged": true,
+        "warning": null
+      },
+      "monopoly_only": {
+        "monopoly_targeted": {
+          "term": "monopoly:targeted",
+          "estimate": -0.7006688487605307,
+          "se": 0.06998731109752367,
+          "p": 1.3585832272872228e-23,
+          "ci95": [
+            -0.8378414578864776,
+            -0.5634962396345838
+          ]
+        },
+        "monopoly_main": {
+          "term": "monopoly",
+          "estimate": -0.4081925858687604,
+          "se": 0.012714146264236469,
+          "p": 3.7080702961130954e-226,
+          "ci95": [
+            -0.43311185464083835,
+            -0.38327331709668244
+          ]
+        },
+        "converged": true
+      },
+      "entropy_only": {
+        "entropy_targeted": {
+          "term": "entropy:targeted",
+          "estimate": 0.6383692239774973,
+          "se": 0.055599684960240224,
+          "p": 1.6337146982999483e-30,
+          "ci95": [
+            0.5293958439036531,
+            0.7473426040513415
+          ]
+        },
+        "entropy_main": {
+          "term": "entropy",
+          "estimate": 0.36183860238884263,
+          "se": 0.010121205501962202,
+          "p": 6.48823814591831e-280,
+          "ci95": [
+            0.34200140412486807,
+            0.3816758006528172
+          ]
+        },
+        "converged": true
+      }
+    },
+    "paired_source_harm": {
+      "n": 90,
+      "ols": {
+        "formula": "harm ~ Mc + C(alpha) + C(algorithm) + C(pair)",
+        "n": 90,
+        "r2": 0.5853922524783777,
+        "r2_adj": 0.5554206080792242,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": 0.06249901874782742,
+            "se": 0.11452875003389489,
+            "p": 0.5867317766590363,
+            "ci95": [
+              -0.16529405872179476,
+              0.2902920962174496
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.13677519164808483,
+            "se": 0.057439313245477075,
+            "p": 0.019544545291454312,
+            "ci95": [
+              -0.2510196754834236,
+              -0.02253070781274609
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.086581253096424,
+            "se": 0.0877074948651017,
+            "p": 0.32643366922362127,
+            "ci95": [
+              -0.2610279327865433,
+              0.08786542659369528
+            ]
+          },
+          {
+            "term": "C(algorithm)[T.fedprox]",
+            "estimate": -0.003215780998389539,
+            "se": 0.04353348025201414,
+            "p": 0.9412922434188464,
+            "ci95": [
+              -0.08980212230251178,
+              0.0833705603057327
+            ]
+          },
+          {
+            "term": "C(pair)[T.cherry]",
+            "estimate": -0.0695503955336225,
+            "se": 0.053428418626535024,
+            "p": 0.19660356099652138,
+            "ci95": [
+              -0.17581737129011848,
+              0.036716580222873496
+            ]
+          },
+          {
+            "term": "C(pair)[T.potato]",
+            "estimate": -0.026705560642848847,
+            "se": 0.0533664663749582,
+            "p": 0.6181048389911559,
+            "ci95": [
+              -0.1328493158626789,
+              0.07943819457698119
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": 0.8498837925443665,
+            "se": 0.1481086219045997,
+            "p": 1.5147959957809584e-07,
+            "ci95": [
+              0.5553017005067896,
+              1.1444658845819435
+            ]
+          }
+        ]
+      },
+      "lmm_seed": {
+        "formula": "harm ~ Mc + C(alpha) + C(algorithm) + C(pair)",
+        "method": "LMM, (1|seed), REML L-BFGS",
+        "n": 90,
+        "converged": true,
+        "residual_var": 0.040874295152777136,
+        "coefficients": [
+          {
+            "term": "Intercept",
+            "estimate": -5.55923838534875e-15,
+            "se": null,
+            "p": null,
+            "ci95": [
+              null,
+              null
+            ]
+          },
+          {
+            "term": "C(alpha)[T.a05]",
+            "estimate": -0.13647353418462715,
+            "se": 0.056370188693570515,
+            "p": 0.015476889819219027,
+            "ci95": [
+              -0.24695707382575233,
+              -0.025989994543501982
+            ]
+          },
+          {
+            "term": "C(alpha)[T.iid]",
+            "estimate": -0.08559804712497047,
+            "se": 0.08679604879682949,
+            "p": 0.3240362013729463,
+            "ci95": [
+              -0.2557151767671374,
+              0.08451908251719643
+            ]
+          },
+          {
+            "term": "C(algorithm)[T.fedprox]",
+            "estimate": -0.0032157809983897295,
+            "se": 0.04262200535079771,
+            "p": 0.9398575986727591,
+            "ci95": [
+              -0.08675337643482671,
+              0.08032181443804724
+            ]
+          },
+          {
+            "term": "C(pair)[T.cherry]",
+            "estimate": -0.06959899598283534,
+            "se": 0.05231349982953401,
+            "p": 0.18337949085889815,
+            "ci95": [
+              -0.17213157155396425,
+              0.032933579588293585
+            ]
+          },
+          {
+            "term": "C(pair)[T.potato]",
+            "estimate": -0.02667326144013357,
+            "se": 0.05225076424965229,
+            "p": 0.6097113178627065,
+            "ci95": [
+              -0.12908287753414507,
+              0.07573635465387794
+            ]
+          },
+          {
+            "term": "Mc",
+            "estimate": 0.8519748227249667,
+            "se": 0.1474772967122146,
+            "p": 7.604894356250775e-09,
+            "ci95": [
+              0.5629246326316988,
+              1.1410250128182347
+            ]
+          }
+        ]
+      },
+      "reading": "Direct model of paired source-recall harm on the 90 flip-1.0 jobs. Mc is the poison dose at q=1. Pair fixed effects keep the three locked sources from being treated as 19 independently attacked classes."
+    },
+    "headline": {
+      "protocol_monopoly_targeted": {
+        "term": "monopoly:targeted",
+        "estimate": -0.7197963294916365,
+        "se": 0.0661951537630842,
+        "p": 1.5357623515582251e-27,
+        "ci95": [
+          -0.8495364468183726,
+          -0.5900562121649005
+        ]
+      },
+      "job_grouped_monopoly_targeted": {
+        "term": "monopoly:targeted",
+        "estimate": -0.6919586773420693,
+        "se": 0.07756234244935642,
+        "p": 4.607524206365637e-19,
+        "ci95": [
+          -0.8439780750993701,
+          -0.5399392795847685
+        ]
+      },
+      "attack_job_monopoly_targeted": {
+        "term": "monopoly:targeted",
+        "estimate": -0.7197963179339173,
+        "se": 0.06620708468213402,
+        "p": 1.5691151769005374e-27,
+        "ci95": [
+          -0.8495598194322934,
+          -0.5900328164355412
+        ]
+      },
+      "ols_harm_Mc": {
+        "term": "Mc",
+        "estimate": 0.8498837925443665,
+        "se": 0.1481086219045997,
+        "p": 1.5147959957809584e-07,
+        "ci95": [
+          0.5553017005067896,
+          1.1444658845819435
+        ]
+      },
+      "lmm_harm_Mc": {
+        "term": "Mc",
+        "estimate": 0.8519748227249667,
+        "se": 0.1474772967122146,
+        "p": 7.604894356250775e-09,
+        "ci95": [
+          0.5629246326316988,
+          1.1410250128182347
+        ]
+      }
+    }
+  },
+  "aggregator_source_decomposition": {
+    "note": "Secondary. Not a Holm family. Pair-averaged like Table 4. harm_vs_clean_fedavg = clean_source_cost + own_baseline_harm.",
+    "rows": [
+      {
+        "alpha": "0.1",
+        "aggregator": "krum",
+        "clean_source_recall": 0.5639903381642513,
+        "attacked_source_recall": 0.31443961352657007,
+        "own_baseline_harm": 0.24955072463768113,
+        "harm_vs_clean_fedavg": 0.5114734299516909,
+        "clean_source_cost_vs_fedavg": 0.2619227053140097,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.22799999999999998,
+            "harm_vs_clean_fedavg": 0.5
+          },
+          "cherry": {
+            "own_baseline_harm": 0.1956521739130435,
+            "harm_vs_clean_fedavg": 0.5260869565217392
+          },
+          "potato": {
+            "own_baseline_harm": 0.325,
+            "harm_vs_clean_fedavg": 0.5083333333333333
+          }
+        }
+      },
+      {
+        "alpha": "0.1",
+        "aggregator": "median",
+        "clean_source_recall": 0.7350772946859904,
+        "attacked_source_recall": 0.19926086956521738,
+        "own_baseline_harm": 0.5358164251207729,
+        "harm_vs_clean_fedavg": 0.6266521739130434,
+        "clean_source_cost_vs_fedavg": 0.09083574879227053,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.5559999999999999,
+            "harm_vs_clean_fedavg": 0.6679999999999999
+          },
+          "cherry": {
+            "own_baseline_harm": 0.5347826086956522,
+            "harm_vs_clean_fedavg": 0.5869565217391304
+          },
+          "potato": {
+            "own_baseline_harm": 0.5166666666666666,
+            "harm_vs_clean_fedavg": 0.625
+          }
+        }
+      },
+      {
+        "alpha": "0.1",
+        "aggregator": "multikrum",
+        "clean_source_recall": 0.6695265700483092,
+        "attacked_source_recall": 0.22656038647342994,
+        "own_baseline_harm": 0.4429661835748792,
+        "harm_vs_clean_fedavg": 0.5993526570048309,
+        "clean_source_cost_vs_fedavg": 0.15638647342995168,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.476,
+            "harm_vs_clean_fedavg": 0.564
+          },
+          "cherry": {
+            "own_baseline_harm": 0.26956521739130435,
+            "harm_vs_clean_fedavg": 0.5173913043478261
+          },
+          "potato": {
+            "own_baseline_harm": 0.5833333333333334,
+            "harm_vs_clean_fedavg": 0.7166666666666666
+          }
+        }
+      },
+      {
+        "alpha": "0.1",
+        "aggregator": "trimmed_mean",
+        "clean_source_recall": 0.7922270531400967,
+        "attacked_source_recall": 0.23272946859903385,
+        "own_baseline_harm": 0.5594975845410628,
+        "harm_vs_clean_fedavg": 0.593183574879227,
+        "clean_source_cost_vs_fedavg": 0.03368599033816425,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.564,
+            "harm_vs_clean_fedavg": 0.656
+          },
+          "cherry": {
+            "own_baseline_harm": 0.5478260869565217,
+            "harm_vs_clean_fedavg": 0.5652173913043478
+          },
+          "potato": {
+            "own_baseline_harm": 0.5666666666666667,
+            "harm_vs_clean_fedavg": 0.5583333333333333
+          }
+        }
+      },
+      {
+        "alpha": "0.5",
+        "aggregator": "krum",
+        "clean_source_recall": 0.6025652173913043,
+        "attacked_source_recall": 0.5171545893719807,
+        "own_baseline_harm": 0.08541062801932366,
+        "harm_vs_clean_fedavg": 0.38594202898550717,
+        "clean_source_cost_vs_fedavg": 0.3005314009661836,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.11999999999999997,
+            "harm_vs_clean_fedavg": 0.5599999999999999
+          },
+          "cherry": {
+            "own_baseline_harm": 0.16956521739130434,
+            "harm_vs_clean_fedavg": 0.24782608695652178
+          },
+          "potato": {
+            "own_baseline_harm": -0.03333333333333332,
+            "harm_vs_clean_fedavg": 0.35
+          }
+        }
+      },
+      {
+        "alpha": "0.5",
+        "aggregator": "median",
+        "clean_source_recall": 0.9202415458937199,
+        "attacked_source_recall": 0.6341932367149758,
+        "own_baseline_harm": 0.28604830917874396,
+        "harm_vs_clean_fedavg": 0.2689033816425121,
+        "clean_source_cost_vs_fedavg": -0.017144927536231876,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.248,
+            "harm_vs_clean_fedavg": 0.252
+          },
+          "cherry": {
+            "own_baseline_harm": 0.34347826086956523,
+            "harm_vs_clean_fedavg": 0.3130434782608696
+          },
+          "potato": {
+            "own_baseline_harm": 0.2666666666666667,
+            "harm_vs_clean_fedavg": 0.2416666666666667
+          }
+        }
+      },
+      {
+        "alpha": "0.5",
+        "aggregator": "multikrum",
+        "clean_source_recall": 0.8584057971014493,
+        "attacked_source_recall": 0.5305797101449276,
+        "own_baseline_harm": 0.32782608695652177,
+        "harm_vs_clean_fedavg": 0.3725169082125604,
+        "clean_source_cost_vs_fedavg": 0.044690821256038654,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.44000000000000006,
+            "harm_vs_clean_fedavg": 0.44400000000000006
+          },
+          "cherry": {
+            "own_baseline_harm": 0.14347826086956522,
+            "harm_vs_clean_fedavg": 0.26521739130434785
+          },
+          "potato": {
+            "own_baseline_harm": 0.4000000000000001,
+            "harm_vs_clean_fedavg": 0.4083333333333334
+          }
+        }
+      },
+      {
+        "alpha": "0.5",
+        "aggregator": "trimmed_mean",
+        "clean_source_recall": 0.9247004830917874,
+        "attacked_source_recall": 0.6305652173913043,
+        "own_baseline_harm": 0.29413526570048304,
+        "harm_vs_clean_fedavg": 0.27253140096618356,
+        "clean_source_cost_vs_fedavg": -0.02160386473429951,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.244,
+            "harm_vs_clean_fedavg": 0.256
+          },
+          "cherry": {
+            "own_baseline_harm": 0.32173913043478264,
+            "harm_vs_clean_fedavg": 0.2782608695652174
+          },
+          "potato": {
+            "own_baseline_harm": 0.3166666666666666,
+            "harm_vs_clean_fedavg": 0.2833333333333333
+          }
+        }
+      },
+      {
+        "alpha": "IID",
+        "aggregator": "krum",
+        "clean_source_recall": 0.8490821256038648,
+        "attacked_source_recall": 0.7268212560386473,
+        "own_baseline_harm": 0.12226086956521738,
+        "harm_vs_clean_fedavg": 0.1986231884057971,
+        "clean_source_cost_vs_fedavg": 0.07636231884057969,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.13199999999999998,
+            "harm_vs_clean_fedavg": 0.25999999999999995
+          },
+          "cherry": {
+            "own_baseline_harm": 0.034782608695652195,
+            "harm_vs_clean_fedavg": 0.060869565217391286
+          },
+          "potato": {
+            "own_baseline_harm": 0.2,
+            "harm_vs_clean_fedavg": 0.275
+          }
+        }
+      },
+      {
+        "alpha": "IID",
+        "aggregator": "median",
+        "clean_source_recall": 0.9323333333333332,
+        "attacked_source_recall": 0.8133864734299516,
+        "own_baseline_harm": 0.11894685990338161,
+        "harm_vs_clean_fedavg": 0.11205797101449272,
+        "clean_source_cost_vs_fedavg": -0.006888888888888892,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.08799999999999994,
+            "harm_vs_clean_fedavg": 0.08399999999999994
+          },
+          "cherry": {
+            "own_baseline_harm": 0.05217391304347822,
+            "harm_vs_clean_fedavg": 0.05217391304347822
+          },
+          "potato": {
+            "own_baseline_harm": 0.2166666666666667,
+            "harm_vs_clean_fedavg": 0.2
+          }
+        }
+      },
+      {
+        "alpha": "IID",
+        "aggregator": "multikrum",
+        "clean_source_recall": 0.9034396135265701,
+        "attacked_source_recall": 0.8070289855072463,
+        "own_baseline_harm": 0.09641062801932364,
+        "harm_vs_clean_fedavg": 0.11841545893719803,
+        "clean_source_cost_vs_fedavg": 0.022004830917874394,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.02799999999999998,
+            "harm_vs_clean_fedavg": 0.04799999999999997
+          },
+          "cherry": {
+            "own_baseline_harm": 0.06956521739130431,
+            "harm_vs_clean_fedavg": 0.07391304347826082
+          },
+          "potato": {
+            "own_baseline_harm": 0.19166666666666662,
+            "harm_vs_clean_fedavg": 0.2333333333333333
+          }
+        }
+      },
+      {
+        "alpha": "IID",
+        "aggregator": "trimmed_mean",
+        "clean_source_recall": 0.9267777777777777,
+        "attacked_source_recall": 0.8131497584541063,
+        "own_baseline_harm": 0.11362801932367146,
+        "harm_vs_clean_fedavg": 0.11229468599033814,
+        "clean_source_cost_vs_fedavg": -0.001333333333333342,
+        "pair_means": {
+          "apple": {
+            "own_baseline_harm": 0.08399999999999996,
+            "harm_vs_clean_fedavg": 0.07999999999999996
+          },
+          "cherry": {
+            "own_baseline_harm": 0.06521739130434778,
+            "harm_vs_clean_fedavg": 0.06521739130434778
+          },
+          "potato": {
+            "own_baseline_harm": 0.19166666666666668,
+            "harm_vs_clean_fedavg": 0.19166666666666665
+          }
+        }
+      }
+    ]
+  },
+  "visibility_gap_decomposition": {
+    "note": "Secondary. Not a Holm family. Accuracy drop equals the support-weighted sum of class recall changes. F2b (H_s minus accuracy drop) is kept as an operational visibility summary, not as a scientific null that those two scales should match.",
+    "n_test": 850,
+    "n_classes": 19,
+    "pair_support": {
+      "apple": {
+        "source_class": "Apple___healthy",
+        "target_class": "Apple___Apple_scab",
+        "source_support": 50,
+        "target_support": 48,
+        "pi_source": 0.058823529411764705,
+        "pi_target": 0.05647058823529412
+      },
+      "cherry": {
+        "source_class": "Cherry___healthy",
+        "target_class": "Cherry___Powdery_mildew",
+        "source_support": 46,
+        "target_support": 46,
+        "pi_source": 0.05411764705882353,
+        "pi_target": 0.05411764705882353
+      },
+      "potato": {
+        "source_class": "Potato___healthy",
+        "target_class": "Potato___Late_blight",
+        "source_support": 24,
+        "target_support": 44,
+        "pi_source": 0.02823529411764706,
+        "pi_target": 0.05176470588235294
+      }
+    },
+    "summaries": [
+      {
+        "alpha": "0.1",
+        "pair": "apple",
+        "n": 5,
+        "H_s": 0.592,
+        "acc_drop": 0.01552941176470588,
+        "source_contrib_piHs": 0.034823529411764705,
+        "collateral": -0.019294117647058823,
+        "p_target_given_source": 0.584,
+        "frac_source_errors_to_target": 0.7736190476190477,
+        "target_recall_delta": 0.2375,
+        "target_precision_delta": -0.1263299363598605,
+        "ba_drop": 0.012746425670465421,
+        "H_s_over_K": 0.031157894736842107
+      },
+      {
+        "alpha": "0.1",
+        "pair": "cherry",
+        "n": 5,
+        "H_s": 0.6347826086956522,
+        "acc_drop": 0.04188235294117648,
+        "source_contrib_piHs": 0.034352941176470586,
+        "collateral": 0.007529411764705894,
+        "p_target_given_source": 0.691304347826087,
+        "frac_source_errors_to_target": 0.7615384615384615,
+        "target_recall_delta": 0.026086956521739136,
+        "target_precision_delta": -0.24941327150359519,
+        "ba_drop": 0.040275628919758485,
+        "H_s_over_K": 0.033409610983981694
+      },
+      {
+        "alpha": "0.1",
+        "pair": "potato",
+        "n": 5,
+        "H_s": 0.5666666666666667,
+        "acc_drop": 0.004235294117647048,
+        "source_contrib_piHs": 0.016,
+        "collateral": -0.011764705882352951,
+        "p_target_given_source": 0.425,
+        "frac_source_errors_to_target": 0.425,
+        "target_recall_delta": 0.12727272727272726,
+        "target_precision_delta": -0.20668459316093588,
+        "ba_drop": 0.01789418763094335,
+        "H_s_over_K": 0.02982456140350877
+      },
+      {
+        "alpha": "0.1",
+        "pair": "unweighted_pair_mean",
+        "n": 15,
+        "H_s": 0.5978164251207729,
+        "acc_drop": 0.020549019607843135,
+        "source_contrib_piHs": 0.028392156862745096,
+        "collateral": -0.00784313725490196,
+        "p_target_given_source": 0.5667681159420289,
+        "frac_source_errors_to_target": 0.6533858363858364,
+        "target_recall_delta": 0.13028656126482213,
+        "target_precision_delta": -0.19414260034146388,
+        "ba_drop": 0.023638747407055752,
+        "H_s_over_K": 0.03146402237477752
+      },
+      {
+        "alpha": "0.5",
+        "pair": "apple",
+        "n": 5,
+        "H_s": 0.484,
+        "acc_drop": 0.026117647058823534,
+        "source_contrib_piHs": 0.02847058823529412,
+        "collateral": -0.002352941176470584,
+        "p_target_given_source": 0.44800000000000006,
+        "frac_source_errors_to_target": 0.8462998405103669,
+        "target_recall_delta": 0.23333333333333334,
+        "target_precision_delta": -0.22707306450766138,
+        "ba_drop": 0.022344221837653545,
+        "H_s_over_K": 0.025473684210526315
+      },
+      {
+        "alpha": "0.5",
+        "pair": "cherry",
+        "n": 5,
+        "H_s": 0.3826086956521739,
+        "acc_drop": 0.028705882352941203,
+        "source_contrib_piHs": 0.020705882352941178,
+        "collateral": 0.008000000000000026,
+        "p_target_given_source": 0.26956521739130435,
+        "frac_source_errors_to_target": 0.5465838509316769,
+        "target_recall_delta": 0.00869565217391306,
+        "target_precision_delta": -0.1779715251791523,
+        "ba_drop": 0.027413546621650985,
+        "H_s_over_K": 0.020137299771167048
+      },
+      {
+        "alpha": "0.5",
+        "pair": "potato",
+        "n": 5,
+        "H_s": 0.2500000000000001,
+        "acc_drop": 0.004941176470588249,
+        "source_contrib_piHs": 0.0070588235294117676,
+        "collateral": -0.0021176470588235166,
+        "p_target_given_source": 0.17500000000000002,
+        "frac_source_errors_to_target": 0.3842424242424243,
+        "target_recall_delta": -0.004545454545454552,
+        "target_precision_delta": -0.08662671105196025,
+        "ba_drop": 0.01114378470324211,
+        "H_s_over_K": 0.013157894736842108
+      },
+      {
+        "alpha": "0.5",
+        "pair": "unweighted_pair_mean",
+        "n": 15,
+        "H_s": 0.37220289855072464,
+        "acc_drop": 0.019921568627450995,
+        "source_contrib_piHs": 0.018745098039215688,
+        "collateral": 0.0011764705882353085,
+        "p_target_given_source": 0.29752173913043484,
+        "frac_source_errors_to_target": 0.5923753718948227,
+        "target_recall_delta": 0.07916117698726395,
+        "target_precision_delta": -0.1638904335795913,
+        "ba_drop": 0.02030051772084888,
+        "H_s_over_K": 0.019589626239511822
+      },
+      {
+        "alpha": "IID",
+        "pair": "apple",
+        "n": 5,
+        "H_s": 0.09999999999999998,
+        "acc_drop": 0.00023529411764706688,
+        "source_contrib_piHs": 0.005882352941176469,
+        "collateral": -0.005647058823529403,
+        "p_target_given_source": 0.055999999999999994,
+        "frac_source_errors_to_target": 0.41261904761904755,
+        "target_recall_delta": 0.15000000000000002,
+        "target_precision_delta": -0.04187329783656222,
+        "ba_drop": 0.00046150963421929256,
+        "H_s_over_K": 0.00526315789473684
+      },
+      {
+        "alpha": "IID",
+        "pair": "cherry",
+        "n": 5,
+        "H_s": 0.05652173913043475,
+        "acc_drop": 0.010117647058823542,
+        "source_contrib_piHs": 0.0030588235294117623,
+        "collateral": 0.00705882352941178,
+        "p_target_given_source": 0.0391304347826087,
+        "frac_source_errors_to_target": 0.24047619047619043,
+        "target_recall_delta": 0.0,
+        "target_precision_delta": -0.0002405281650564417,
+        "ba_drop": 0.010116220938828246,
+        "H_s_over_K": 0.0029748283752860393
+      },
+      {
+        "alpha": "IID",
+        "pair": "potato",
+        "n": 5,
+        "H_s": 0.225,
+        "acc_drop": 0.005176470588235294,
+        "source_contrib_piHs": 0.006352941176470589,
+        "collateral": -0.0011764705882352947,
+        "p_target_given_source": 0.11666666666666665,
+        "frac_source_errors_to_target": 0.3771428571428571,
+        "target_recall_delta": -0.0045454545454545634,
+        "target_precision_delta": -0.0594149477519806,
+        "ba_drop": 0.010657798552156362,
+        "H_s_over_K": 0.011842105263157893
+      },
+      {
+        "alpha": "IID",
+        "pair": "unweighted_pair_mean",
+        "n": 15,
+        "H_s": 0.12717391304347825,
+        "acc_drop": 0.005176470588235301,
+        "source_contrib_piHs": 0.005098039215686273,
+        "collateral": 7.843137254902748e-05,
+        "p_target_given_source": 0.07059903381642511,
+        "frac_source_errors_to_target": 0.34341269841269834,
+        "target_recall_delta": 0.048484848484848485,
+        "target_precision_delta": -0.033842924584533085,
+        "ba_drop": 0.0070785097084013,
+        "H_s_over_K": 0.0066933638443935906
+      }
+    ]
+  },
+  "n_class_rows": 2280,
+  "n_jobs_in_lmm": 120
+}

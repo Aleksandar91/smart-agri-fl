@@ -1,0 +1,13 @@
+{
+  "description": "Targeted data poisoning on client 0: relabel all local Tomato healthy training images as Tomato late blight.",
+  "seed": 1337,
+  "active_rounds": {
+    "start": 1,
+    "end": 10
+  },
+  "label_flip": {
+    "source_class": "Tomato___healthy",
+    "target_class": "Tomato___Late_blight",
+    "fraction": 1.0
+  }
+}

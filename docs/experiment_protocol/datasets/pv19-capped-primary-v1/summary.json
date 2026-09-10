@@ -1,0 +1,438 @@
+{
+  "class_to_idx": {
+    "Apple___Apple_scab": 0,
+    "Apple___Black_rot": 1,
+    "Apple___Cedar_apple_rust": 2,
+    "Apple___healthy": 3,
+    "Blueberry___healthy": 4,
+    "Cherry___Powdery_mildew": 5,
+    "Cherry___healthy": 6,
+    "Grape___Black_rot": 7,
+    "Grape___Esca": 8,
+    "Grape___Leaf_blight": 9,
+    "Pepper___Bacterial_spot": 10,
+    "Pepper___healthy": 11,
+    "Potato___Early_blight": 12,
+    "Potato___Late_blight": 13,
+    "Potato___healthy": 14,
+    "Tomato___Bacterial_spot": 15,
+    "Tomato___Early_blight": 16,
+    "Tomato___Leaf_Mold": 17,
+    "Tomato___Spider_mites": 18
+  },
+  "classes": [
+    "Apple___Apple_scab",
+    "Apple___Black_rot",
+    "Apple___Cedar_apple_rust",
+    "Apple___healthy",
+    "Blueberry___healthy",
+    "Cherry___Powdery_mildew",
+    "Cherry___healthy",
+    "Grape___Black_rot",
+    "Grape___Esca",
+    "Grape___Leaf_blight",
+    "Pepper___Bacterial_spot",
+    "Pepper___healthy",
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Potato___healthy",
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Spider_mites"
+  ],
+  "dataset_gate_note": "Structural and perceptual-audit gates passed.",
+  "dataset_gate_passed": true,
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "dataset_manifest_sha256": "62b5b2119fb2e12b004e59c5fdfdef29765e2e4bb9c1b6cf79aeb3155ba8f872",
+  "grouping_audit": {
+    "conflicting_exact_duplicates": [],
+    "connected_groups": 993,
+    "exact_duplicate_images": 14,
+    "exact_duplicate_sets": 7,
+    "known_leaf_images": 5526,
+    "leaf_groups": 993,
+    "scope": "selected_variant",
+    "unknown_leaf_images": 0
+  },
+  "leaf_id_coverage": {
+    "Apple___Apple_scab": {
+      "images": 630,
+      "leaf_id_mapped": 630,
+      "leaf_id_unmapped": 0
+    },
+    "Apple___Black_rot": {
+      "images": 621,
+      "leaf_id_mapped": 621,
+      "leaf_id_unmapped": 0
+    },
+    "Apple___Cedar_apple_rust": {
+      "images": 275,
+      "leaf_id_mapped": 275,
+      "leaf_id_unmapped": 0
+    },
+    "Apple___healthy": {
+      "images": 1645,
+      "leaf_id_mapped": 1645,
+      "leaf_id_unmapped": 0
+    },
+    "Blueberry___healthy": {
+      "images": 1502,
+      "leaf_id_mapped": 1502,
+      "leaf_id_unmapped": 0
+    },
+    "Cherry___Powdery_mildew": {
+      "images": 1052,
+      "leaf_id_mapped": 1052,
+      "leaf_id_unmapped": 0
+    },
+    "Cherry___healthy": {
+      "images": 854,
+      "leaf_id_mapped": 854,
+      "leaf_id_unmapped": 0
+    },
+    "Grape___Black_rot": {
+      "images": 1180,
+      "leaf_id_mapped": 1180,
+      "leaf_id_unmapped": 0
+    },
+    "Grape___Esca": {
+      "images": 1383,
+      "leaf_id_mapped": 1383,
+      "leaf_id_unmapped": 0
+    },
+    "Grape___Leaf_blight": {
+      "images": 1076,
+      "leaf_id_mapped": 1076,
+      "leaf_id_unmapped": 0
+    },
+    "Grape___healthy": {
+      "images": 423,
+      "leaf_id_mapped": 0,
+      "leaf_id_unmapped": 423
+    },
+    "Pepper___Bacterial_spot": {
+      "images": 997,
+      "leaf_id_mapped": 997,
+      "leaf_id_unmapped": 0
+    },
+    "Pepper___healthy": {
+      "images": 1478,
+      "leaf_id_mapped": 1476,
+      "leaf_id_unmapped": 2
+    },
+    "Potato___Early_blight": {
+      "images": 1000,
+      "leaf_id_mapped": 1000,
+      "leaf_id_unmapped": 0
+    },
+    "Potato___Late_blight": {
+      "images": 1000,
+      "leaf_id_mapped": 1000,
+      "leaf_id_unmapped": 0
+    },
+    "Potato___healthy": {
+      "images": 152,
+      "leaf_id_mapped": 152,
+      "leaf_id_unmapped": 0
+    },
+    "Squash___Powdery_mildew": {
+      "images": 1835,
+      "leaf_id_mapped": 0,
+      "leaf_id_unmapped": 1835
+    },
+    "Tomato___Bacterial_spot": {
+      "images": 2127,
+      "leaf_id_mapped": 2127,
+      "leaf_id_unmapped": 0
+    },
+    "Tomato___Early_blight": {
+      "images": 1000,
+      "leaf_id_mapped": 999,
+      "leaf_id_unmapped": 1
+    },
+    "Tomato___Late_blight": {
+      "images": 1909,
+      "leaf_id_mapped": 920,
+      "leaf_id_unmapped": 989
+    },
+    "Tomato___Leaf_Mold": {
+      "images": 952,
+      "leaf_id_mapped": 952,
+      "leaf_id_unmapped": 0
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "images": 1771,
+      "leaf_id_mapped": 1000,
+      "leaf_id_unmapped": 771
+    },
+    "Tomato___Spider_mites": {
+      "images": 1676,
+      "leaf_id_mapped": 1676,
+      "leaf_id_unmapped": 0
+    },
+    "Tomato___Target_Spot": {
+      "images": 1404,
+      "leaf_id_mapped": 0,
+      "leaf_id_unmapped": 1404
+    },
+    "Tomato___Yellow_Leaf_Curl_Virus": {
+      "images": 5357,
+      "leaf_id_mapped": 2738,
+      "leaf_id_unmapped": 2619
+    },
+    "Tomato___healthy": {
+      "images": 1591,
+      "leaf_id_mapped": 999,
+      "leaf_id_unmapped": 592
+    },
+    "Tomato___mosaic_virus": {
+      "images": 373,
+      "leaf_id_mapped": 0,
+      "leaf_id_unmapped": 373
+    }
+  },
+  "perceptual_audit": {
+    "metadata_distinct_candidates": 72,
+    "path": "perceptual_audit.json",
+    "phash_radius": 8,
+    "unresolved_candidates": 0
+  },
+  "perceptual_audit_status": "complete",
+  "schema_version": 1,
+  "selection": {
+    "excluded_classes_by_leaf_coverage": [
+      "Grape___healthy",
+      "Squash___Powdery_mildew",
+      "Tomato___Late_blight",
+      "Tomato___Septoria_leaf_spot",
+      "Tomato___Target_Spot",
+      "Tomato___Yellow_Leaf_Curl_Virus",
+      "Tomato___healthy",
+      "Tomato___mosaic_virus"
+    ],
+    "min_leaf_id_coverage": 0.99,
+    "per_class": 300,
+    "require_leaf_id": true,
+    "split_ratios": {
+      "test": 0.15,
+      "train": 0.7,
+      "validation": 0.15
+    },
+    "split_seed": 20260824,
+    "subset_seed": 20260824,
+    "variant": "capped"
+  },
+  "source": {
+    "image_variant": "color",
+    "leaf_map": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\leaf-map.json",
+    "raw_root": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\raw\\color"
+  },
+  "split_images": {
+    "test": 850,
+    "train": 3797,
+    "validation": 879
+  },
+  "total_groups": 993,
+  "total_images": 5526,
+  "validation": {
+    "errors": [],
+    "groups_per_class_split": {
+      "Apple___Apple_scab": {
+        "test": 7,
+        "train": 29,
+        "validation": 7
+      },
+      "Apple___Black_rot": {
+        "test": 4,
+        "train": 16,
+        "validation": 3
+      },
+      "Apple___Cedar_apple_rust": {
+        "test": 11,
+        "train": 47,
+        "validation": 11
+      },
+      "Apple___healthy": {
+        "test": 6,
+        "train": 25,
+        "validation": 5
+      },
+      "Blueberry___healthy": {
+        "test": 3,
+        "train": 11,
+        "validation": 3
+      },
+      "Cherry___Powdery_mildew": {
+        "test": 2,
+        "train": 11,
+        "validation": 2
+      },
+      "Cherry___healthy": {
+        "test": 5,
+        "train": 20,
+        "validation": 5
+      },
+      "Grape___Black_rot": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Grape___Esca": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Grape___Leaf_blight": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Pepper___Bacterial_spot": {
+        "test": 4,
+        "train": 17,
+        "validation": 4
+      },
+      "Pepper___healthy": {
+        "test": 3,
+        "train": 15,
+        "validation": 4
+      },
+      "Potato___Early_blight": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Potato___Late_blight": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Potato___healthy": {
+        "test": 6,
+        "train": 26,
+        "validation": 6
+      },
+      "Tomato___Bacterial_spot": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Tomato___Early_blight": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Tomato___Leaf_Mold": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      },
+      "Tomato___Spider_mites": {
+        "test": 11,
+        "train": 52,
+        "validation": 12
+      }
+    },
+    "images_per_class_split": {
+      "Apple___Apple_scab": {
+        "test": 48,
+        "train": 204,
+        "validation": 48
+      },
+      "Apple___Black_rot": {
+        "test": 52,
+        "train": 206,
+        "validation": 42
+      },
+      "Apple___Cedar_apple_rust": {
+        "test": 43,
+        "train": 188,
+        "validation": 44
+      },
+      "Apple___healthy": {
+        "test": 50,
+        "train": 207,
+        "validation": 43
+      },
+      "Blueberry___healthy": {
+        "test": 53,
+        "train": 194,
+        "validation": 53
+      },
+      "Cherry___Powdery_mildew": {
+        "test": 46,
+        "train": 208,
+        "validation": 46
+      },
+      "Cherry___healthy": {
+        "test": 46,
+        "train": 203,
+        "validation": 51
+      },
+      "Grape___Black_rot": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Grape___Esca": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Grape___Leaf_blight": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Pepper___Bacterial_spot": {
+        "test": 48,
+        "train": 202,
+        "validation": 49
+      },
+      "Pepper___healthy": {
+        "test": 44,
+        "train": 209,
+        "validation": 47
+      },
+      "Potato___Early_blight": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Potato___Late_blight": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Potato___healthy": {
+        "test": 24,
+        "train": 104,
+        "validation": 24
+      },
+      "Tomato___Bacterial_spot": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Tomato___Early_blight": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Tomato___Leaf_Mold": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      },
+      "Tomato___Spider_mites": {
+        "test": 44,
+        "train": 208,
+        "validation": 48
+      }
+    },
+    "leaking_group_ids": [],
+    "leaking_sha256": [],
+    "passed": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "description": "Moderate Byzantine model poisoning: reverse the client's local model delta without amplification.",
+  "seed": 1337,
+  "active_rounds": {
+    "start": 1,
+    "end": 10
+  },
+  "model_update": {
+    "mode": "scale_delta",
+    "scale": -1.0
+  }
+}

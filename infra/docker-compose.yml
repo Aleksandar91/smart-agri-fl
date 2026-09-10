@@ -1,0 +1,181 @@
+services:
+  # Legacy FastAPI health/ping scaffold. Opt-in only so it does not spam logs
+  # during Flower FL runs (`docker compose --profile fl up`).
+  # Start with:  docker compose --profile connectivity up
+  fl-server:
+    profiles: ["connectivity"]
+    build:
+      context: ../fl-server
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health').read()"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  fl-client:
+    profiles: ["connectivity"]
+    build:
+      context: ../fl-client
+    depends_on:
+      fl-server:
+        condition: service_healthy
+    environment:
+      FL_SERVER_BASE_URL: "http://fl-server:8080"
+      INTERVAL_SECONDS: "3"
+      HTTP_TIMEOUT_SECONDS: "3"
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # Federated learning (Flower) - profiles "fl" (4 clients) and "fl5" (5 clients)
+  #
+  # 1) Generate data + partitions once (see infra/README.md or docs/faza1-flower.md)
+  # 2) Run:  DATASET_DIR=./fl-data PARTITIONS_DIR=./fl-partitions \
+  #          docker compose --profile fl up --build
+  #
+  # flower-server aggregates over gRPC (port 9091) and saves the global model
+  # each round into ./fl-models/. Profile fl uses four clients (client_0..3.json).
+  # Profile fl5 adds fl-client-4 and is required for Krum (n >= 2f+3). Use
+  # FL_MIN_CLIENTS=5 and five-client partition manifests with fl5.
+  # ---------------------------------------------------------------------------
+  flower-server:
+    profiles: ["fl", "fl5"]
+    build:
+      context: ../fl-server
+    command: ["python", "-m", "app.fl_server"]
+    ports:
+      - "9091:9091"
+    environment:
+      FL_LISTEN_ADDRESS: "0.0.0.0:9091"
+      FL_NUM_ROUNDS: "${FL_NUM_ROUNDS:-5}"
+      FL_MIN_CLIENTS: "${FL_MIN_CLIENTS:-4}"
+      FL_OUTPUT_DIR: "/models/global"
+      FL_EXPERIMENT_ID: "${FL_EXPERIMENT_ID:-baseline}"
+      FL_AGGREGATION: "${FL_AGGREGATION:-fedavg}"
+      FL_TRIM_BETA: "${FL_TRIM_BETA:-0.25}"
+      FL_KRUM_MALICIOUS_CLIENTS: "${FL_KRUM_MALICIOUS_CLIENTS:-1}"
+      FL_KRUM_CLIENTS_TO_KEEP: "${FL_KRUM_CLIENTS_TO_KEEP:-0}"
+      FL_DP_NOISE_MULTIPLIER: "${FL_DP_NOISE_MULTIPLIER:-0}"
+      FL_DP_CLIPPING_NORM: "${FL_DP_CLIPPING_NORM:-10}"
+      FL_DP_DELTA: "${FL_DP_DELTA:-1e-5}"
+      FL_DP_CLIP_ONLY: "${FL_DP_CLIP_ONLY:-0}"
+      FL_DP_SCOPE: "${FL_DP_SCOPE:-head}"
+      FL_TLS_CERTS_DIR: "${FL_TLS_CERTS_DIR:-}"
+      FL_TLS_REQUIRE_CLIENT_AUTH: "${FL_TLS_REQUIRE_CLIENT_AUTH:-1}"
+    volumes:
+      - "${MODELS_DIR:-./fl-models}:/models/global"
+      - "${CERTS_DIR:-./certs/out}:/certs:ro"
+
+  fl-client-0:
+    profiles: ["fl", "fl5"]
+    build:
+      context: ../fl-client
+      target: ml
+    command: ["python", "-m", "app.fl_client"]
+    depends_on:
+      - flower-server
+    environment: &fl_client_env
+      FL_SERVER_ADDRESS: "flower-server:9091"
+      FL_DATA_ROOT: "/data"
+      FL_LOCAL_EPOCHS: "${FL_LOCAL_EPOCHS:-1}"
+      FL_BATCH_SIZE: "${FL_BATCH_SIZE:-16}"
+      FL_IMG_SIZE: "${FL_IMG_SIZE:-96}"
+      FL_NUM_WORKERS: "0"
+      FL_CLIENT_ID: "client-0"
+      FL_PARTITION_FILE: "/partitions/client_0.json"
+      FL_ATTACK_CONFIG: "${FL_ATTACK_CONFIG_CLIENT_0:-}"
+      FL_TLS_CERTS_DIR: "${FL_TLS_CERTS_DIR:-}"
+    volumes: &fl_client_volumes
+      - "${DATASET_DIR:-./fl-data}:/data:ro"
+      - "${PARTITIONS_DIR:-./fl-partitions}:/partitions:ro"
+      - "./attack-configs:/attack-configs:ro"
+      - "${CERTS_DIR:-./certs/out}:/certs:ro"
+    restart: "no"
+
+  fl-client-1:
+    profiles: ["fl", "fl5"]
+    build:
+      context: ../fl-client
+      target: ml
+    command: ["python", "-m", "app.fl_client"]
+    depends_on:
+      - flower-server
+    environment:
+      <<: *fl_client_env
+      FL_CLIENT_ID: "client-1"
+      FL_PARTITION_FILE: "/partitions/client_1.json"
+      FL_ATTACK_CONFIG: "${FL_ATTACK_CONFIG_CLIENT_1:-}"
+    volumes: *fl_client_volumes
+    restart: "no"
+
+  fl-client-2:
+    profiles: ["fl", "fl5"]
+    build:
+      context: ../fl-client
+      target: ml
+    command: ["python", "-m", "app.fl_client"]
+    depends_on:
+      - flower-server
+    environment:
+      <<: *fl_client_env
+      FL_CLIENT_ID: "client-2"
+      FL_PARTITION_FILE: "/partitions/client_2.json"
+      FL_ATTACK_CONFIG: "${FL_ATTACK_CONFIG_CLIENT_2:-}"
+    volumes: *fl_client_volumes
+    restart: "no"
+
+  fl-client-3:
+    profiles: ["fl", "fl5"]
+    build:
+      context: ../fl-client
+      target: ml
+    command: ["python", "-m", "app.fl_client"]
+    depends_on:
+      - flower-server
+    environment:
+      <<: *fl_client_env
+      FL_CLIENT_ID: "client-3"
+      FL_PARTITION_FILE: "/partitions/client_3.json"
+      FL_ATTACK_CONFIG: "${FL_ATTACK_CONFIG_CLIENT_3:-}"
+    volumes: *fl_client_volumes
+    restart: "no"
+
+  fl-client-4:
+    profiles: ["fl5"]
+    build:
+      context: ../fl-client
+      target: ml
+    command: ["python", "-m", "app.fl_client"]
+    depends_on:
+      - flower-server
+    environment:
+      <<: *fl_client_env
+      FL_CLIENT_ID: "client-4"
+      FL_PARTITION_FILE: "/partitions/client_4.json"
+      FL_ATTACK_CONFIG: "${FL_ATTACK_CONFIG_CLIENT_4:-}"
+    volumes: *fl_client_volumes
+    restart: "no"
+
+  # Optional: periodic USB camera capture (Linux/Raspberry Pi only).
+  # Start it explicitly with:
+  #   docker compose --profile camera up --build
+  fl-camera:
+    profiles: ["camera"]
+    build:
+      context: ../fl-client
+    command: ["python", "-m", "app.capture_usb_cam"]
+    restart: unless-stopped
+    environment:
+      CAM_DEVICE: "/dev/video0"
+      CAM_INTERVAL_SECONDS: "5"
+      CAM_OUTPUT_DIR: "/captures"
+      CAM_WIDTH: "1280"
+      CAM_HEIGHT: "720"
+      CAM_JPEG_QUALITY: "90"
+      CAM_NO_BANNER: "true"
+    devices:
+      - "/dev/video0:/dev/video0"
+    volumes:
+      - "./captures:/captures"
+

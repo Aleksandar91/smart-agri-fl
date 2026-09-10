@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-iid-s401-fedprox-e5",
+  "alpha_label": "iid",
+  "seed": 401,
+  "algorithm": "fedprox",
+  "local_epochs": 5,
+  "started_utc": "2026-08-25T10:30:52Z",
+  "finished_utc": "2026-08-25T10:59:49Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "eval_clients": 1,
+  "proximal_mu": 0.01,
+  "role": "clean-utility-matrix",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-iid-s401-fedprox-e5",
+  "aggregation": "fedprox"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-a01-s101-fedavg-e1-muminus1",
+  "alpha_label": "a01",
+  "seed": 101,
+  "algorithm": "fedavg",
+  "local_epochs": 1,
+  "attack": "model_update",
+  "update_scale": -1.0,
+  "attacker_client": 0,
+  "started_utc": "2026-08-28T21:38:03Z",
+  "finished_utc": "2026-08-28T21:44:11Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "role": "phase4-model-update",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-a01-s101-fedavg-e1-muminus1"
+}
