@@ -1,7 +1,7 @@
 # A Locked Evaluation Protocol for Class Ownership Concentration in Small-Silo Federated Learning: Utility, Targeted Label Flipping, and Robust Aggregation
 
 **Working title (not locked).**  
-**Manuscript status:** draft based on locked PV-19-capped phases 3–4.2c and the locked PV-19-full follow-on slice (test evaluation completed). Figures 1–5 and Table 10 use those locked summaries. Table 9 uses the 8 September 2026 seed-block amendment. Tables 11–12 are the same-day secondary α / \(qM_c\) and LMM-specification analyses. Table 13 is the protocol chronology. Table 7 adds own-baseline source harm (9 September 2026). Visibility-gap arithmetic and source-to-target confusion are in §5.2 (10 September 2026; no new table). Sections 3 and 8 dump the executable training, partition, attack, and aggregation settings from the scored launchers (10 September 2026; no new table). The public GitHub artefact is tag `pv19-protocol-v1` (10 September 2026); it is not an OSF preregistration and not a DOI. Physical-edge measurements are out of scope for the claims below.
+**Manuscript status:** draft based on locked PV-19-capped phases 3–4.2c and the locked PV-19-full follow-on slice (test evaluation completed). Figures 1–5 and Table 10 use those locked summaries. Table 9 uses the 8 September 2026 seed-block amendment. Tables 11–12 are the same-day secondary α / \(qM_c\) and LMM-specification analyses. Table 13 is the protocol chronology. Table 7 adds own-baseline source harm (9 September 2026). Visibility-gap arithmetic and source-to-target confusion are in §5.2 (10 September 2026; no new table). Sections 3 and 8 dump the executable training, partition, attack, and aggregation settings from the scored launchers (10 September 2026; no new table). The public GitHub artefact is tag `pv19-protocol-v2` (10 September 2026); it is not an OSF preregistration and not a DOI. Physical-edge measurements are out of scope for the claims below.
 
 **Authors:** *to be completed*  
 **Affiliation:** *to be completed*
@@ -559,7 +559,7 @@ Training used Flower 1.32.1 [15] on CPU Docker clients (Python 3.11; PyTorch 2.1
 
 Code paths: `fl-client` / `fl-server` packages; launchers `run_pv19_utility_matrix.sh`, `run_pv19_attack_matrix.sh`, `run_pv19_defense_matrix.sh`, `run_pv19_flip_sensitivity_matrix.sh`, `run_pv19_model_update_matrix.sh`, `run_pv19_clean_robust_matrix.sh`, `run_pv19_full_confirm_matrix.sh`; partitions `infra/generate_pv19_partitions.sh`; inference `docs/manuscript/locked_inference.py`.
 
-**Public artefact.** A versioned copy of those packages, launchers, attack configs, dataset and partition manifests, attacker map, job registries, slim locked-test `test_evaluation.json` files (confusion matrix and per-class metrics; per-image prediction lists omitted), and `locked_inference.py` is at https://github.com/Aleksandar91/smart-agri-fl, tag `pv19-protocol-v1` (commit `b204a03e1a29aa00ac07e7dd24d80c4b0bbf3507`; 10 September 2026) [29]. That dump is a September archive of the already-scored protocol. It is not a public preregistration and not an August timestamp. Raw PlantVillage images and `*.npz` checkpoints are not in the dump; each slim evaluation records `checkpoint_sha256`. Per-image predictions and `fl_history.json` remain in the laboratory tree.
+**Public artefact.** An English-language versioned copy of those packages, launchers, the three locked-pair attack configs, dataset and partition manifests, attacker map, job registries, slim locked-test `test_evaluation.json` files (confusion matrix and per-class metrics; per-image prediction lists omitted), and `locked_inference.py` is at https://github.com/Aleksandar91/smart-agri-fl, tag `pv19-protocol-v2` (commit `78f68f301a7d9d0372258edd2b7930b898d3e91f`; 10 September 2026) [29]. That dump is a September archive of the already-scored PV-19 protocol. It is not a public preregistration, not an August timestamp, and not the earlier PlantVillage-v2 / Pi / DP campaign. Raw PlantVillage images and `*.npz` checkpoints are not in the dump; each slim evaluation records `checkpoint_sha256`. Per-image predictions and `fl_history.json` remain in the laboratory tree.
 
 **Table 13.** Protocol chronology. Artefact paths are relative to the laboratory repository root unless a public URL is given. “Already visible” is what existed as files, not a claim that analysts were blinded to summaries.
 
@@ -577,7 +577,7 @@ Code paths: `fl-client` / `fl-server` packages; launchers `run_pv19_utility_matr
 | 9 Sep 2026 | Own-baseline source harm (Table 7) | Same plan, dated amendment; `docs/manuscript/locked_inference.py` | All of the above |
 | 10 Sep 2026 | Visibility-gap arithmetic in Section 5.2 | Same plan, dated amendment; `docs/manuscript/locked_inference.py` | All of the above |
 | 10 Sep 2026 | Executable specification in Sections 3 and 8 | Same plan, dated amendment; scored launchers and `fl-client` / `fl-server` | All of the above |
-| 10 Sep 2026 | Public GitHub artefact | https://github.com/Aleksandar91/smart-agri-fl tag `pv19-protocol-v1` | All of the above; not an August timestamp |
+| 10 Sep 2026 | Public GitHub artefact | https://github.com/Aleksandar91/smart-agri-fl tag `pv19-protocol-v2` | All of the above; not an August timestamp |
 
 ---
 
@@ -591,7 +591,7 @@ A new defence algorithm is not licensed by these tables; it would need its own l
 
 ## Acknowledgements
 
-*To be completed.* Laboratory protocol dates: dataset lock and attack-pair lock 24 August 2026; phase 3 test 25 August 2026; phase 4.1 test 26 August 2026; phase 4.2a test 27 August 2026; phase 4.2b test 28 August 2026; phase 4.2c tests 29 August 2026; phase 5 PV-19-full test 30 August 2026; analysis plan on archived predictions 31 August 2026 (not a public preregistration); seed-block amendment of Table 9 families F2/F3.1–F3.4, secondary α / \(qM_c\) analysis (Table 11), and LMM specification audit (Table 12) on 8 September 2026; Table 7 own-baseline source harm on 9 September 2026; visibility-gap arithmetic in Section 5.2, the executable implementation dump in Sections 3 and 8, and the public GitHub tag `pv19-protocol-v1` on 10 September 2026. Chronology: Table 13.
+*To be completed.* Laboratory protocol dates: dataset lock and attack-pair lock 24 August 2026; phase 3 test 25 August 2026; phase 4.1 test 26 August 2026; phase 4.2a test 27 August 2026; phase 4.2b test 28 August 2026; phase 4.2c tests 29 August 2026; phase 5 PV-19-full test 30 August 2026; analysis plan on archived predictions 31 August 2026 (not a public preregistration); seed-block amendment of Table 9 families F2/F3.1–F3.4, secondary α / \(qM_c\) analysis (Table 11), and LMM specification audit (Table 12) on 8 September 2026; Table 7 own-baseline source harm on 9 September 2026; visibility-gap arithmetic in Section 5.2, the executable implementation dump in Sections 3 and 8, and the public GitHub tag `pv19-protocol-v2` on 10 September 2026. Chronology: Table 13.
 
 ---
 
@@ -653,7 +653,7 @@ A new defence algorithm is not licensed by these tables; it would need its own l
 
 [28] M. Fang, X. Cao, J. Jia, and N. Gong, “Local model poisoning attacks to Byzantine-robust federated learning,” in *Proc. 29th USENIX Security Symp.*, 2020, pp. 1605–1622.
 
-[29] “PV-19 class-concentrated federated learning protocol artefact,” GitHub, tag `pv19-protocol-v1`, commit `b204a03e1a29aa00ac07e7dd24d80c4b0bbf3507`, 2026. [Online]. Available: https://github.com/Aleksandar91/smart-agri-fl
+[29] “PV-19 class-concentrated federated learning protocol artefact,” GitHub, tag `pv19-protocol-v2`, commit `78f68f301a7d9d0372258edd2b7930b898d3e91f`, 2026. [Online]. Available: https://github.com/Aleksandar91/smart-agri-fl
 
 ---
 

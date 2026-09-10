@@ -191,6 +191,6 @@ Spearman ρ of monopoly vs harm on 45 FedAvg jobs remains a descriptive point wi
 
 **Status:** submission archive. Not a Holm family. Not a public preregistration. No new training.
 
-**What was posted.** https://github.com/Aleksandar91/smart-agri-fl — English-only dump of the PV-19 protocol (scored `fl-client` / `fl-server` import graph, launchers, attack configs for the three locked pairs, dataset and partition manifests, attacker map, job registries, slim `test_evaluation.json`, `locked_inference.py`, figures 1–5).
+**What was posted.** https://github.com/Aleksandar91/smart-agri-fl tag `pv19-protocol-v2` (commit `78f68f301a7d9d0372258edd2b7930b898d3e91f`). English-only dump of the PV-19 protocol (scored `fl-client` / `fl-server` import graph, launchers, attack configs for the three locked pairs, dataset and partition manifests, attacker map, job registries, slim `test_evaluation.json`, `locked_inference.py`, figures 1–5).
 
 **Not in the dump.** Raw PlantVillage images; `*.npz` checkpoints (`checkpoint_sha256` is in each slim evaluation); per-image `predictions`; `fl_history.json`; Raspberry Pi / mTLS / DP analysis scripts; the pre-24-August PlantVillage-v2 campaign; Serbian laboratory notes.
