@@ -89,7 +89,7 @@
   "review_status": "manual_or_stricter_review_required",
   "schema_version": 1,
   "source_manifest_dir": "<repository-root>\\docs\\experiment_protocol\\datasets\\pv19-capped-primary-v1",
-  "source_raw_root": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\raw\\color",
+  "source_raw_root": "<plantvillage-raw-color>",
   "unresolved_candidates": [],
   "unresolved_candidates_found": 0,
   "unresolved_candidates_truncated": false,

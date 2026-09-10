@@ -1,5 +1,5 @@
 {
-  "data_root": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\raw\\color",
+  "data_root": "<plantvillage-raw-color>",
   "source_manifest": "<repository-root>\\docs\\experiment_protocol\\datasets\\pv19-full-confirmatory-v1\\train.json",
   "source_dataset_id": "pv19-full-774007483a1d",
   "source_dataset_manifest_sha256": "774007483a1d71af339ae430d2e41dfd90fb966363c18c238dc0dc97004626d2",

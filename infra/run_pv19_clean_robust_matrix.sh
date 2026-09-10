@@ -13,7 +13,7 @@ SEEDS=(101 211 307 401 503)
 ALPHAS=(a01 a05 iid)
 AGGS=(median trimmed_mean krum multikrum)
 
-RAW_COLOR="../iot-edge/sensors/data/PlantVillage/PlantVillage-Dataset-master/PlantVillage-Dataset-master/raw/color"
+RAW_COLOR="${PV19_RAW_COLOR:-../plantvillage/raw/color}"
 VAL_MANIFEST="../docs/experiment_protocol/datasets/pv19-capped-primary-v1/validation.json"
 RUNS_ROOT="../docs/experiment_protocol/runs/pv19-capped-clean-robust"
 REGISTRY="$RUNS_ROOT/clean_robust_jobs.json"

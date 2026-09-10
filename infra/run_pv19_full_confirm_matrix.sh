@@ -10,7 +10,7 @@ MODE="${PV19_FULL_MODE:-list}"
 ONLY="${PV19_FULL_ONLY:-}"
 SEEDS=(101 211 307 401 503)
 
-RAW_COLOR="../iot-edge/sensors/data/PlantVillage/PlantVillage-Dataset-master/PlantVillage-Dataset-master/raw/color"
+RAW_COLOR="${PV19_RAW_COLOR:-../plantvillage/raw/color}"
 VAL_MANIFEST="../docs/experiment_protocol/datasets/pv19-full-confirmatory-v1/validation.json"
 RUNS_ROOT="../docs/experiment_protocol/runs/pv19-full-confirm"
 PART_ROOT="../docs/experiment_protocol/partitions/pv19-full"

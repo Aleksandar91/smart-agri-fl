@@ -20,7 +20,7 @@ ALPHAS=(a01 a05 iid)
 ALGOS=(fedavg fedprox)
 EPOCHS=(1 5)
 
-RAW_COLOR="../iot-edge/sensors/data/PlantVillage/PlantVillage-Dataset-master/PlantVillage-Dataset-master/raw/color"
+RAW_COLOR="${PV19_RAW_COLOR:-../plantvillage/raw/color}"
 VAL_MANIFEST="../docs/experiment_protocol/datasets/pv19-capped-primary-v1/validation.json"
 TEST_MANIFEST="../docs/experiment_protocol/datasets/pv19-capped-primary-v1/test.json"
 RUNS_ROOT="../docs/experiment_protocol/runs/pv19-capped"

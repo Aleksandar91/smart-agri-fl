@@ -1,11 +1,14 @@
 # PV-19 class-concentrated federated learning — protocol artefact
 
-Public, versioned archive for the locked evaluation protocol on a 19-class
-PlantVillage subset (PV-19-capped and the PV-19-full follow-on slice).
+Public, versioned, **English-language** archive for the locked evaluation
+protocol that starts on **24 August 2026**: a 19-class PlantVillage subset
+(PV-19-capped) and the PV-19-full follow-on slice.
 
-This repository is **not** the private laboratory monorepo. It does not
-contain edge/Pi clients, TLS certificates, the web app, or differential-privacy
-slices. Those remain internal.
+This repository is **not** the private laboratory monorepo and **not** the
+earlier PlantVillage-v2 / Raspberry Pi / differential-privacy study. It does
+not contain edge/Pi clients, TLS certificates, the web app, DP analysis
+scripts, tomato label-flip configs from that campaign, or Serbian laboratory
+notes.
 
 Public GitHub repository: <https://github.com/Aleksandar91/smart-agri-fl>
 
@@ -13,16 +16,17 @@ Public GitHub repository: <https://github.com/Aleksandar91/smart-agri-fl>
 
 | Path | Role |
 |------|------|
-| `fl-client/`, `fl-server/` | Scored Flower 1.32.1 client and server |
-| `infra/run_pv19_*.sh`, `run_fl_sequential.sh` | Matrix launchers (CPU Docker) |
-| `infra/attack-configs/` | Label-flip and model-update JSON |
+| `fl-client/`, `fl-server/` | Scored Flower 1.32.1 client and server (PV-19 import graph) |
+| `infra/run_pv19_*.sh`, `run_fl_sequential.sh` | Matrix launchers (CPU Docker, five clients) |
+| `infra/attack-configs/` | Locked apple / cherry / potato flips and Apple model-update |
 | `docs/research_protocol_20260824.md` | Dataset and slice lock |
 | `docs/experiment_protocol/` | Plan, attacker map, manifests, partitions, locked-test scores |
+| `docs/manuscript/class_concentrated_fl_pv19_en.md` | English manuscript draft |
 | `docs/manuscript/locked_inference.py` | Confirmatory tests and secondary analyses |
 | `docs/manuscript/figures/` | Figures 1–5 |
 
-PlantVillage **images are not redistributed**. Point `DATASET_DIR` at a local
-copy of `raw/color` from [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset)
+PlantVillage **images are not redistributed**. Point `PV19_RAW_COLOR` at a
+local copy of `raw/color` from [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset)
 (or the Hughes / Mohanty colour tree used in the lock). Manifests list relative
 paths and SHA-256.
 
@@ -33,9 +37,13 @@ paths and SHA-256.
 - Per-image prediction lists (`predictions` in the original evaluator output).
   Confusion matrices and per-class metrics are kept; they are what the paper
   tables and `locked_inference.py` use.
-- Development-validation JSON and per-round `fl_history.json` (available from
-  the laboratory archive on request).
-- Absolute Windows paths from the laboratory machine (`<repository-root>`).
+- Development-validation JSON and per-round `fl_history.json` (laboratory).
+- USB-camera, FastAPI ping, personalization, synthetic-data, and DP-report
+  modules from the earlier campaign.
+- Absolute Windows paths (`<repository-root>`).
+
+`fl_server.py` still imports optional DP / TLS helpers because the scored
+process does. PV-19 jobs ran with differential privacy off and TLS off.
 
 ## Reproduce the published numbers
 
@@ -48,8 +56,7 @@ python docs/manuscript/plot_figures.py
 
 Training the 675 jobs is a separate, long CPU Docker campaign. Launchers expect
 the same environment variables as in the paper (128 px, batch 16, ten rounds,
-`FL_FREEZE_BACKBONE=1`). See `docs/manuscript/class_concentrated_fl_pv19_en.md`
-in the laboratory tree, or the methods section of the submitted manuscript.
+`FL_FREEZE_BACKBONE=1`, five clients). See `docs/manuscript/class_concentrated_fl_pv19_en.md`.
 
 ## Licence
 

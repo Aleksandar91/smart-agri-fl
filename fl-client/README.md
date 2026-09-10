@@ -1,11 +1,10 @@
 # Flower FL client (PV-19 protocol)
 
-Scored client for the public PV-19 artefact. Build the `ml` Docker target
-from this directory. The private GitLab container registry is not part of
-this dump.
+Scored client for the public PV-19 artefact (24 August 2026 protocol).
+Build from this directory:
 
 ```bash
-docker build --target ml -t fl-client:ml .
+docker build -t fl-client:ml .
 python -m app.fl_client
 ```
 

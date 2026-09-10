@@ -1,116 +1,122 @@
-# Zaključani inferencijalni plan (faze 3–4.2a)
+# Locked inference plan (phases 3–4.2a)
 
-Datum zaključavanja plana: 31. avgust 2026.  
-Status: porodice i kodiranje zaključani **prije** izračuna p-vrijednosti.  
-Ulaz: već arhivirani locked-test sažeci i `test_evaluation.json` (matrica zabune / per-class recall). Nema novog FL treninga. Nema izbora testova prema pregledu p-vrijednosti.
+Plan lock date: 31 August 2026.
 
-Osnova: `docs/research_protocol_20260824.md` §8 i RQ1–RQ3 u rukopisu.
+Status: families and coding locked **before** p-values were computed.
 
-## Jedinica uparivanja
+Input: already-archived locked-test summaries and `test_evaluation.json` (confusion matrix / per-class recall). No new FL training. No test selection after looking at p-values.
 
-- Seed lista: `101, 211, 307, 401, 503`.
-- Algoritmi i clean/attack uslovi na istoj particiji uparuju se po seedu.
-- Gdje porodica nalaže, tri zaključana para (jabuka, trešnja, krompir) **ulaze u isti seed-blok**: usrednjavaju se unutar seeda, pa je confirmatory n = 5 (amandman 8. septembar 2026.). Stari n = 15 (pari kao razmjenjivi) nije confirmatory.
+Basis: `docs/research_protocol_20260824.md` §8 and RQ1–RQ3 in the manuscript.
 
-## Testovi
+## Pairing unit
 
-Primarni test: upareni permutation test na sredini razlika (sve 2^n dodjele predznaka kada n ≤ 15).  
-Osjetljivost: Wilcoxon signed-rank na istim razlikama.  
-Interval: percentilni bootstrap 95% CI srednje uparene razlike, 10 000 ponavljanja, RNG seed 20260824.  
-Holm korekcija unutar svake porodice ispod, ne preko porodica.
+- Seed list: `101, 211, 307, 401, 503`.
+- Algorithms and clean/attack conditions on the same partition are paired by seed.
+- Where a family requires it, the three locked pairs (apple, cherry, potato) **enter the same seed block**: they are averaged inside the seed, so confirmatory n = 5 (amendment 8 September 2026). The old n = 15 (pairs treated as exchangeable) is not confirmatory.
 
-Sa n = 5 seedova tačan dvostrani permutation p ne može biti manji od 2/32 = 0,0625. To nije razlog da se porodica proširi ili da se nivo α naknadno mijenja.
+## Tests
 
-## Porodica F1 — čista korisnost (RQ1), E = 1
+Primary test: paired permutation test on the mean difference (all 2^n sign assignments when n ≤ 15).
 
-Metrika: macro-F1 na zaključanom testu.
+Sensitivity: Wilcoxon signed-rank on the same differences.
 
-| ID | Poređenje | n |
-|----|-----------|---|
-| F1.1 | FedProx − FedAvg, α = 0,1 | 5 seedova |
-| F1.2 | FedProx − FedAvg, α = 0,5 | 5 |
+Interval: percentile bootstrap 95% CI of the mean paired difference, 10,000 replicates, RNG seed 20260824.
+
+Holm correction inside each family below, not across families.
+
+With n = 5 seeds the exact two-sided permutation p cannot be smaller than 2/32 = 0.0625. That is not a reason to enlarge the family or to change the α level after the fact.
+
+## Family F1 — clean utility (RQ1), E = 1
+
+Metric: macro-F1 on the locked test.
+
+| ID | Comparison | n |
+|----|------------|---|
+| F1.1 | FedProx − FedAvg, α = 0.1 | 5 seeds |
+| F1.2 | FedProx − FedAvg, α = 0.5 | 5 |
 | F1.3 | FedProx − FedAvg, IID | 5 |
 
-Holm preko F1.1–F1.3.
+Holm across F1.1–F1.3.
 
-## Porodica F1b — heterogenost (RQ1), FedAvg E = 1
+## Family F1b — heterogeneity (RQ1), FedAvg E = 1
 
-Isti seed, različite particije (uparivanje po RNG listi, ne po identičnom rasporedu slika).
+Same seed, different partitions (pairing by the RNG list, not by an identical image layout).
 
-| ID | Poređenje | n |
-|----|-----------|---|
-| F1b.1 | α = 0,1 − IID, macro-F1 | 5 |
-| F1b.2 | α = 0,5 − IID, macro-F1 | 5 |
+| ID | Comparison | n |
+|----|------------|---|
+| F1b.1 | α = 0.1 − IID, macro-F1 | 5 |
+| F1b.2 | α = 0.5 − IID, macro-F1 | 5 |
 
-Holm preko F1b.1–F1b.2.
+Holm across F1b.1–F1b.2.
 
-## Porodica F2a — šteta na izvoru (RQ2), FedAvg flip 1,0
-
-| ID | H0 | n |
-|----|----|---|
-| F2a.1 | srednja source-recall harm = 0, α = 0,1 | 5 seedova (3 para usrednjena unutar seeda) |
-| F2a.2 | isto, α = 0,5 | 5 |
-| F2a.3 | isto, IID | 5 |
-
-Holm preko F2a.1–F2a.3.
-
-## Porodica F2b — jaz vidljivosti (RQ2), FedAvg flip 1,0
-
-Razlika: source-recall harm minus pad tačnosti, ista skala.
+## Family F2a — source harm (RQ2), FedAvg flip 1.0
 
 | ID | H0 | n |
 |----|----|---|
-| F2b.1 | mean(harm − acc_drop) = 0, α = 0,1 | 5 seedova (3 para usrednjena unutar seeda) |
-| F2b.2 | isto, α = 0,5 | 5 |
-| F2b.3 | isto, IID | 5 |
+| F2a.1 | mean source-recall harm = 0, α = 0.1 | 5 seeds (3 pairs averaged within seed) |
+| F2a.2 | same, α = 0.5 | 5 |
+| F2a.3 | same, IID | 5 |
 
-Holm preko F2b.1–F2b.3.
+Holm across F2a.1–F2a.3.
 
-## Porodica F2c — FedProx nije odbrana (RQ2), flip 1,0
+## Family F2b — visibility gap (RQ2), FedAvg flip 1.0
 
-| ID | Poređenje | n |
-|----|-----------|---|
-| F2c.1 | FedProx − FedAvg, source harm, α = 0,1 | 5 seedova (3 para usrednjena unutar seeda) |
-| F2c.2 | isto, α = 0,5 | 5 |
-| F2c.3 | isto, IID | 5 |
+Difference: source-recall harm minus accuracy drop, same scale.
 
-Holm preko F2c.1–F2c.3.
+| ID | H0 | n |
+|----|----|---|
+| F2b.1 | mean(harm − acc_drop) = 0, α = 0.1 | 5 seeds (3 pairs averaged within seed) |
+| F2b.2 | same, α = 0.5 | 5 |
+| F2b.3 | same, IID | 5 |
 
-## Porodica F3 — robusni agregatori pri α = 0,1 (RQ3)
+Holm across F2b.1–F2b.3.
 
-Confirmatory samo α = 0,1 (naslovna tvrdnja rukopisa). Ostali α ostaju opisni.
+## Family F2c — FedProx is not a defence (RQ2), flip 1.0
 
-| ID | Poređenje | n |
-|----|-----------|---|
-| F3.1 | median − napadnuti FedAvg, source-recall recovery, α = 0,1 | 5 seedova (3 para usrednjena unutar seeda) |
-| F3.2 | trimmed mean − napadnuti FedAvg, isto | 5 |
-| F3.3 | MultiKrum − napadnuti FedAvg, isto | 5 |
-| F3.4 | Krum − napadnuti FedAvg, isto | 5 |
-| F3.5 | čisti Krum − čisti FedAvg, macro-F1, α = 0,1 | 5 seedova |
+| ID | Comparison | n |
+|----|------------|---|
+| F2c.1 | FedProx − FedAvg, source harm, α = 0.1 | 5 seeds (3 pairs averaged within seed) |
+| F2c.2 | same, α = 0.5 | 5 |
+| F2c.3 | same, IID | 5 |
 
-Holm preko F3.1–F3.5.
+Holm across F2c.1–F2c.3.
+
+## Family F3 — robust aggregators at α = 0.1 (RQ3)
+
+Confirmatory only at α = 0.1 (the manuscript headline). Other α remain descriptive.
+
+| ID | Comparison | n |
+|----|------------|---|
+| F3.1 | median − attacked FedAvg, source-recall recovery, α = 0.1 | 5 seeds (3 pairs averaged within seed) |
+| F3.2 | trimmed mean − attacked FedAvg, same | 5 |
+| F3.3 | MultiKrum − attacked FedAvg, same | 5 |
+| F3.4 | Krum − attacked FedAvg, same | 5 |
+| F3.5 | clean Krum − clean FedAvg, macro-F1, α = 0.1 | 5 seeds |
+
+Holm across F3.1–F3.5.
 
 ## Mixed model (RQ2)
 
-Protokol:
+Protocol formula:
 
 `class_recall ~ monopoly + entropy + algorithm + attack + monopoly:attack + algorithm:attack + (1 | seed) + (1 | class)`
 
-**Kodiranje `attack` (dokumentovano odstupanje).** Indikator je na nivou klase unutar posla, ne na nivou cijelog posla: `targeted = 1` samo ako je ta klasa zaključani izvor label-flip-a u tom poslu. Job-level `attack` bi pomiješao ciljanu štetu s kolateralom na ostalih 18 klasa i ne bi odgovorio na RQ2.
+**Coding of `attack` (documented deviation).** The indicator is at class-within-job, not job-level: `targeted = 1` only if that class is the locked label-flip source in that job. A job-level `attack` would mix targeted harm with collateral on the other 18 classes and would not answer RQ2.
 
-Obuhvat: faza 3 čisti E = 1 FedAvg/FedProx (30 poslova) i faza 4.1 flip 1,0 (90 poslova). Sve 19 klasa. Ishod: recall na zaključanom testu iz arhivirane `test_evaluation.json`. `monopoly` i `normalized_entropy` sa train particije.
+Coverage: phase 3 clean E = 1 FedAvg/FedProx (30 jobs) and phase 4.1 flip 1.0 (90 jobs). All 19 classes. Outcome: recall on the locked test from archived `test_evaluation.json`. `monopoly` and `normalized_entropy` from the train partition.
 
-Gaussian LMM je confirmatory model iz protokola. Binomni GEE na (tačni, support) klasterovan po seedu je osjetljivost, jer per-image predikcije postoje (agregacija po klasi daje isti binomni broj kao Bernoulli po slici).
+The Gaussian LMM is the confirmatory model from the protocol. Binomial GEE on (correct, support) clustered by seed is sensitivity, because per-image predictions exist in the laboratory archive (class aggregation gives the same binomial count as Bernoulli per image).
 
-Exploratory (nije Holm, nije confirmatory): isti LMM plus `log(test support)`.
+Exploratory (not Holm, not confirmatory): the same LMM plus `log(test support)`.
 
-Spearman ρ monopol–šteta na 45 FedAvg poslova ostaje opisna tačka uz seed-klasterovani bootstrap CI; nije treća p-porodica (poslovi unutar seeda nisu nezavisni).
+Spearman ρ of monopoly vs harm on 45 FedAvg jobs remains a descriptive point with a seed-clustered bootstrap CI; it is not a third p-family (jobs inside a seed are not independent).
 
-## Šta nije u ovom planu
+## What is not in this plan
 
-- E = 5 pod napadom (nije rađeno).
-- Izbor dodatnih poređenja nakon p-vrijednosti.
-- Faza 5 PV-19-full kao nova test porodica (potvrda ostaje opisna, slice je manji i nije pun par).
+- E = 5 under attack (not run).
+- Choosing extra comparisons after p-values.
+- Phase 5 PV-19-full as a new test family (confirmation stays descriptive; the slice is smaller and not a full pair).
+
 ## Amendment — 8 September 2026 (inferential unit)
 
 **Status:** dated amendment after isolated manuscript reviews. It does **not** add or drop comparisons, change Holm families, or use new training jobs. It corrects the exchangeability assumption for families that previously listed n = 15.
@@ -153,7 +159,7 @@ Spearman ρ monopol–šteta na 45 FedAvg poslova ostaje opisna tačka uz seed-k
 
 **Confirmatory.** Family IDs F1–F3 are comparison bundles in this document. PV-19-full is a locked follow-on on more images of the same 19 classes. Validation learning-curve summaries exist in job histories; reporting them would be exploratory, not forbidden by a preregistration rule.
 
-**Manuscript.** Table 13 lists dates, artefacts (`dataset_id` and summary JSON paths), and what was already on disk. Git SHAs are omitted because they were not part of the laboratory lock record.
+**Manuscript.** Table 13 lists dates, artefacts (`dataset_id` and summary JSON paths), and what was already on disk. Laboratory git SHAs are omitted because they were not part of the August lock record. The public GitHub tag is a September archive of this already-scored protocol.
 
 ## Amendment — 9 September 2026 (own-baseline source harm)
 
@@ -179,4 +185,12 @@ Spearman ρ monopol–šteta na 45 FedAvg poslova ostaje opisna tačka uz seed-k
 
 **Question.** Sections 3 and 8 must specify Dirichlet allocation, leaf-group integrity among clients, leaf-ID origin and the 99% rule, scored-run optimiser and freeze, BN buffers, attack-mask timing, aggregation tensors and Krum \(n>2f+2\), and what a public artefact would contain.
 
-**Result used in the manuscript.** Group-safe Dirichlet (class shares across clients; groups not split across silos; min 20 images/client). Scored freeze is `features` only; AdamW \(10^{-3}\), batch 16, BN running stats still aggregated. Flip mask seed 1337 drawn once; fractions nested. Flower 1.32.1; no public OSF/DOI claimed.
+**Result used in the manuscript.** Group-safe Dirichlet (class shares across clients; groups not split across silos; min 20 images/client). Scored freeze is `features` only; AdamW \(10^{-3}\), batch 16, BN running stats still aggregated. Flip mask seed 1337 drawn once; fractions nested. Flower 1.32.1. No public OSF/DOI claimed.
+
+## Amendment — 10 September 2026 (public GitHub artefact)
+
+**Status:** submission archive. Not a Holm family. Not a public preregistration. No new training.
+
+**What was posted.** https://github.com/Aleksandar91/smart-agri-fl — English-only dump of the PV-19 protocol (scored `fl-client` / `fl-server` import graph, launchers, attack configs for the three locked pairs, dataset and partition manifests, attacker map, job registries, slim `test_evaluation.json`, `locked_inference.py`, figures 1–5).
+
+**Not in the dump.** Raw PlantVillage images; `*.npz` checkpoints (`checkpoint_sha256` is in each slim evaluation); per-image `predictions`; `fl_history.json`; Raspberry Pi / mTLS / DP analysis scripts; the pre-24-August PlantVillage-v2 campaign; Serbian laboratory notes.

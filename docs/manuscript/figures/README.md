@@ -15,5 +15,3 @@ Each figure is written as a vector PDF (fonttype 42) and a 600 dpi PNG.
 | `fig3_monopoly_harm` | Train monopoly vs paired source-recall harm within each α (phase 4.1, three panels, \(n=30\) each) |
 | `fig4_visibility_gap` | Accuracy drop vs source harm at flip 0.25 / 0.50 / 1.0 (FedAvg) |
 | `fig5_aggregator_pareto` | Clean macro-F1 vs attack-induced source harm (own clean baseline) |
-
-Captions live in the EN/SR markdown files next to the image includes.

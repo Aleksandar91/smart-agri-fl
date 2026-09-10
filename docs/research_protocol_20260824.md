@@ -1,336 +1,151 @@
-# Zaključani protokol novog istraživačkog zadatka
+# Locked evaluation protocol (PV-19 class-concentrated FL)
 
-Datum početka: 24. avgust 2026.  
-Status: faza 5 auditovana i testirana 30. avgusta (45/45). Zaključani
-FL sliceovi na laptopu su zatvoreni. E=5 pod napadom nije pokrenut
-(nema lock-a, nema vremena prije povratka). Pi čeka korisnika.  
-Primarni cilj: ispitati kako class-concentrated non-IID raspodjela utiče na
-korisnost, ciljano trovanje i robusnu agregaciju u reproduktivnom small-silo FL
-testbedu, uz odvojenu potvrdu na fizičkom Raspberry Pi klijentu.
+Start date: 24 August 2026.
 
-Ovaj dokument je operativni protokol. Svaka promjena unaprijed definisanih
-odluka mora biti zabilježena u odjeljku „Odstupanja od protokola” prije analize
-rezultata na koju ta promjena utiče.
+This is the operational lock for the PV-19-capped scoring slices (phases 3–4.2c) and the PV-19-full follow-on (phase 5). It is not a public preregistration and not a DOI.
 
-## 1. Granice primarnog rada
+Primary aim: measure how class-concentrated non-IID partitions affect utility, targeted label flipping, and robust aggregation in a reproducible five-silo Flower testbed.
 
-Primarni naučni doprinos nije novi FL algoritam niti novi model za prepoznavanje
-biljnih bolesti. PlantVillage i pametna poljoprivreda služe kao praktičan,
-kontrolisan slučaj za:
+This document is the protocol. Any change to a pre-specified decision must be recorded under “Deviations” before the analysis that uses that change.
 
-1. mjerenje class-level heterogenosti, a ne samo globalnog Dirichlet parametra;
-2. povezivanje koncentracije klase sa clean utility i target-class štetom;
-3. upareno poređenje agregatora na identičnim particijama;
-4. provjeru da isti protokol može uključiti fizički edge klijent, uz mjerljive
-   sistemske troškove.
+Raspberry Pi, mTLS, differential privacy, field photographs, and the earlier PlantVillage-v2 / PV-27 engineering campaign are **out of scope for this artefact**. They are not part of the paper’s claims.
 
-DP nije dio primarnih tvrdnji dok mehanizam, susjedstvo, sensitivity bound,
-randomness i accounting ne budu zasebno metodološki popravljeni.
+## 1. Scope
 
-## 2. Istraživačka pitanja
+The contribution is not a new FL optimiser and not a field plant-disease detector. PlantVillage is a controlled image task used to:
 
-**RQ1.** Kako Dirichlet heterogenost i koncentracija vlasništva nad klasom
-utiču na globalni macro-F1, balanced accuracy, worst-class recall i per-client
-korisnost pri jednakom optimization budgetu?
+1. measure class-level heterogeneity, not only a global Dirichlet concentration;
+2. relate class ownership concentration to clean utility and source-class harm;
+3. compare aggregators on identical partitions.
 
-**RQ2.** U kojoj mjeri class ownership concentration predviđa štetu ciljanog
-label-flip napada i jaz između ukupne i target-class metrike?
+## 2. Research questions
 
-**RQ3.** Kako FedAvg, FedProx i odabrani robusni agregatori mijenjaju clean
-utility–attack robustness kompromis na identičnim dataset particijama?
+**RQ1.** How do Dirichlet heterogeneity and class-ownership concentration affect global macro-F1, balanced accuracy, worst-class recall, and per-client utility at a matched optimisation budget?
 
-**RQ4.** Može li se zaključani protokol izvršiti sa Raspberry Pi 5 klijentom
-uz kvantifikovane round latency, local train time, komunikaciju, CPU, RAM,
-temperaturu, throttling i mTLS overhead?
+**RQ2.** How far does class ownership concentration predict targeted label-flip harm and the gap between overall and source-class metrics?
 
-RQ4 ostaje systems doprinos samo ako se navedena mjerenja zaista prikupe.
-U suprotnom se Pi/mTLS prikazuje kao implementation validation.
+**RQ3.** How do FedAvg, FedProx, and selected robust aggregators change the clean-utility vs attack-robustness trade-off on identical partitions?
 
-## 3. Dataset uloge
+## 3. Datasets
 
-### 3.1 Primarni kontrolisani benchmark: PV-19-capped
+### 3.1 Primary benchmark: PV-19-capped
 
-- Izvor: originalne RGB slike iz lokalnog PlantVillage repozitorijuma.
-- Klase: 19 klasa sa najmanje 99% class-aware `leaf_id` pokrivenosti; nakon
-  class-level filtera izbacuju se i pojedinačne slike bez `leaf_id`.
-- Ograničenje: najviše 300 slika po klasi.
-- Veličina prije train/validation/test podjele: 5.526 slika u 993 fizička
-  leaf ID-a.
-- Namjena: kompletna multi-seed utility, heterogeneity i attack/defense
-  matrica uz prihvatljiv računarski trošak.
+- Source: original PlantVillage RGB (`raw/color`).
+- Classes: 19 classes with at least 99% class-aware `leaf_id` coverage; after the class-level filter, remaining images without a leaf ID are dropped.
+- Cap: at most 300 images per class (whole leaf groups; groups are not split to hit 300 exactly).
+- Size before the train/validation/test split: 5,526 images in 993 physical leaf IDs.
+- `dataset_id`: `pv19-capped-62b5b2119fb2`.
+- Role: the full multi-seed utility, heterogeneity, and attack/defense matrix.
 
-Postojeći `infra/fl-data-pv-v2` nije automatski prihvaćen kao zaključani
-benchmark. Prvo mora biti rekonstruisan iz deklarisanog izvora uz group-safe
-podjelu i manifest sa hash vrijednostima.
+The earlier laboratory subset `infra/fl-data-pv-v2` is **not** the locked benchmark.
 
-### 3.2 Potvrdni benchmark: PV-19-full
+### 3.2 Confirmatory benchmark: PV-19-full
 
-- Isti izvor, iste 19 klase i ista kanonska imena kao PV-19-capped.
-- Bez ograničenja od 300 slika po klasi.
-- Namjena: potvrda samo unaprijed odabranih ključnih nalaza, bez ponavljanja
-  cijele široke matrice.
+- Same source, same 19 classes and canonical names as PV-19-capped.
+- No 300-image cap.
+- `dataset_id`: `pv19-full-774007483a1d` (20,597 images).
+- Role: a pre-specified subset of key configurations, not a repeat of the full matrix.
 
-PV-19-full je primarni potvrdni skup jer zadržava istu label-space definiciju.
-PV-27 ostaje exploratory audit varijanta: u capped verziji sadrži 1.200 slika
-bez poznatog leaf ID-a i potvrđene neriješene cross-split perceptual kandidate,
-pa nije prihvatljiv za primarne confirmatory tvrdnje. PV-38 može kasnije
-služiti kao odvojen scalability test, ali se njegovi
-rezultati ne porede direktno sa PV-19 kao da je riječ o istom zadatku.
+An exploratory PV-27-capped audit (1,200 images without a known leaf ID; unresolved cross-split perceptual pairs) is **not** used for confirmatory claims. That audit is why the primary set is PV-19.
 
-### 3.3 Terenski dokazi
+## 4. Group-safe split
 
-Vlastite terenske fotografije se ne zanemaruju i ne miješaju u zaključani
-PlantVillage test skup. Njihove uloge su:
-
-- eksterni domain-shift/OOD test ako postoje stručne ground-truth oznake;
-- personalization studija ako postoje dovoljne oznake i odvojene
-  biljka/list/sesija/date grupe;
-- kvalitativna demonstracija samo za fotografije bez pouzdane oznake.
-
-Train i test fotografije ne smiju biti iz istog burst-a, istog fizičkog lista
-ili iste capture sesije. Finalni protokol će koristiti grupisanje po biljci,
-listu, sesiji i datumu, u mjeri u kojoj metapodaci to omogućavaju.
-
-### 3.4 Dodatni javni terenski skup
-
-U primarni rad se uključuje najviše jedan javni terenski benchmark:
-
-- Plant Pathology 2021 ako je cilj nezavisna replikacija na velikom realnom
-  skupu, kao zaseban multi-label FL zadatak; ili
-- PlantDoc ako je cilj direktnija, ali manja domain-shift provjera prema
-  PlantVillage klasama.
-
-RoCoLe nije primarni izbor zbog male veličine, jednog polja, uskog coffee
-domena i jake neravnoteže. Može biti naknadni stress-test, ne ključni dokaz.
-Konačan izbor javnog skupa donosi se tek nakon inventara i kvaliteta oznaka
-vlastitih terenskih slika.
-
-## 4. Obavezna group-safe podjela
-
-Jedan zaključani globalni split nastaje prije FL particionisanja:
+One locked global split is made before FL partitioning:
 
 - train pool: 70%;
 - development validation: 15%;
 - final test: 15%.
 
-Procenti se primjenjuju približno po klasi na nivou grupa, ne pojedinačnih
-slika. Sve slike istog fizičkog lista moraju pripasti samo jednom splitu.
-Finalni test se ne koristi za izbor hiperparametara, runde, agregatora,
-attack para niti model checkpointa.
+Percentages are applied approximately per class at the **group** level, not per image. All images of the same physical leaf belong to one split. The final test is not used to choose hyperparameters, rounds, aggregators, attack pairs, or checkpoints.
 
-Hijerarhija group ID izvora:
+Group-ID hierarchy:
 
-1. class-aware PlantVillage `leaf_id`, gdje je dostupan;
-2. identičan SHA-256 sadržaj slike;
-3. potvrđena near-duplicate/perceptual grupa;
-4. jedinstven image ID samo kada prethodne veze nisu pronađene.
+1. class-aware PlantVillage `leaf_id`, when available;
+2. identical SHA-256 image content;
+3. a confirmed near-duplicate / perceptual group;
+4. a unique image ID only when the previous links are absent.
 
-Perceptualni kandidati se ne spajaju automatski samo na osnovu labavog praga.
-Audit mora prijaviti prag, udaljenost, veličinu komponente i reprezentativne
-parove za ručnu ili strogu automatsku potvrdu.
+Perceptual candidates are not merged automatically from a loose threshold. The audit reports threshold, distance, component size, and representative pairs.
 
-Početni audit lokalnog punog RGB skupa utvrdio je:
+A scan of the local full RGB tree found 54,305 RGB files in 38 classes and 40,328 keys in `leaf-map.json`. Coverage is complete for most but not all classes. Presence of `leaf-map.json` is not enough to call a split group-safe.
 
-- 54.305 lokalnih RGB datoteka u 38 klasa;
-- 40.328 ključeva u postojećem `leaf-map.json`;
-- potpuna `leaf_id` pokrivenost za većinu, ali ne za sve klase;
-- nultu trenutnu pokrivenost, između ostalog, za kukuruz, squash, tomato
-  target spot i tomato mosaic virus;
-- djelimičnu pokrivenost za nekoliko tomato klasa.
+## 5. Dataset manifest and gates
 
-Zato samo prisustvo `leaf-map.json` nije dovoljno da se split proglasi
-group-safe. Mora se arhivirati izvještaj pokrivenosti i unresolved grupa.
+Each variant archives: source name/version; relative path, canonical class, file size, SHA-256; group ID and its origin; split; subset and split seeds; class list and class-to-index map; counts per class and split; exact-duplicate and perceptual-audit reports; no group-ID or SHA-256 intersection across splits; hash of the manifest itself and the script version.
 
-## 5. Dataset manifest i provjere
+The dataset gate passes only if:
 
-Za svaku dataset varijantu arhiviraju se:
+1. no known group crosses a split boundary;
+2. no SHA-256 crosses a split boundary;
+3. every class has train samples and, where group counts allow, validation and test;
+4. all manifest paths exist;
+5. a rerun with the same parameters yields the same manifest hash;
+6. unknown or incomplete `leaf_id` coverage is quantified.
 
-- naziv i verzija izvora;
-- relativna putanja, kanonska klasa, veličina datoteke i SHA-256;
-- group ID i dokaz porijekla group ID-a;
-- split (`train`, `validation`, `test`);
-- subset selection seed i split seed;
-- lista klasa i class-to-index mapiranje;
-- broj slika i grupa po klasi i splitu;
-- exact-duplicate i perceptual-audit izvještaj;
-- provjera da nema group ID ili SHA-256 presjeka između splitova;
-- hash samog manifesta i korištena verzija skripte.
+## 6. FL partitions and seeds
 
-Dataset gate prolazi samo ako:
+Client partitions are drawn only from the locked train pool. Validation and test images are never written into client training manifests.
 
-1. nijedna poznata grupa ne prelazi split granicu;
-2. nijedan SHA-256 ne prelazi split granicu;
-3. svaka klasa ima train uzorke i, gdje broj grupa dopušta, validation i test;
-4. svi manifest pathovi postoje;
-5. ponovno pokretanje sa istim parametrima daje identičan manifest hash;
-6. nepoznata ili nepotpuna `leaf_id` pokrivenost je eksplicitno kvantifikovana.
+Primary setting:
 
-## 6. FL particije i seedovi
+- five clients;
+- alpha 0.1, 0.5, and an IID control;
+- FedAvg and FedProx;
+- local epochs 1 and 5 on the clean matrix;
+- equal round count and a pre-specified local-work budget;
+- five paired partition/training seeds: `101, 211, 307, 401, 503`.
 
-Klijentske particije nastaju isključivo iz zaključanog train poola.
-Validation i test slike se nikada ne upisuju u klijentske training manifeste.
+Locked communication budget for the primary clean matrix: **10 rounds**. E=1 and E=5 are compared at that same round count. FedProx uses `μ = 0.01` unless a separate μ sweep is locked.
 
-Primarna postavka:
+Dataset subset and global split use a separate fixed seed and do not change across these runs. The same partition seed is used across compared algorithms, clean/attack pairs, and local epochs.
 
-- pet klijenata;
-- alpha: 0,1; 0,5; i IID kontrola;
-- FedAvg i FedProx;
-- lokalne epohe: 1 i 5;
-- jednak broj rundi i unaprijed definisan local-work budget;
-- najmanje pet uparenih partition/training seedova.
+A technical smoke test precedes the matrix. Its metrics are not scientific statistics.
 
-Zaključani komunikacioni budžet za primarnu clean matricu je **10 rundi**.
-Lokalne epohe E=1 i E=5 porede se pri tom istom broju rundi. Jednak
-local-work budžet (npr. E=5 × 2 runde naspram E=1 × 10 rundi) ostaje
-sekundarna, unaprijed najavljena analiza, ne uslov za početak matrice.
+## 7. Primary metrics and evaluation time
 
-FedProx koristi `μ = 0,01` dok se ne uvede zasebna, unaprijed zaključana
-osjetljivost na μ.
+Primary metrics are computed on the locked test set at the pre-fixed final round: macro-F1; balanced accuracy; weighted/global accuracy; per-class recall; worst-class recall; 10th percentile of the class-recall distribution.
 
-Početna unaprijed definisana seed lista je:
+Attack primary contrasts: source-class recall harm; attacked macro-F1; clean utility penalty; attack recovery; operational visibility (harm minus accuracy drop).
 
-`101, 211, 307, 401, 503`
+Per-image predictions were archived in the laboratory tree so that paired and class-level tests remain possible. The public dump keeps confusion matrices and per-class metrics; the per-image lists stay laboratory-only.
 
-Dataset subset i globalni split imaju zaseban, fiksiran seed i ne mijenjaju se
-između ovih run-ova. Isti partition seed koristi se kroz poređene algoritme,
-clean/attack parove i lokalne epohe.
+## 8. Statistical plan
 
-Prije pune matrice radi se samo tehnički smoke test. Njegov rezultat se ne
-uključuje u naučnu statistiku.
+For each configuration, report mean, standard deviation, and a 95% bootstrap interval across independent seed runs. Algorithms and clean/attack conditions are compared as pairs:
 
-## 7. Primarne metrike i vrijeme evaluacije
+- paired permutation test as the primary test;
+- Wilcoxon signed-rank as sensitivity;
+- paired difference and an interval for the effect;
+- Holm correction inside a pre-specified family, not across families.
 
-Primarne finalne metrike računaju se na zaključanom test skupu u unaprijed
-fiksiranoj finalnoj rundi:
+Class-level analysis uses entropy and monopoly/concentration. The planned mixed model is:
 
-- macro-F1;
-- balanced accuracy;
-- weighted/global accuracy;
-- per-class recall;
-- worst-class recall;
-- 10. percentil class recall distribucije.
+`class_recall ~ entropy + monopoly + algorithm + attack + monopoly:attack + algorithm:attack + (1 | seed) + (1 | class)`
 
-Sekundarne metrike:
+The confirmatory coding of `attack` is documented in `docs/experiment_protocol/locked_inference_plan.md`.
 
-- validation AULC;
-- rounds-to-target, ako je target definisan prije run-ova;
-- per-client utility;
-- komunikacioni i vremenski trošak;
-- peak validation rezultat, jasno označen kao sekundaran.
+## 9. Execution order
 
-Za napade su primarne:
+**Phase 0 — dataset audit.** Class normalisation without copying files; `leaf_id` coverage; exact-duplicate and perceptual reports; PV-19-capped / PV-19-full manifests; gate and reproducibility.
 
-- target-class recall harm;
-- attacked macro-F1;
-- clean utility penalty;
-- attack recovery;
-- attack success/visibility gap.
+**Phase 1 — evaluation infrastructure.** Separate train partitions, development validation, and final test; post-run evaluator for saved global checkpoints; per-image predictions and run manifests (laboratory); real `FL_LOCAL_EPOCHS`, seed, and FedProx parameters in the launcher; protocol unit tests.
 
-Per-image predikcije, targeti, confidence vrijednosti i checkpoint identitet
-moraju se arhivirati kako bi bili mogući upareni i class-level testovi.
+**Phase 2 — local smoke.** One small configuration (fewer rounds) only to check that manifests, training, aggregation, and the evaluator share the same class mapping.
 
-## 8. Statistički plan
+**Phase 3 — PV-19-capped utility matrix.** Clean FedAvg/FedProx first. Attack/defense does not start until clean results, failures, and cost are audited.
 
-Za svaku konfiguraciju izvještavaju se mean, standardna devijacija i 95%
-bootstrap interval kroz nezavisne seed run-ove. Algoritmi i clean/attack
-uslovi porede se upareno:
+**Phase 4 — attack/defense matrix.** At least three source/target pairs chosen in advance from class-concentration profiles, not from final-test scores.
 
-- paired permutation test kao primarni test;
-- Wilcoxon signed-rank kao sensitivity analiza;
-- uparena razlika i interval efekta;
-- Holm korekcija unutar unaprijed definisane porodice poređenja.
+**Phase 5 — PV-19-full confirmation.** Only the key configurations locked after the capped development protocol.
 
-Class-level analiza koristi entropy i monopoly/concentration mjere. Planirani
-model je:
+## 10. Deviations
 
-`class_recall ~ entropy + monopoly + algorithm + attack +`
-`monopoly:attack + algorithm:attack + (1 | seed) + (1 | class)`
+**24 August 2026, before any new FL run.** The initial PV-27 intention was replaced by the primary PV-19 protocol. Official local leaf metadata are incomplete for all 27 selected classes. The exploratory PV-27-capped manifest had 1,200 images without a leaf ID; perceptual audit then found unresolved similar pairs that cross the split boundary, including visually confirmed shots of the same physical leaf. The perceptual-hash threshold also misses most known sibling images, so it was not used for automatic merging.
 
-Ako se arhiviraju per-image predikcije, prednost ima binomial mixed model nad
-regresijom agregiranih stopa.
+The primary set therefore keeps only classes with at least 99% class-aware leaf coverage and drops remaining images without a leaf ID. The resulting `pv19-capped-62b5b2119fb2` has 5,526 images, 993 groups, zero unknown leaf IDs, and passes the dataset gate. The change is a methodological correction made before any new model result was seen, not a post-hoc accuracy choice.
 
-## 9. Redoslijed izvođenja i phase gates
+**31 August 2026, after the FL slices closed, before p-values.** The RQ1–RQ3 inference plan was locked in `docs/experiment_protocol/locked_inference_plan.md` and run on already-archived locked-test artefacts (`docs/manuscript/locked_inference.py`). No new training. In the mixed model, the protocol factor `attack` is coded as `targeted` at class-within-job (1 only if that class is the locked label-flip source). A job-level attack flag would mix targeted harm with collateral on the other 18 classes and would not answer RQ2. The analysis is confirmatory for families F1–F3 and the Gaussian LMM; binomial GEE is sensitivity (five seed clusters).
 
-### Faza 0 — dataset audit
+Later dated amendments (inferential unit, dose \(qM_c\), LMM audit, own-baseline harm, visibility-gap arithmetic, executable specification) are in the same plan file.
 
-1. Implementirati class normalization bez kopiranja datoteka.
-2. Izmjeriti `leaf_id` pokrivenost po klasi.
-3. Auditovati exact duplikate i napraviti perceptual candidate izvještaj.
-4. Generisati primarne PV-19-capped/PV-19-full i exploratory PV-27 manifeste.
-5. Verifikovati dataset gate i reproduktivnost.
-
-### Faza 1 — evaluation i experiment infrastruktura
-
-1. Odvojiti train particije, development validation i final test.
-2. Dodati centralni post-run evaluator za sačuvane globalne checkpointove.
-3. Arhivirati per-image predikcije i kompletan run/environment manifest.
-4. Omogućiti stvarne `FL_LOCAL_EPOCHS`, seed i FedProx parametre kroz launcher.
-5. Dodati automatske testove protokola.
-
-### Faza 2 — lokalni smoke test
-
-Jedna mala konfiguracija, smanjen broj rundi i slika, služi samo provjeri da
-manifeste, treniranje, agregaciju i evaluator povezuje isti class mapping.
-
-### Faza 3 — PV-19-capped utility matrica
-
-Prvo clean FedAvg/FedProx matrica. Attack/defense matrica ne počinje dok clean
-rezultati, kvarovi i procijenjeni troškovi nisu auditovani.
-
-### Faza 4 — attack/defense matrica
-
-Najmanje tri source/target para biraju se unaprijed na osnovu class
-concentration profila, ne na osnovu pregledanja finalnih test rezultata.
-
-### Faza 5 — PV-19-full potvrda
-
-Ponavljaju se samo ključne konfiguracije zaključane nakon capped razvojnog
-protokola, uz jasno označavanje confirmatory i exploratory analiza.
-
-### Faza 6 — field i fizički Pi
-
-Terenska anotacija/split i systems instrumentacija moraju biti spremni prije
-Pi run-a. Pi se ne uključuje samo radi još jednog accuracy rezultata.
-
-## 10. Kada je potreban Raspberry Pi
-
-Pi nije potreban za faze 0–5 dok se dataset, lokalna infrastruktura i primarni
-modeli ne stabilizuju. Korisnik će biti eksplicitno obaviješten prije faze 6.
-Tada će zahtjev sadržati:
-
-- tačnu granu/verziju koda ili arhivski hash;
-- komandu koju treba pokrenuti;
-- očekivani izlaz i health check;
-- potrebne senzore/mjerače;
-- procijenjeno trajanje;
-- lokaciju artefakata koji se vraćaju u analizu.
-
-## 11. Odstupanja od protokola
-
-**24. avgust 2026, prije bilo kojeg novog FL run-a.** Početna PV-27 namjera
-zamijenjena je primarnim PV-19 protokolom. Audit je pokazao da zvanični lokalni
-leaf metadata nije potpun za svih 27 izabranih klasa. Exploratory PV-27-capped
-manifest imao je 1.200 slika bez leaf ID-a; perceptual audit je zatim pronašao
-neriješene slične parove koji prelaze split granicu, uključujući vizuelno
-potvrđene snimke istog fizičkog lista. Prag perceptualnog hasha istovremeno
-propušta većinu poznatih sibling slika, pa nije korišten za automatsko spajanje.
-
-Primarni skup zato zadržava samo klase sa najmanje 99% class-aware leaf
-pokrivenosti i izbacuje preostale slike bez leaf ID-a. Dobijeni
-`pv19-capped-62b5b2119fb2` ima 5.526 slika, 993 grupe, nula nepoznatih leaf
-ID-a i prolazi dataset gate. Promjena je metodološka korekcija donesena prije
-pregleda bilo kojeg novog modelskog rezultata, ne post hoc izbor prema accuracy.
-
-**31. avgust 2026, nakon zatvaranja FL sliceova, prije izračuna p-vrijednosti.**
-Inferencijalni plan za RQ1–RQ3 zaključan je u
-`docs/experiment_protocol/locked_inference_plan.md` i izvršen na već
-arhiviranim locked-test artefaktima (`docs/manuscript/locked_inference.py`).
-Nema novog treninga. U mixed modelu protokolni faktor `attack` kodiran je kao
-`targeted` na nivou klase unutar posla (1 samo ako je ta klasa zaključani
-izvor label-flip-a). Job-level napad bi pomiješao ciljanu štetu s kolateralom
-na ostalih 18 klasa i ne bi odgovorio na RQ2. Analiza je confirmatory za
-porodice F1–F3 i za Gaussian LMM; binomni GEE je osjetljivost (pet seed
-klastera).
-
-Svako naredno odstupanje bilježi datum, razlog, zahvaćene run-ove i da li je
-analiza confirmatory ili exploratory.
+Each further deviation records the date, reason, affected runs, and whether the analysis is confirmatory or exploratory.

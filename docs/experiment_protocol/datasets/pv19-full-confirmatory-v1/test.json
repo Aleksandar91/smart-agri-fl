@@ -46723,8 +46723,8 @@
   },
   "source": {
     "image_variant": "color",
-    "leaf_map": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\leaf-map.json",
-    "raw_root": "<repository-root>\\iot-edge\\sensors\\data\\PlantVillage\\PlantVillage-Dataset-master\\PlantVillage-Dataset-master\\raw\\color"
+    "leaf_map": "<plantvillage-leaf-map>",
+    "raw_root": "<plantvillage-raw-color>"
   },
   "split": "test"
 }

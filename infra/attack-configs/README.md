@@ -1,30 +1,15 @@
-# Poisoning attack configurations
+# Attack configurations (PV-19 locked pairs)
 
-These files configure **client-side research attacks** against the local
-Flower testbed. They are inert unless a client receives an
-`FL_ATTACK_CONFIG` path. Dataset images and partition manifests remain
-read-only and unchanged.
+JSON files consumed by `FL_ATTACK_CONFIG` on the provisioned source-class owner. Dataset images and partition manifests stay read-only.
 
-Example: run a targeted label-flip attack from client 0 on the v2
-PlantVillage dataset with the existing alpha=0.5 partitions:
+Locked label-flip pairs (24 August 2026):
 
-```bash
-MSYS_NO_PATHCONV=1 \
-DATASET_DIR=./fl-data-pv-v2 \
-PARTITIONS_DIR=./fl-partitions-pv-v2-a05 \
-MODELS_DIR=./fl-models-security-label-flip-a05 \
-FL_IMG_SIZE=128 \
-FL_NUM_ROUNDS=10 \
-FL_EXPERIMENT_ID=poison-label-flip-a05-c0 \
-FL_ATTACK_CONFIG_CLIENT_0=/attack-configs/label_flip_tomato_client0.json \
-docker compose --profile fl up --build
-```
+- `Apple___healthy` → `Apple___Apple_scab` (fractions 1.0 / 0.50 / 0.25)
+- `Cherry___healthy` → `Cherry___Powdery_mildew`
+- `Potato___healthy` → `Potato___Late_blight`
 
-Run only one full experiment at a time. Use a new `MODELS_DIR` for every run.
-The other three client attack variables must remain empty.
+Model-update configs scale the Apple-monopoly client’s honest delta by `s = −0.5` or `s = −1`.
 
-The `scale=-1` model-update configuration reverses the malicious client's
-learned delta and is the primary multi-round scenario. The intentionally
-strong `scale=-5` configuration also amplifies that reversed delta five times;
-it is a stress/denial-of-service reference before robust aggregation is
-introduced.
+Flip-mask seed is `1337`, drawn once per process. Nested fractions on the same partition: 0.25 ⊂ 0.50 ⊂ 1.0.
+
+The attacker client is **not** hard-coded here. Matrix launchers set the config path on the client named in `docs/experiment_protocol/attack_attacker_clients.json`.

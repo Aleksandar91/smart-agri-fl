@@ -22,7 +22,7 @@ ALGOS=(fedavg fedprox)
 PAIRS=(apple cherry potato)
 FRACS=(025 050)
 
-RAW_COLOR="../iot-edge/sensors/data/PlantVillage/PlantVillage-Dataset-master/PlantVillage-Dataset-master/raw/color"
+RAW_COLOR="${PV19_RAW_COLOR:-../plantvillage/raw/color}"
 VAL_MANIFEST="../docs/experiment_protocol/datasets/pv19-capped-primary-v1/validation.json"
 RUNS_ROOT="../docs/experiment_protocol/runs/pv19-capped-flip-sensitivity"
 ATTACKERS="../docs/experiment_protocol/attack_attacker_clients.json"
