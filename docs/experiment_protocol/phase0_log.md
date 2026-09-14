@@ -63,7 +63,7 @@ Artefacts: `docs/experiment_protocol/datasets/pv19-capped-primary-v1`
 
 PV-27 → PV-19 was decided before any new model result was seen. The reason is leakage control, not accuracy optimisation.
 
-### 0.9 PV-19-full confirmatory dataset
+### 0.9 PV-19-full follow-on dataset
 
 Artefacts: `docs/experiment_protocol/datasets/pv19-full-confirmatory-v1`
 
@@ -74,7 +74,7 @@ Artefacts: `docs/experiment_protocol/datasets/pv19-full-confirmatory-v1`
 - images without leaf ID: 0; unresolved perceptual candidates: 0
 - dataset gate: **pass**
 
-The full utility/attack matrix is not run on this set. Its role is a pre-limited confirmation of key PV-19-capped findings.
+The full utility/attack matrix is not run on this set. Its role is a pre-limited follow-on on the same 19 classes. A 10 September 2026 overlap check treats it as a within-dataset scale extension, not an independent replication.
 
 ### 0.10 Group-safe FL partitioning of the train pool
 

@@ -115,7 +115,7 @@ Spearman ρ of monopoly vs harm on 45 FedAvg jobs remains a descriptive point wi
 
 - E = 5 under attack (not run).
 - Choosing extra comparisons after p-values.
-- Phase 5 PV-19-full as a new test family (confirmation stays descriptive; the slice is smaller and not a full pair).
+- Phase 5 PV-19-full as a new test family (descriptive within-dataset scale extension, not an independent replication; the slice is smaller and not a full pair).
 
 ## Amendment — 8 September 2026 (inferential unit)
 
@@ -157,7 +157,7 @@ Spearman ρ of monopoly vs harm on 45 FedAvg jobs remains a descriptive point wi
 
 **Sealed test.** The 850-image capped test is scored once per completed matrix slice and reused on later slices. It is not a once-only holdout kept unseen until the whole study ended.
 
-**Confirmatory.** Family IDs F1–F3 are comparison bundles in this document. PV-19-full is a locked follow-on on more images of the same 19 classes. Validation learning-curve summaries exist in job histories; reporting them would be exploratory, not forbidden by a preregistration rule.
+**Confirmatory.** Family IDs F1–F3 are comparison bundles in this document. PV-19-full is a locked within-dataset scale extension on more images of the same 19 classes, not an independent replication. Validation learning-curve summaries exist in job histories; reporting them would be exploratory, not forbidden by a preregistration rule.
 
 **Manuscript.** Table 13 lists dates, artefacts (`dataset_id` and summary JSON paths), and what was already on disk. Laboratory git SHAs are omitted because they were not part of the August lock record. The public GitHub tag is a September archive of this already-scored protocol.
 
@@ -194,3 +194,28 @@ Spearman ρ of monopoly vs harm on 45 FedAvg jobs remains a descriptive point wi
 **What was posted.** https://github.com/Aleksandar91/smart-agri-fl tag `pv19-protocol-v2` (commit `78f68f301a7d9d0372258edd2b7930b898d3e91f`). English-only dump of the PV-19 protocol (scored `fl-client` / `fl-server` import graph, launchers, attack configs for the three locked pairs, dataset and partition manifests, attacker map, job registries, slim `test_evaluation.json`, `locked_inference.py`, figures 1–5).
 
 **Not in the dump.** Raw PlantVillage images; `*.npz` checkpoints (`checkpoint_sha256` is in each slim evaluation); per-image `predictions`; `fl_history.json`; Raspberry Pi / mTLS / DP analysis scripts; the pre-24-August PlantVillage-v2 campaign; Serbian laboratory notes.
+
+## Amendment — 10 September 2026 (PV-19-full scale extension)
+
+**Status:** secondary. Not a Holm family. No new training. No new table.
+
+**Question.** Report image- and leaf-group overlap of capped vs full train/validation/test, whether any leaf changes split, and class-support / balanced accuracy / macro-F1 on both variants. Do not call PV-19-full an independent replication. Check the 0.264 apple-source recall equality against archives.
+
+**What was computed.** All 5,526 capped paths and 993 groups are in full. 2,166 images (397 groups) change split. Of 850 capped-test images, 216 remain in the full test. Only `Apple___Cedar_apple_rust` and `Potato___healthy` keep an identical group set. Apple healthy keeps 8 of 50 capped-test images in the full test (\(\pi_s\) 0.059 vs 0.079). At α = 0.1 FedAvg, full accuracy / balanced accuracy / macro-F1 are 0.759 / 0.729 / 0.699 vs capped 0.636 / 0.643 / 0.591. Apple flip-1.0 source recall means are 0.264 on both variants because three of five seeds are exactly 0 in both archives.
+
+**Manuscript.** Section 5.7; Table 8 caption. JSON key `pv19_full_scale_extension`.
+
+## Amendment — 14 September 2026 (code audit)
+
+**Status:** dated correction of analysis code. No new Holm family. No new training. Table 10 coefficients unchanged.
+
+**Spearman.** `scipy.stats.spearmanr` (average ranks for ties). Partial Spearman residualises those ranks on α dummies, then takes Pearson of the residuals. The previous residual-then-rank value (~0.45) is stored in JSON as a diagnostic; Table 11 uses the partial-rank value (~0.63).
+
+**LMM variance components.** Names come from `MixedLM.exog_vc.names`. A positional relabel had assigned the class component (≈0.012) to seed and the seed component (≈8.9×10^{−5}, boundary) to class. Coefficients were never swapped.
+
+**GEE.** Pass `weights=support` (GEE constructor). Analysis environment for the published JSON: Python 3.7, statsmodels 0.12.2.
+
+**Flip counts.** Public dump does not ship `fl_history.json`. `docs/experiment_protocol/attack_flip_counts.json` stores observed round-1 flipped counts for the 90 attack jobs and 180 flip-sensitivity jobs. `locked_inference.py` reads the ledger, then a local history if present, then the attacker-rule formula.
+
+**Manuscript.** Table 10 caption and §5.8 name the seed intercept as the boundary component. Table 11 partial Spearman and GEE logit updated. Public tag `pv19-protocol-v3`.
+

@@ -12,6 +12,7 @@ from pathlib import Path
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.stats import spearmanr
 from matplotlib.lines import Line2D
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Rectangle
 from matplotlib.colors import LinearSegmentedColormap
@@ -232,7 +233,7 @@ def fig1_testbed() -> None:
 
     box(0.35, 6.35, 3.5, 1.35, "Train pool\n3,797 images  ·  70%\nclient partitions drawn here only", "#E8F6F3", C["green"], fs=7.5)
     box(4.25, 6.35, 3.5, 1.35, "Development validation\n879 images  ·  15%\nused during FL rounds", C["light"], "#555555", fs=7.5)
-    box(8.15, 6.35, 3.5, 1.35, "Final test  ·  SEALED\n850 images  ·  15%\nevaluated once per finished slice", "#FDEBD0", C["vermillion"], fs=7.5, weight="bold")
+    box(8.15, 6.35, 3.5, 1.35, "Final test  ·  fixed hold-out\n850 images  ·  15%\nscored after each finished slice", "#FDEBD0", C["vermillion"], fs=7.5, weight="bold")
 
     arrow(2.1, 6.35, 2.1, 5.55)
     ax.text(2.25, 5.85, r"Dirichlet  $\alpha$ = 0.1 or 0.5,  or IID  ·  five partition seeds", fontsize=6.5, color=C["gray"], va="center")
@@ -446,9 +447,7 @@ def fig3_scatter() -> None:
             )
         xs = by_alpha[alpha]["x"]
         ys = by_alpha[alpha]["y"]
-        rx = np.argsort(np.argsort(xs))
-        ry = np.argsort(np.argsort(ys))
-        rho = float(np.corrcoef(rx, ry)[0, 1])
+        rho = float(spearmanr(xs, ys).correlation)
         ax.set_xlim(-0.02, 1.05)
         ax.set_ylim(-0.08, 1.08)
         ax.axhline(0, color="#CCCCCC", linewidth=0.5, zorder=0)

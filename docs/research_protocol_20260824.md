@@ -39,12 +39,13 @@ The contribution is not a new FL optimiser and not a field plant-disease detecto
 
 The earlier laboratory subset `infra/fl-data-pv-v2` is **not** the locked benchmark.
 
-### 3.2 Confirmatory benchmark: PV-19-full
+### 3.2 Follow-on benchmark: PV-19-full
 
 - Same source, same 19 classes and canonical names as PV-19-capped.
 - No 300-image cap.
 - `dataset_id`: `pv19-full-774007483a1d` (20,597 images).
 - Role: a pre-specified subset of key configurations, not a repeat of the full matrix.
+- Construction: same `split_seed` 20260824 as capped, but splits are assigned on the complete group list (capped selects ≤300 images/class first). Later archive analysis (10 September 2026) treats this as a within-dataset scale extension, not an independent replication.
 
 An exploratory PV-27-capped audit (1,200 images without a known leaf ID; unresolved cross-split perceptual pairs) is **not** used for confirmatory claims. That audit is why the primary set is PV-19.
 
@@ -136,7 +137,7 @@ The confirmatory coding of `attack` is documented in `docs/experiment_protocol/l
 
 **Phase 4 — attack/defense matrix.** At least three source/target pairs chosen in advance from class-concentration profiles, not from final-test scores.
 
-**Phase 5 — PV-19-full confirmation.** Only the key configurations locked after the capped development protocol.
+**Phase 5 — PV-19-full follow-on.** Only the key configurations locked after the capped development protocol. Later documented as a within-dataset scale extension, not an independent replication.
 
 ## 10. Deviations
 
@@ -146,6 +147,8 @@ The primary set therefore keeps only classes with at least 99% class-aware leaf 
 
 **31 August 2026, after the FL slices closed, before p-values.** The RQ1–RQ3 inference plan was locked in `docs/experiment_protocol/locked_inference_plan.md` and run on already-archived locked-test artefacts (`docs/manuscript/locked_inference.py`). No new training. In the mixed model, the protocol factor `attack` is coded as `targeted` at class-within-job (1 only if that class is the locked label-flip source). A job-level attack flag would mix targeted harm with collateral on the other 18 classes and would not answer RQ2. The analysis is confirmatory for families F1–F3 and the Gaussian LMM; binomial GEE is sensitivity (five seed clusters).
 
-Later dated amendments (inferential unit, dose \(qM_c\), LMM audit, own-baseline harm, visibility-gap arithmetic, executable specification) are in the same plan file.
+**10 September 2026, archived manifests and phase-5 scores.** Capped versus full split overlap was counted. PV-19-full is documented as a within-dataset scale extension, not an independent replication. Not a Holm family. No new training.
+
+Later dated amendments (inferential unit, dose \(qM_c\), LMM audit, own-baseline harm, visibility-gap arithmetic, executable specification, PV-19-full scale extension) are in the same plan file.
 
 Each further deviation records the date, reason, affected runs, and whether the analysis is confirmatory or exploratory.

@@ -23,6 +23,7 @@ Public GitHub repository: <https://github.com/Aleksandar91/smart-agri-fl>
 | `docs/experiment_protocol/` | Plan, attacker map, manifests, partitions, locked-test scores |
 | `docs/manuscript/class_concentrated_fl_pv19_en.md` | English manuscript draft |
 | `docs/manuscript/locked_inference.py` | Confirmatory tests and secondary analyses |
+| `docs/experiment_protocol/attack_flip_counts.json` | Observed round-1 flipped-label counts (histories stay lab-only) |
 | `docs/manuscript/figures/` | Figures 1–5 |
 
 PlantVillage **images are not redistributed**. Point `PV19_RAW_COLOR` at a
@@ -38,6 +39,8 @@ paths and SHA-256.
   Confusion matrices and per-class metrics are kept; they are what the paper
   tables and `locked_inference.py` use.
 - Development-validation JSON and per-round `fl_history.json` (laboratory).
+  Observed round-1 flipped counts for attack and flip-sensitivity jobs are in
+  `docs/experiment_protocol/attack_flip_counts.json`.
 - USB-camera, FastAPI ping, personalization, synthetic-data, and DP-report
   modules from the earlier campaign.
 - Absolute Windows paths (`<repository-root>`).
@@ -47,12 +50,18 @@ process does. PV-19 jobs ran with differential privacy off and TLS off.
 
 ## Reproduce the published numbers
 
-Python 3.7+ with `numpy`, `pandas`, `scipy`, `statsmodels`, `matplotlib`.
+The analysis environment used for the published JSON is **Python 3.7** with
+`numpy`, `pandas`, `scipy`, and **statsmodels 0.12.2** (GEE `weights=` is a
+constructor argument on that build). Later statsmodels versions may reject
+`var_weights` on GEE and leave the binomial GEE unweighted.
 
 ```bash
 python docs/manuscript/locked_inference.py
 python docs/manuscript/plot_figures.py
 ```
+
+`locked_inference.py` reads flip counts from `attack_flip_counts.json` when
+`fl_history.json` is absent. Do not commit full round histories to this dump.
 
 Training the 675 jobs is a separate, long CPU Docker campaign. Launchers expect
 the same environment variables as in the paper (128 px, batch 16, ten rounds,

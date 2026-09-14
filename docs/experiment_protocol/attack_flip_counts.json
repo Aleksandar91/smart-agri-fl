@@ -1,0 +1,1363 @@
+{
+  "note": "Observed round-1 attacker label_flipped_samples from laboratory fl_history.json (max over client_metrics on the first fit round). These are runtime counts, not reconstructed from qMc. Full histories remain laboratory-only; this ledger is the public attack-count file.",
+  "extracted": "2026-09-14",
+  "source": "max label_flipped_samples on round-1 fit client_metrics",
+  "folders": [
+    "pv19-capped-attack",
+    "pv19-capped-flip-sensitivity"
+  ],
+  "n_runs": 270,
+  "n_missing_history": 0,
+  "runs": [
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip1-apple",
+      "flipped": 107
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip1-cherry",
+      "flipped": 133
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip1-potato",
+      "flipped": 52
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip1-apple",
+      "flipped": 107
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip1-cherry",
+      "flipped": 133
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip1-potato",
+      "flipped": 52
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip1-apple",
+      "flipped": 90
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip1-cherry",
+      "flipped": 174
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip1-potato",
+      "flipped": 92
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip1-apple",
+      "flipped": 90
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip1-cherry",
+      "flipped": 174
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip1-potato",
+      "flipped": 92
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip1-apple",
+      "flipped": 167
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip1-cherry",
+      "flipped": 154
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip1-potato",
+      "flipped": 64
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip1-apple",
+      "flipped": 167
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip1-cherry",
+      "flipped": 154
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip1-potato",
+      "flipped": 64
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip1-apple",
+      "flipped": 207
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip1-cherry",
+      "flipped": 109
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip1-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip1-apple",
+      "flipped": 207
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip1-cherry",
+      "flipped": 109
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip1-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip1-apple",
+      "flipped": 113
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip1-cherry",
+      "flipped": 203
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip1-potato",
+      "flipped": 92
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip1-apple",
+      "flipped": 113
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip1-cherry",
+      "flipped": 203
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip1-potato",
+      "flipped": 92
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip1-apple",
+      "flipped": 124
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip1-cherry",
+      "flipped": 83
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip1-potato",
+      "flipped": 64
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip1-apple",
+      "flipped": 124
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip1-cherry",
+      "flipped": 83
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip1-potato",
+      "flipped": 64
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip1-apple",
+      "flipped": 81
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip1-cherry",
+      "flipped": 119
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip1-potato",
+      "flipped": 80
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip1-apple",
+      "flipped": 81
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip1-cherry",
+      "flipped": 119
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip1-potato",
+      "flipped": 80
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip1-apple",
+      "flipped": 107
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip1-cherry",
+      "flipped": 164
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip1-potato",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip1-apple",
+      "flipped": 107
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip1-cherry",
+      "flipped": 164
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip1-potato",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip1-apple",
+      "flipped": 172
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip1-cherry",
+      "flipped": 87
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip1-potato",
+      "flipped": 48
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip1-apple",
+      "flipped": 172
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip1-cherry",
+      "flipped": 87
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip1-potato",
+      "flipped": 48
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip1-apple",
+      "flipped": 105
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip1-cherry",
+      "flipped": 91
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip1-potato",
+      "flipped": 36
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip1-apple",
+      "flipped": 105
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip1-cherry",
+      "flipped": 91
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip1-potato",
+      "flipped": 36
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip1-cherry",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip1-cherry",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip1-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip1-cherry",
+      "flipped": 42
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip1-apple",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip1-cherry",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip1-apple",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip1-cherry",
+      "flipped": 44
+    },
+    {
+      "folder": "pv19-capped-attack",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip1-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip025-cherry",
+      "flipped": 33
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip025-potato",
+      "flipped": 13
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip050-apple",
+      "flipped": 53
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip050-cherry",
+      "flipped": 66
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedavg-e1-flip050-potato",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip025-cherry",
+      "flipped": 33
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip025-potato",
+      "flipped": 13
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip050-apple",
+      "flipped": 53
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip050-cherry",
+      "flipped": 66
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s101-fedprox-e1-flip050-potato",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip025-apple",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip025-cherry",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip025-potato",
+      "flipped": 23
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip050-apple",
+      "flipped": 45
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip050-cherry",
+      "flipped": 87
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedavg-e1-flip050-potato",
+      "flipped": 46
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip025-apple",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip025-cherry",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip025-potato",
+      "flipped": 23
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip050-apple",
+      "flipped": 45
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip050-cherry",
+      "flipped": 87
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip050-potato",
+      "flipped": 46
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip025-apple",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip025-cherry",
+      "flipped": 38
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip025-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip050-apple",
+      "flipped": 83
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip050-cherry",
+      "flipped": 77
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedavg-e1-flip050-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip025-apple",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip025-cherry",
+      "flipped": 38
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip025-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip050-apple",
+      "flipped": 83
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip050-cherry",
+      "flipped": 77
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s307-fedprox-e1-flip050-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip025-apple",
+      "flipped": 51
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip025-cherry",
+      "flipped": 27
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip025-potato",
+      "flipped": 8
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip050-apple",
+      "flipped": 103
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip050-cherry",
+      "flipped": 54
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedavg-e1-flip050-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip025-apple",
+      "flipped": 51
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip025-cherry",
+      "flipped": 27
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip025-potato",
+      "flipped": 8
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip050-apple",
+      "flipped": 103
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip050-cherry",
+      "flipped": 54
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s401-fedprox-e1-flip050-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip025-apple",
+      "flipped": 28
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip025-cherry",
+      "flipped": 50
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip025-potato",
+      "flipped": 23
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip050-apple",
+      "flipped": 56
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip050-cherry",
+      "flipped": 101
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip050-potato",
+      "flipped": 46
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip025-apple",
+      "flipped": 28
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip025-cherry",
+      "flipped": 50
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip025-potato",
+      "flipped": 23
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip050-apple",
+      "flipped": 56
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip050-cherry",
+      "flipped": 101
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a01-s503-fedprox-e1-flip050-potato",
+      "flipped": 46
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip025-apple",
+      "flipped": 31
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip025-cherry",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip025-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip050-apple",
+      "flipped": 62
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip050-cherry",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedavg-e1-flip050-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip025-apple",
+      "flipped": 31
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip025-cherry",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip025-potato",
+      "flipped": 16
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip050-apple",
+      "flipped": 62
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip050-cherry",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s101-fedprox-e1-flip050-potato",
+      "flipped": 32
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip025-apple",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip025-cherry",
+      "flipped": 29
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip025-potato",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip050-apple",
+      "flipped": 40
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip050-cherry",
+      "flipped": 59
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedavg-e1-flip050-potato",
+      "flipped": 40
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip025-apple",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip025-cherry",
+      "flipped": 29
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip025-potato",
+      "flipped": 20
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip050-apple",
+      "flipped": 40
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip050-cherry",
+      "flipped": 59
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s211-fedprox-e1-flip050-potato",
+      "flipped": 40
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip025-cherry",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip025-potato",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip050-apple",
+      "flipped": 53
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip050-cherry",
+      "flipped": 82
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedavg-e1-flip050-potato",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip025-cherry",
+      "flipped": 41
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip025-potato",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip050-apple",
+      "flipped": 53
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip050-cherry",
+      "flipped": 82
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s307-fedprox-e1-flip050-potato",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip025-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip025-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip025-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip050-apple",
+      "flipped": 86
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip050-cherry",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedavg-e1-flip050-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip025-apple",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip025-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip025-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip050-apple",
+      "flipped": 86
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip050-cherry",
+      "flipped": 43
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s401-fedprox-e1-flip050-potato",
+      "flipped": 24
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip025-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip025-potato",
+      "flipped": 9
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip050-apple",
+      "flipped": 52
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip050-cherry",
+      "flipped": 45
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedavg-e1-flip050-potato",
+      "flipped": 18
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip025-apple",
+      "flipped": 26
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip025-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip025-potato",
+      "flipped": 9
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip050-apple",
+      "flipped": 52
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip050-cherry",
+      "flipped": 45
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-a05-s503-fedprox-e1-flip050-potato",
+      "flipped": 18
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedavg-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s101-fedprox-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedavg-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s211-fedprox-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip025-cherry",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip050-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedavg-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip025-cherry",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip050-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s307-fedprox-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedavg-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip025-apple",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip025-cherry",
+      "flipped": 10
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip050-apple",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip050-cherry",
+      "flipped": 21
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s401-fedprox-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip025-apple",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip025-cherry",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip050-apple",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip050-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedavg-e1-flip050-potato",
+      "flipped": 12
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip025-apple",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip025-cherry",
+      "flipped": 11
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip025-potato",
+      "flipped": 6
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip050-apple",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip050-cherry",
+      "flipped": 22
+    },
+    {
+      "folder": "pv19-capped-flip-sensitivity",
+      "experiment_id": "pv19-capped-iid-s503-fedprox-e1-flip050-potato",
+      "flipped": 12
+    }
+  ]
+}

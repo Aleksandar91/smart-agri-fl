@@ -1,6 +1,6 @@
 {
   "plan": "docs/experiment_protocol/locked_inference_plan.md",
-  "plan_amendment": "2026-09-08 (1) F2a/F2b/F2c/F3.1\u2013F3.4 use partition-seed means (n=5). (2) Secondary \u03b1-vs-monopoly and qMc dose analysis. (3) Secondary LMM specification audit (job intercept, attack_job, collinearity, paired-harm); Table 10 protocol formula unchanged. (4) 2026-09-09 aggregator own-baseline source harm (Table 7). (5) 2026-09-10 visibility-gap arithmetic and source-to-target confusion. See locked_inference_plan.md.",
+  "plan_amendment": "2026-09-08 (1) F2a/F2b/F2c/F3.1\u2013F3.4 use partition-seed means (n=5). (2) Secondary \u03b1-vs-monopoly and qMc dose analysis. (3) Secondary LMM specification audit (job intercept, attack_job, collinearity, paired-harm); Table 10 protocol formula unchanged. (4) 2026-09-09 aggregator own-baseline source harm (Table 7). (5) 2026-09-10 visibility-gap arithmetic and source-to-target confusion. (6) 2026-09-10 PV-19-full within-dataset scale extension: split overlap and test composition. (7) 2026-09-14 code audit: Spearman average ranks, partial Spearman on residualised ranks, LMM VC names from exog_vc.names (class \u2248 0.012, seed boundary), GEE weights=, public attack_flip_counts.json. See locked_inference_plan.md.",
   "rng_seed": 20260824,
   "n_bootstrap": 10000,
   "targeted_coding": "targeted=1 iff the class is the locked label-flip source in that job",
@@ -1159,12 +1159,12 @@
   ],
   "spearman_fedavg": {
     "n_jobs": 45,
-    "rho": 0.7756258234519103,
+    "rho": 0.7757138020253694,
     "seed_clustered_boot_ci95": [
-      0.7110671936758892,
-      0.8413702239789196
+      0.7151360123760543,
+      0.8461675235549087
     ],
-    "note": "Descriptive association on 45 FedAvg jobs; CI resamples the five seeds."
+    "note": "Descriptive association on 45 FedAvg jobs; CI resamples the five seeds. Spearman uses average ranks for ties (scipy.stats.spearmanr)."
   },
   "mixedlm": {
     "formula": "recall ~ monopoly + entropy + C(algorithm) + targeted + monopoly:targeted + C(algorithm):targeted",
@@ -1250,8 +1250,8 @@
     "random_effects": {},
     "warning": null,
     "variance_components": {
-      "seed": 0.01185853795618009,
-      "klass": 8.885246740364061e-05
+      "klass": 0.01185853795618009,
+      "seed": 8.885246740364061e-05
     },
     "residual_var": 0.023042655962455586,
     "residual_summary": {
@@ -1359,8 +1359,8 @@
     "random_effects": {},
     "warning": null,
     "variance_components": {
-      "seed": 0.009392445789201674,
-      "klass": 0.00019979189759794334
+      "klass": 0.009392445789201674,
+      "seed": 0.00019979189759794334
     },
     "residual_var": 0.023073555188977555,
     "residual_summary": {
@@ -1379,80 +1379,86 @@
     "formula": "recall ~ monopoly + entropy + C(algorithm) + targeted + monopoly:targeted + C(algorithm):targeted",
     "n_rows": 2280,
     "n_clusters": 5,
-    "method": "binomial GEE, independence, clustered by seed, var_weights=support",
+    "method": "binomial GEE, independence, clustered by seed, weights=support",
+    "weights_param": "weights",
+    "analysis_env_note": "weights is the GEE constructor argument (statsmodels 0.12.2 / Python 3.7). var_weights is not used: later statsmodels builds reject it and leave the GEE unweighted.",
     "coefficients": [
       {
         "term": "Intercept",
-        "estimate": -1.592860887894928,
-        "se": 0.8675354931904165,
-        "p": 0.06634645311335505,
+        "estimate": -1.6584878088920507,
+        "se": 0.9450118352115285,
+        "p": 0.07926074889105449,
         "ci95": [
-          -3.2931992098583374,
-          0.10747743406848165
+          -3.510676970870747,
+          0.1937013530866456
         ]
       },
       {
         "term": "C(algorithm)[T.fedprox]",
-        "estimate": 0.11028373777760901,
-        "se": 0.013926128680616311,
-        "p": 2.390519270126961e-15,
+        "estimate": 0.11004788329367617,
+        "se": 0.013850636929458609,
+        "p": 1.9367424919127143e-15,
         "ci95": [
-          0.08298902711953074,
-          0.13757844843568728
+          0.08290113374899685,
+          0.13719463283835548
         ]
       },
       {
         "term": "monopoly",
-        "estimate": 1.4430807655134288,
-        "se": 0.9067222082478774,
-        "p": 0.11148906747707439,
+        "estimate": 1.4806171077031918,
+        "se": 0.9907225797198015,
+        "p": 0.13504967122243894,
         "ci95": [
-          -0.33406210663503777,
-          3.2202236376618956
+          -0.46116346721823165,
+          3.422397682624615
         ]
       },
       {
         "term": "entropy",
-        "estimate": 3.3845202008825996,
-        "se": 0.6480234596570453,
-        "p": 1.762035139153031e-07,
+        "estimate": 3.439951153267296,
+        "se": 0.7059025092467262,
+        "p": 1.0984668026246195e-06,
         "ci95": [
-          2.1144175588177463,
-          4.654622842947453
+          2.0564076585472604,
+          4.8234946479873315
         ]
       },
       {
         "term": "targeted",
-        "estimate": 0.22139017314232315,
-        "se": 0.2656165257904034,
-        "p": 0.40456534706009106,
+        "estimate": 0.28941615216422817,
+        "se": 0.2313961793879879,
+        "p": 0.21102983313019652,
         "ci95": [
-          -0.29920865110552197,
-          0.7419889973901682
+          -0.1641120255963977,
+          0.742944329924854
         ]
       },
       {
         "term": "C(algorithm)[T.fedprox]:targeted",
-        "estimate": 0.07680830916860816,
-        "se": 0.047245140629677745,
-        "p": 0.10400500291363719,
+        "estimate": 0.09681497253897967,
+        "se": 0.0660004845211047,
+        "p": 0.14240795258334063,
         "ci95": [
-          -0.01579046491009023,
-          0.16940708324730655
+          -0.03254360008457885,
+          0.22617354516253818
         ]
       },
       {
         "term": "monopoly:targeted",
-        "estimate": -3.3572596080196235,
-        "se": 0.6706617454826431,
-        "p": 5.560421210913975e-07,
+        "estimate": -3.473366226491201,
+        "se": 0.5904288024665455,
+        "p": 4.034176706899077e-09,
         "ci95": [
-          -4.671732474974372,
-          -2.042786741064875
+          -4.630585414760744,
+          -2.316147038221658
         ]
       }
     ],
-    "warning": "Five seed clusters make the sandwich SE a sensitivity check, not a substitute for the LMM."
+    "warning": "Five seed clusters make the sandwich SE a sensitivity check, not a substitute for the LMM.",
+    "weights_applied": true,
+    "weights_sum": 102000.0,
+    "model_weights_sum": 102000.0,
+    "model_weights_n": 2280
   },
   "rq2_alpha_and_dose": {
     "role": "Secondary analysis after reviews: does monopoly add prediction beyond \u03b1, and is that association distinct from poison dose qMc?",
@@ -1461,58 +1467,59 @@
     "flip1_Mc_equals_realized_max_abs_diff": 0.0,
     "q_lt1_realized_vs_qMc_max_abs_diff": 0.003694581280788173,
     "spearman_flip1": {
-      "all_90": 0.7867884924064699,
-      "fedavg_45": 0.7756258234519103,
-      "partial_given_alpha_all_90": 0.452146355517142,
+      "all_90": 0.790550982732893,
+      "fedavg_45": 0.7757138020253694,
+      "partial_given_alpha_all_90": 0.6344325773858209,
+      "partial_given_alpha_all_90_residual_then_spearman": 0.4496623669177441,
       "within_alpha": {
         "a01": {
           "n_all": 30,
-          "rho_all": 0.2978865406006674,
+          "rho_all": 0.3052863473182848,
           "n_fedavg": 15,
-          "rho_fedavg": 0.28928571428571426,
+          "rho_fedavg": 0.28021497352907243,
           "Mc_min": 0.3076923076923077,
           "Mc_max": 1.0
         },
         "a05": {
           "n_all": 30,
-          "rho_all": 0.6186874304783093,
+          "rho_all": 0.6176146535863043,
           "n_fedavg": 15,
-          "rho_fedavg": 0.5464285714285714,
+          "rho_fedavg": 0.5576409733417206,
           "Mc_min": 0.34615384615384615,
           "Mc_max": 0.8309178743961353
         },
         "iid": {
           "n_all": 30,
-          "rho_all": 0.625361512791991,
+          "rho_all": 0.6647879501551058,
           "n_fedavg": 15,
-          "rho_fedavg": 0.7857142857142856,
+          "rho_fedavg": 0.8242087698329561,
           "Mc_min": 0.20689655172413793,
           "Mc_max": 0.23076923076923078
         }
       }
     },
     "spearman_dose_270": {
-      "qMc": 0.7688747445095269,
-      "realized": 0.768992411113702,
-      "Mc": 0.5423464123117067,
+      "qMc": 0.7759435455420706,
+      "realized": 0.7755415158175893,
+      "Mc": 0.5547461134292326,
       "within_alpha": {
         "a01": {
           "n": 90,
-          "rho_qMc": 0.7657982466971232,
-          "rho_Mc": 0.45374326048483343,
-          "rho_realized": 0.7610733835452936
+          "rho_qMc": 0.7722110748721079,
+          "rho_Mc": 0.445522148553303,
+          "rho_realized": 0.7678946939165516
         },
         "a05": {
           "n": 90,
-          "rho_qMc": 0.799646046837058,
-          "rho_Mc": 0.28773099559616416,
-          "rho_realized": 0.7967650327200888
+          "rho_qMc": 0.8032752873625123,
+          "rho_Mc": 0.3036344340638467,
+          "rho_realized": 0.800764009906912
         },
         "iid": {
           "n": 90,
-          "rho_qMc": 0.6489443141128534,
-          "rho_Mc": 0.29879408980532574,
-          "rho_realized": 0.6657858994937647
+          "rho_qMc": 0.6553349586569085,
+          "rho_Mc": 0.2150185738047069,
+          "rho_realized": 0.6694872338976574
         }
       }
     },
@@ -2024,7 +2031,7 @@
         "rmse": 0.14426455833972832
       }
     ],
-    "reading": "At flip 1.0, Mc equals the globally corrupted source-class fraction by the attacker rule. Across fractions 0.25/0.50/1.0, harm tracks qMc; adding Mc beside qMc does not improve the fit."
+    "reading": "At flip 1.0, Mc equals the globally corrupted source-class fraction by the attacker rule. Across fractions 0.25/0.50/1.0, harm tracks qMc; adding Mc beside qMc does not improve LOSO prediction. Partial Spearman residualises average ranks on \u03b1 dummies, then takes Pearson of those residuals."
   },
   "lmm_specification_audit": {
     "role": "Secondary specification audit of the protocol Gaussian LMM. Table 10 remains the protocol fit. Not a Holm family.",
@@ -2040,8 +2047,8 @@
       "converged": true,
       "method": "crossed LMM, (1|seed)+(1|class), REML L-BFGS",
       "variance_components": {
-        "seed": 0.01185853795618009,
-        "klass": 8.885246740364061e-05
+        "klass": 0.01185853795618009,
+        "seed": 8.885246740364061e-05
       },
       "residual_var": 0.023042655962455586,
       "residual_summary": {
@@ -2066,10 +2073,10 @@
         ]
       },
       "boundary_component": {
-        "name": "klass (class intercept)",
+        "name": "seed (partition-and-training intercept)",
         "estimate": 8.885246740364061e-05,
-        "seed_intercept": 0.01185853795618009,
-        "note": "The class intercept sits on the boundary relative to residual variance. Seed intercept is interior."
+        "class_intercept": 0.01185853795618009,
+        "note": "Variance-component names come from MixedLM.exog_vc.names. The seed intercept sits on the boundary relative to residual variance. The class intercept is interior."
       }
     },
     "sensitivities": {
@@ -2867,6 +2874,467 @@
         "H_s_over_K": 0.0066933638443935906
       }
     ]
+  },
+  "pv19_full_scale_extension": {
+    "role": "within-dataset scale extension: cap-then-split vs full-then-split; not an independent replication",
+    "construction": {
+      "capped": {
+        "dataset_id": "pv19-capped-62b5b2119fb2",
+        "variant": "capped",
+        "split_seed": 20260824,
+        "subset_seed": 20260824,
+        "n_images": 5526,
+        "n_unique_sha": 5519,
+        "n_groups": 993,
+        "n_split": {
+          "train": 3797,
+          "validation": 879,
+          "test": 850
+        }
+      },
+      "full": {
+        "dataset_id": "pv19-full-774007483a1d",
+        "variant": "full",
+        "split_seed": 20260824,
+        "subset_seed": null,
+        "n_images": 20597,
+        "n_unique_sha": 20590,
+        "n_groups": 4064,
+        "n_split": {
+          "train": 14372,
+          "validation": 3115,
+          "test": 3110
+        }
+      },
+      "note": "Both variants use split_seed 20260824. Capped selects <=300 images/class then assigns splits; full assigns splits on the complete group list. Shared groups keep the same split only when the class group set is identical."
+    },
+    "path_overlap": {
+      "n_capped": 5526,
+      "n_missing_in_full": 0,
+      "n_same_split": 3360,
+      "n_changed_split": 2166,
+      "crosstab": {
+        "test->test": 216,
+        "test->train": 504,
+        "test->validation": 130,
+        "train->test": 480,
+        "train->train": 2877,
+        "train->validation": 440,
+        "validation->test": 126,
+        "validation->train": 486,
+        "validation->validation": 267
+      }
+    },
+    "sha_overlap": {
+      "n_capped": 5519,
+      "n_missing_in_full": 0,
+      "n_same_split": 3358,
+      "n_changed_split": 2161,
+      "crosstab": {
+        "test->test": 216,
+        "test->train": 504,
+        "test->validation": 130,
+        "train->test": 480,
+        "train->train": 2875,
+        "train->validation": 435,
+        "validation->test": 126,
+        "validation->train": 486,
+        "validation->validation": 267
+      }
+    },
+    "group_overlap": {
+      "n_capped": 993,
+      "n_missing_in_full": 0,
+      "n_same_split": 596,
+      "n_changed_split": 397,
+      "crosstab": {
+        "test->test": 37,
+        "test->train": 94,
+        "test->validation": 19,
+        "train->test": 83,
+        "train->train": 517,
+        "train->validation": 85,
+        "validation->test": 22,
+        "validation->train": 94,
+        "validation->validation": 42
+      }
+    },
+    "leaf_overlap": {
+      "n_capped": 993,
+      "n_missing_in_full": 0,
+      "n_same_split": 596,
+      "n_changed_split": 397,
+      "crosstab": {
+        "test->test": 37,
+        "test->train": 94,
+        "test->validation": 19,
+        "train->test": 83,
+        "train->train": 517,
+        "train->validation": 85,
+        "validation->test": 22,
+        "validation->train": 94,
+        "validation->validation": 42
+      }
+    },
+    "n_groups_changed_split": 397,
+    "n_capped_images_in_changed_groups": 2166,
+    "changed_groups_by_class": {
+      "Apple___Apple_scab": 22,
+      "Apple___Black_rot": 11,
+      "Apple___healthy": 20,
+      "Blueberry___healthy": 2,
+      "Cherry___Powdery_mildew": 4,
+      "Cherry___healthy": 11,
+      "Grape___Black_rot": 35,
+      "Grape___Esca": 35,
+      "Grape___Leaf_blight": 37,
+      "Pepper___Bacterial_spot": 11,
+      "Pepper___healthy": 11,
+      "Potato___Early_blight": 28,
+      "Potato___Late_blight": 35,
+      "Tomato___Bacterial_spot": 35,
+      "Tomato___Early_blight": 31,
+      "Tomato___Leaf_Mold": 36,
+      "Tomato___Spider_mites": 33
+    },
+    "class_group_sets": [
+      {
+        "class": "Apple___Apple_scab",
+        "capped_groups": 43,
+        "full_groups": 108,
+        "n_extra_full_groups": 65,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 22,
+        "identical_group_set": false
+      },
+      {
+        "class": "Apple___Black_rot",
+        "capped_groups": 23,
+        "full_groups": 71,
+        "n_extra_full_groups": 48,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 11,
+        "identical_group_set": false
+      },
+      {
+        "class": "Apple___Cedar_apple_rust",
+        "capped_groups": 69,
+        "full_groups": 69,
+        "n_extra_full_groups": 0,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 0,
+        "identical_group_set": true
+      },
+      {
+        "class": "Apple___healthy",
+        "capped_groups": 36,
+        "full_groups": 257,
+        "n_extra_full_groups": 221,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 20,
+        "identical_group_set": false
+      },
+      {
+        "class": "Blueberry___healthy",
+        "capped_groups": 17,
+        "full_groups": 160,
+        "n_extra_full_groups": 143,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 2,
+        "identical_group_set": false
+      },
+      {
+        "class": "Cherry___Powdery_mildew",
+        "capped_groups": 15,
+        "full_groups": 65,
+        "n_extra_full_groups": 50,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 4,
+        "identical_group_set": false
+      },
+      {
+        "class": "Cherry___healthy",
+        "capped_groups": 30,
+        "full_groups": 107,
+        "n_extra_full_groups": 77,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 11,
+        "identical_group_set": false
+      },
+      {
+        "class": "Grape___Black_rot",
+        "capped_groups": 75,
+        "full_groups": 295,
+        "n_extra_full_groups": 220,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 35,
+        "identical_group_set": false
+      },
+      {
+        "class": "Grape___Esca",
+        "capped_groups": 75,
+        "full_groups": 346,
+        "n_extra_full_groups": 271,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 35,
+        "identical_group_set": false
+      },
+      {
+        "class": "Grape___Leaf_blight",
+        "capped_groups": 75,
+        "full_groups": 269,
+        "n_extra_full_groups": 194,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 37,
+        "identical_group_set": false
+      },
+      {
+        "class": "Pepper___Bacterial_spot",
+        "capped_groups": 25,
+        "full_groups": 175,
+        "n_extra_full_groups": 150,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 11,
+        "identical_group_set": false
+      },
+      {
+        "class": "Pepper___healthy",
+        "capped_groups": 22,
+        "full_groups": 165,
+        "n_extra_full_groups": 143,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 11,
+        "identical_group_set": false
+      },
+      {
+        "class": "Potato___Early_blight",
+        "capped_groups": 75,
+        "full_groups": 250,
+        "n_extra_full_groups": 175,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 28,
+        "identical_group_set": false
+      },
+      {
+        "class": "Potato___Late_blight",
+        "capped_groups": 75,
+        "full_groups": 250,
+        "n_extra_full_groups": 175,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 35,
+        "identical_group_set": false
+      },
+      {
+        "class": "Potato___healthy",
+        "capped_groups": 38,
+        "full_groups": 38,
+        "n_extra_full_groups": 0,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 0,
+        "identical_group_set": true
+      },
+      {
+        "class": "Tomato___Bacterial_spot",
+        "capped_groups": 75,
+        "full_groups": 532,
+        "n_extra_full_groups": 457,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 35,
+        "identical_group_set": false
+      },
+      {
+        "class": "Tomato___Early_blight",
+        "capped_groups": 75,
+        "full_groups": 250,
+        "n_extra_full_groups": 175,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 31,
+        "identical_group_set": false
+      },
+      {
+        "class": "Tomato___Leaf_Mold",
+        "capped_groups": 75,
+        "full_groups": 238,
+        "n_extra_full_groups": 163,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 36,
+        "identical_group_set": false
+      },
+      {
+        "class": "Tomato___Spider_mites",
+        "capped_groups": 75,
+        "full_groups": 419,
+        "n_extra_full_groups": 344,
+        "n_capped_missing_in_full": 0,
+        "n_shared_groups_changed_split": 33,
+        "identical_group_set": false
+      }
+    ],
+    "capped_test_images_in_full_split": {
+      "train": 504,
+      "validation": 130,
+      "test": 216
+    },
+    "apple_healthy_path_overlap_by_split": {
+      "train": {
+        "capped": 207,
+        "full": 1151,
+        "intersection": 114
+      },
+      "validation": {
+        "capped": 43,
+        "full": 247,
+        "intersection": 8
+      },
+      "test": {
+        "capped": 50,
+        "full": 247,
+        "intersection": 8
+      }
+    },
+    "test_class_support": {
+      "capped_min": 24,
+      "capped_max": 53,
+      "full_min": 24,
+      "full_max": 320,
+      "capped_entropy_norm": 0.996910558317384,
+      "full_entropy_norm": 0.9650220162054673,
+      "capped": {
+        "Apple___Apple_scab": 48,
+        "Apple___Black_rot": 52,
+        "Apple___Cedar_apple_rust": 43,
+        "Apple___healthy": 50,
+        "Blueberry___healthy": 53,
+        "Cherry___Powdery_mildew": 46,
+        "Cherry___healthy": 46,
+        "Grape___Black_rot": 44,
+        "Grape___Esca": 44,
+        "Grape___Leaf_blight": 44,
+        "Pepper___Bacterial_spot": 48,
+        "Pepper___healthy": 44,
+        "Potato___Early_blight": 44,
+        "Potato___Late_blight": 44,
+        "Potato___healthy": 24,
+        "Tomato___Bacterial_spot": 44,
+        "Tomato___Early_blight": 44,
+        "Tomato___Leaf_Mold": 44,
+        "Tomato___Spider_mites": 44
+      },
+      "full": {
+        "Apple___Apple_scab": 95,
+        "Apple___Black_rot": 96,
+        "Apple___Cedar_apple_rust": 43,
+        "Apple___healthy": 247,
+        "Blueberry___healthy": 227,
+        "Cherry___Powdery_mildew": 158,
+        "Cherry___healthy": 129,
+        "Grape___Black_rot": 176,
+        "Grape___Esca": 208,
+        "Grape___Leaf_blight": 164,
+        "Pepper___Bacterial_spot": 150,
+        "Pepper___healthy": 221,
+        "Potato___Early_blight": 152,
+        "Potato___Late_blight": 152,
+        "Potato___healthy": 24,
+        "Tomato___Bacterial_spot": 320,
+        "Tomato___Early_blight": 152,
+        "Tomato___Leaf_Mold": 144,
+        "Tomato___Spider_mites": 252
+      }
+    },
+    "source_test_share": {
+      "apple": {
+        "class": "Apple___healthy",
+        "capped_support": 50,
+        "full_support": 247,
+        "pi_capped": 0.058823529411764705,
+        "pi_full": 0.07942122186495176
+      },
+      "cherry": {
+        "class": "Cherry___healthy",
+        "capped_support": 46,
+        "full_support": 129,
+        "pi_capped": 0.05411764705882353,
+        "pi_full": 0.041479099678456595
+      },
+      "potato": {
+        "class": "Potato___healthy",
+        "capped_support": 24,
+        "full_support": 24,
+        "pi_capped": 0.02823529411764706,
+        "pi_full": 0.0077170418006430866
+      }
+    },
+    "apple_flip1_a01_fedavg_source_recall": {
+      "per_seed": [
+        {
+          "seed": 101,
+          "capped_recall": 0.0,
+          "full_recall": 0.0,
+          "diff_full_minus_capped": 0.0
+        },
+        {
+          "seed": 211,
+          "capped_recall": 0.88,
+          "full_recall": 0.9149797570850202,
+          "diff_full_minus_capped": 0.03497975708502021
+        },
+        {
+          "seed": 307,
+          "capped_recall": 0.44,
+          "full_recall": 0.4048582995951417,
+          "diff_full_minus_capped": -0.03514170040485831
+        },
+        {
+          "seed": 401,
+          "capped_recall": 0.0,
+          "full_recall": 0.0,
+          "diff_full_minus_capped": 0.0
+        },
+        {
+          "seed": 503,
+          "capped_recall": 0.0,
+          "full_recall": 0.0,
+          "diff_full_minus_capped": 0.0
+        }
+      ],
+      "capped_mean": 0.264,
+      "full_mean": 0.2639676113360324,
+      "mean_diff_full_minus_capped": -3.238866396761964e-05,
+      "n_seeds_exact_zero_both": 3
+    },
+    "clean_fedavg_e1": {
+      "capped_a01": {
+        "accuracy": 0.6364705882352941,
+        "balanced_accuracy": 0.6434940194834011,
+        "macro_f1": 0.5909190532161848,
+        "n": 5
+      },
+      "capped_iid": {
+        "accuracy": 0.8611764705882353,
+        "balanced_accuracy": 0.8617213952648585,
+        "macro_f1": 0.8606302218436973,
+        "n": 5
+      },
+      "full_a01": {
+        "accuracy": 0.7586495176848874,
+        "balanced_accuracy": 0.7290852061589354,
+        "macro_f1": 0.6992805235618909,
+        "n": 5
+      },
+      "full_a01_fedprox": {
+        "accuracy": 0.7942122186495176,
+        "balanced_accuracy": 0.7680856167389672,
+        "macro_f1": 0.7523294208807121,
+        "n": 5
+      },
+      "full_iid": {
+        "accuracy": 0.900128617363344,
+        "balanced_accuracy": 0.8859863269704409,
+        "macro_f1": 0.8866972555274018,
+        "n": 5
+      }
+    }
   },
   "n_class_rows": 2280,
   "n_jobs_in_lmm": 120

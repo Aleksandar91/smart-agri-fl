@@ -8,8 +8,8 @@ cd _public_github
 git add .
 git commit -m "Restrict public artefact to English PV-19 protocol files."
 git push origin main
-git tag pv19-protocol-v2
-git push origin pv19-protocol-v2
+git tag pv19-protocol-v3
+git push origin pv19-protocol-v3
 ```
 
 Do not add this folder as a subtree of the private GitLab repo.
