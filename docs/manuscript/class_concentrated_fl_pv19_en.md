@@ -559,7 +559,7 @@ Training used Flower 1.32.1 [26] on CPU Docker clients (Python 3.11; PyTorch 2.1
 
 Code paths: `fl-client` / `fl-server` packages; launchers `run_pv19_utility_matrix.sh`, `run_pv19_attack_matrix.sh`, `run_pv19_defense_matrix.sh`, `run_pv19_flip_sensitivity_matrix.sh`, `run_pv19_model_update_matrix.sh`, `run_pv19_clean_robust_matrix.sh`, `run_pv19_full_confirm_matrix.sh`; partitions `infra/generate_pv19_partitions.sh`; inference `docs/manuscript/locked_inference.py`.
 
-**Public artefact.** An English-language versioned copy of those packages, launchers, the three locked-pair attack configs, dataset and partition manifests, attacker map, observed round-1 flip counts (`attack_flip_counts.json`), job registries, slim locked-test `test_evaluation.json` files (confusion matrix and per-class metrics; per-image prediction lists omitted), and `locked_inference.py` is at https://github.com/Aleksandar91/smart-agri-fl, tag `pv19-protocol-v3` (14 September 2026) [34]. That dump is a September archive of the already-scored PV-19 protocol. It is not a public preregistration, not an August timestamp, and not the earlier PlantVillage-v2 / Pi / DP campaign. Raw PlantVillage images and `*.npz` checkpoints are not in the dump; each slim evaluation records `checkpoint_sha256`. Per-image predictions and `fl_history.json` remain in the laboratory tree; the public script reads flip counts from the ledger when histories are absent.
+**Public artefact.** An English-language versioned copy of those packages, launchers, the three locked-pair attack configs, dataset and partition manifests, attacker map, observed round-1 flip counts (`attack_flip_counts.json`), job registries, slim locked-test `test_evaluation.json` files (confusion matrix and per-class metrics; per-image prediction lists omitted), and `locked_inference.py` is at https://github.com/Aleksandar91/smart-agri-fl, tag `pv19-protocol-v3` (commit `df0e0b495c014e871fb3981b659ef533ee7c3c29`; 14 September 2026) [34]. That dump is a September archive of the already-scored PV-19 protocol. It is not a public preregistration, not an August timestamp, and not the earlier PlantVillage-v2 / Pi / DP campaign. Raw PlantVillage images and `*.npz` checkpoints are not in the dump; each slim evaluation records `checkpoint_sha256`. Per-image predictions and `fl_history.json` remain in the laboratory tree; the public script reads flip counts from the ledger when histories are absent.
 
 **Table 13.** Protocol chronology. Artefact paths are relative to the laboratory repository root unless a public URL is given. “Already visible” is what existed as files, not a claim that analysts were blinded to summaries.
 
@@ -666,7 +666,7 @@ A new defence algorithm is not licensed by these tables; it would need its own l
 
 [33] C. Spearman, “The proof and measurement of association between two things,” *Amer. J. Psychol.*, vol. 15, no. 1, pp. 72–101, 1904.
 
-[34] “PV-19 class-concentrated federated learning protocol artefact,” GitHub, tag `pv19-protocol-v3`, 2026. [Online]. Available: https://github.com/Aleksandar91/smart-agri-fl
+[34] “PV-19 class-concentrated federated learning protocol artefact,” GitHub, tag `pv19-protocol-v3`, commit `df0e0b495c014e871fb3981b659ef533ee7c3c29`, 2026. [Online]. Available: https://github.com/Aleksandar91/smart-agri-fl
 
 ---
 
