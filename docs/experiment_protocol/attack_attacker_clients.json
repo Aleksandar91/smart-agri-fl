@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "locked_at_utc": "2026-08-25T06:41:00Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rule": "For each seed and heterogeneity condition, the attacker is the client with the largest count of the source class in the locked train partition. Ties are broken by the lowest client index via max(..., key=count).",
+  "test_set_inspected": false,
+  "pairs": [
+    {
+      "source": "Apple___healthy",
+      "target": "Apple___Apple_scab",
+      "attackers": {
+        "a01": {
+          "101": 0,
+          "211": 0,
+          "307": 1,
+          "401": 2,
+          "503": 1
+        },
+        "a05": {
+          "101": 4,
+          "211": 1,
+          "307": 2,
+          "401": 1,
+          "503": 1
+        },
+        "iid": {
+          "101": 1,
+          "211": 1,
+          "307": 1,
+          "401": 2,
+          "503": 1
+        }
+      }
+    },
+    {
+      "source": "Cherry___healthy",
+      "target": "Cherry___Powdery_mildew",
+      "attackers": {
+        "a01": {
+          "101": 3,
+          "211": 3,
+          "307": 1,
+          "401": 1,
+          "503": 3
+        },
+        "a05": {
+          "101": 4,
+          "211": 4,
+          "307": 2,
+          "401": 0,
+          "503": 3
+        },
+        "iid": {
+          "101": 3,
+          "211": 0,
+          "307": 4,
+          "401": 4,
+          "503": 2
+        }
+      }
+    },
+    {
+      "source": "Potato___healthy",
+      "target": "Potato___Late_blight",
+      "attackers": {
+        "a01": {
+          "101": 4,
+          "211": 1,
+          "307": 4,
+          "401": 3,
+          "503": 1
+        },
+        "a05": {
+          "101": 3,
+          "211": 3,
+          "307": 4,
+          "401": 4,
+          "503": 4
+        },
+        "iid": {
+          "101": 0,
+          "211": 0,
+          "307": 0,
+          "401": 0,
+          "503": 0
+        }
+      }
+    }
+  ]
+}

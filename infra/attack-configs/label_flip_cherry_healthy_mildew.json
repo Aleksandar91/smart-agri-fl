@@ -1,0 +1,10 @@
+{
+  "description": "PV-19 locked pair 2: relabel Cherry healthy training images as Cherry powdery mildew. Attacker client is selected per seed from attack_attacker_clients.json.",
+  "seed": 1337,
+  "active_rounds": {"start": 1, "end": 10},
+  "label_flip": {
+    "source_class": "Cherry___healthy",
+    "target_class": "Cherry___Powdery_mildew",
+    "fraction": 1.0
+  }
+}

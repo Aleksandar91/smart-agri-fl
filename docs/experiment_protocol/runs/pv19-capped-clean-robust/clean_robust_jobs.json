@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "stage": "4.2c-clean-robust",
+  "jobs": [
+    {
+      "experiment_id": "pv19-capped-a01-s101-median-e1-clean",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s101-trimmed_mean-e1-clean",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s101-krum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s101-multikrum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 101,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s211-median-e1-clean",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s211-trimmed_mean-e1-clean",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s211-krum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s211-multikrum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 211,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s307-median-e1-clean",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s307-trimmed_mean-e1-clean",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s307-krum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s307-multikrum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 307,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s401-median-e1-clean",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s401-trimmed_mean-e1-clean",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s401-krum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s401-multikrum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 401,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s503-median-e1-clean",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s503-trimmed_mean-e1-clean",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s503-krum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a01-s503-multikrum-e1-clean",
+      "alpha_label": "a01",
+      "seed": 503,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s101-median-e1-clean",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s101-trimmed_mean-e1-clean",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s101-krum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s101-multikrum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 101,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s211-median-e1-clean",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s211-trimmed_mean-e1-clean",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s211-krum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s211-multikrum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 211,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s307-median-e1-clean",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s307-trimmed_mean-e1-clean",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s307-krum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s307-multikrum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 307,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s401-median-e1-clean",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s401-trimmed_mean-e1-clean",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s401-krum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s401-multikrum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 401,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s503-median-e1-clean",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s503-trimmed_mean-e1-clean",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s503-krum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-a05-s503-multikrum-e1-clean",
+      "alpha_label": "a05",
+      "seed": 503,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s101-median-e1-clean",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s101-trimmed_mean-e1-clean",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s101-krum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s101-multikrum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 101,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s211-median-e1-clean",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s211-trimmed_mean-e1-clean",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s211-krum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s211-multikrum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 211,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s307-median-e1-clean",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s307-trimmed_mean-e1-clean",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s307-krum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s307-multikrum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 307,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s401-median-e1-clean",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s401-trimmed_mean-e1-clean",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s401-krum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s401-multikrum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 401,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s503-median-e1-clean",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "median",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s503-trimmed_mean-e1-clean",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "trimmed_mean",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s503-krum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "krum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    },
+    {
+      "experiment_id": "pv19-capped-iid-s503-multikrum-e1-clean",
+      "alpha_label": "iid",
+      "seed": 503,
+      "algorithm": "multikrum",
+      "role": "phase4-clean-robust",
+      "scientific": true
+    }
+  ]
+}

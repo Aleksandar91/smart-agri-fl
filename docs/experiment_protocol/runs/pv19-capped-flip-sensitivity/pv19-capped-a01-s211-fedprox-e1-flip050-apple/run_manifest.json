@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip050-apple",
+  "alpha_label": "a01",
+  "seed": 211,
+  "algorithm": "fedprox",
+  "local_epochs": 1,
+  "pair": "apple",
+  "attacker_client": 0,
+  "flip_fraction": 0.5,
+  "started_utc": "2026-08-27T16:38:21Z",
+  "finished_utc": "2026-08-27T16:44:38Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "eval_clients": 1,
+  "proximal_mu": 0.01,
+  "role": "phase4-label-flip-sensitivity",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-a01-s211-fedprox-e1-flip050-apple",
+  "aggregation": "fedprox"
+}

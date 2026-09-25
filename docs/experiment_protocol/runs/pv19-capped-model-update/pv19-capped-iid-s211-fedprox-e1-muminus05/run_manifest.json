@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-iid-s211-fedprox-e1-muminus05",
+  "alpha_label": "iid",
+  "seed": 211,
+  "algorithm": "fedprox",
+  "local_epochs": 1,
+  "attack": "model_update",
+  "update_scale": -0.5,
+  "attacker_client": 1,
+  "started_utc": "2026-08-29T02:16:10Z",
+  "finished_utc": "2026-08-29T02:23:14Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "role": "phase4-model-update",
+  "scientific": true,
+  "test_evaluated": false,
+  "history_experiment_id": "pv19-capped-iid-s211-fedprox-e1-muminus05"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip1-cherry",
+  "alpha_label": "a01",
+  "seed": 503,
+  "algorithm": "fedavg",
+  "local_epochs": 1,
+  "pair": "cherry",
+  "attacker_client": 3,
+  "flip_fraction": 1.0,
+  "started_utc": "2026-08-25T15:23:08Z",
+  "finished_utc": "2026-08-25T15:28:51Z",
+  "dataset_id": "pv19-capped-62b5b2119fb2",
+  "rounds": 10,
+  "clients": 5,
+  "eval_clients": 1,
+  "proximal_mu": 0.0,
+  "role": "phase4-label-flip-primary",
+  "scientific": true,
+  "test_evaluated": true,
+  "history_experiment_id": "pv19-capped-a01-s503-fedavg-e1-flip1-cherry",
+  "aggregation": "fedavg"
+}
